@@ -299,7 +299,15 @@
     if (!senha) return showMessage(form, 'Preencha a senha.', false);
 
     var user = readJSON(KEY_USERS, []).filter(function (u) { return u.email === email; })[0];
-    if (!user) return showMessage(form, 'E-mail ou senha incorretos.', false);
+    if (!user) {
+      showMessage(form, 'Não encontramos uma conta com esse e-mail. Faça o cadastro primeiro: ', false);
+      var signupLink = document.createElement('a');
+      signupLink.href = 'cadastro.html';
+      signupLink.textContent = 'Criar conta';
+      signupLink.className = 'underline';
+      document.getElementById('mensagem').appendChild(signupLink);
+      return;
+    }
 
     hashPassword(senha, user.salt).then(function (hash) {
       if (hash !== user.senhaHash) return showMessage(form, 'E-mail ou senha incorretos.', false);
@@ -353,6 +361,32 @@
     e.stopImmediatePropagation();
     handler();
   }, true);
+
+  /* Adoção exige login: quem clicar em "adotar" sem estar logado vai para o
+     login e, depois de entrar, volta para o formulário de adoção. */
+  var ADOPTION_PAGE = 'formulario-adocao.html';
+  document.addEventListener('click', function (e) {
+    if (getSession()) return;
+    var link = e.target.closest && e.target.closest('a[href]');
+    if (!link) return;
+    var path = (link.getAttribute('href') || '').split('#')[0].split('?')[0];
+    if (path.split('/').pop().toLowerCase() !== ADOPTION_PAGE) return;
+    e.preventDefault();
+    sessionStorage.setItem('pc_voltar', ADOPTION_PAGE);
+    window.location.href = 'login.html';
+  }, true);
+
+  /* Se abrirem o formulário direto (sem login), também vai para o login */
+  if (currentPage === 'formulario-adocao' && !getSession()) {
+    sessionStorage.setItem('pc_voltar', ADOPTION_PAGE);
+    window.location.replace('login.html');
+  }
+
+  /* Aviso na tela de login quando a pessoa veio de "adotar" */
+  if (currentPage === 'login' && sessionStorage.getItem('pc_voltar') === ADOPTION_PAGE) {
+    var loginForm = authForm('login');
+    if (loginForm) showMessage(loginForm, 'Faça login para continuar com a adoção.', true);
+  }
 
   /* Nome do usuário logado e botão de sair */
   var currentUser = getSession();
