@@ -185,21 +185,53 @@
   }
   function getSession() { return readJSON(KEY_SESSION, null); }
 
-  /* Acha o formulário de cada página (por id ou pelo nome do arquivo) */
+  /* Acha o formulário de cada página (por id ou pelo nome do arquivo).
+     Ignora formulários de busca/newsletter que o menu ou o rodapé possam ter. */
   var AUTH_PAGES = { cadastro: 'cadastro', login: 'login', adocao: 'formulario-adocao' };
   function authForm(name) {
     var byId = document.getElementById('form-' + name);
     if (byId) return byId;
-    return currentPage === AUTH_PAGES[name] ? document.querySelector('form') : null;
+    if (currentPage !== AUTH_PAGES[name]) return null;
+    var forms = $$('form');
+    if (name === 'adocao') {
+      /* o formulário de adoção é o que tem mais campos */
+      return forms.sort(function (a, b) { return b.elements.length - a.elements.length; })[0] || null;
+    }
+    /* cadastro e login: o formulário que tem campo de senha */
+    return forms.filter(function (f) { return f.querySelector('input[type="password"]'); })[0] || forms[0] || null;
   }
 
-  /* Procura um campo pelo name/id; se não achar, pelo type */
-  function findField(form, names, type) {
-    for (var i = 0; i < names.length; i++) {
-      var el = form.elements[names[i]];
-      if (el && !el.length && el.tagName) return el;
-    }
-    return type ? form.querySelector('input[type="' + type + '"]') : null;
+  /* Texto que descreve um campo (name, id, placeholder...) para reconhecê-lo */
+  function fieldInfo(el) {
+    return [el.name, el.id, el.placeholder, el.getAttribute('autocomplete'), el.getAttribute('aria-label')]
+      .join(' ').toLowerCase();
+  }
+  /* Campos de senha: type=password ou, se o olhinho trocou para text, pelo nome */
+  function passwordInputs(form) {
+    return $$('input', form).filter(function (el) {
+      var t = (el.getAttribute('type') || 'text').toLowerCase();
+      return t === 'password' || ((t === 'text') && /senha|password/.test(fieldInfo(el)));
+    });
+  }
+  /* Campos de texto comuns (type=text, email, tel ou sem type), sem senha/arquivo/botão */
+  function textInputs(form) {
+    var pass = passwordInputs(form);
+    return $$('input, textarea', form).filter(function (el) {
+      if (pass.indexOf(el) !== -1) return false;
+      var t = (el.getAttribute('type') || 'text').toLowerCase();
+      return el.tagName === 'TEXTAREA' || ['text', 'email', 'tel', 'search', 'url'].indexOf(t) !== -1;
+    });
+  }
+  function findEmailField(form) {
+    var list = textInputs(form);
+    return form.querySelector('input[type="email"]') ||
+      list.filter(function (el) { return /e-?mail/.test(fieldInfo(el)); })[0] ||
+      list.filter(function (el) { return /@/.test(el.value); })[0] ||
+      null;
+  }
+  function findNameField(form, skip) {
+    var list = textInputs(form).filter(function (el) { return el !== skip; });
+    return list.filter(function (el) { return /nome|name/.test(fieldInfo(el)); })[0] || list[0] || null;
   }
 
   function showMessage(form, text, ok) {
@@ -219,15 +251,17 @@
   }
 
   function handleSignup(form) {
-    var nameEl = findField(form, ['nome', 'name', 'nome_completo', 'nomeCompleto']) || form.querySelector('input[type="text"]');
-    var emailEl = findField(form, ['email', 'e-mail'], 'email');
-    var passEls = form.querySelectorAll('input[type="password"]');
+    var emailEl = findEmailField(form);
+    var nameEl = findNameField(form, emailEl);
+    var passEls = passwordInputs(form);
     var nome = nameEl ? nameEl.value.trim() : '';
     var email = emailEl ? emailEl.value.trim().toLowerCase() : '';
     var senha = passEls[0] ? passEls[0].value : '';
     var confirma = passEls[1] ? passEls[1].value : senha;
 
-    if (!nome || !email || !senha) return showMessage(form, 'Preencha todos os campos.', false);
+    if (!nome) return showMessage(form, 'Preencha o seu nome.', false);
+    if (!email) return showMessage(form, 'Preencha o e-mail.', false);
+    if (!senha) return showMessage(form, 'Preencha a senha.', false);
     if (!/^\S+@\S+\.\S+$/.test(email)) return showMessage(form, 'E-mail inválido.', false);
     if (senha.length < 8) return showMessage(form, 'A senha precisa ter pelo menos 8 caracteres.', false);
     if (senha !== confirma) return showMessage(form, 'As senhas não conferem.', false);
@@ -257,11 +291,12 @@
   }
 
   function handleLogin(form) {
-    var emailEl = findField(form, ['email', 'e-mail'], 'email');
-    var passEl = form.querySelector('input[type="password"]');
+    var emailEl = findEmailField(form) || textInputs(form)[0];
+    var passEl = passwordInputs(form)[0];
     var email = emailEl ? emailEl.value.trim().toLowerCase() : '';
     var senha = passEl ? passEl.value : '';
-    if (!email || !senha) return showMessage(form, 'Informe e-mail e senha.', false);
+    if (!email) return showMessage(form, 'Preencha o e-mail.', false);
+    if (!senha) return showMessage(form, 'Preencha a senha.', false);
 
     var user = readJSON(KEY_USERS, []).filter(function (u) { return u.email === email; })[0];
     if (!user) return showMessage(form, 'E-mail ou senha incorretos.', false);
