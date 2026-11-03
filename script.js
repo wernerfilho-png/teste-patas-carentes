@@ -193,11 +193,11 @@
     if (byId) return byId;
     if (currentPage !== AUTH_PAGES[name]) return null;
     var forms = $$('form');
-    if (name === 'adocao') {
-      /* o formulário de adoção é o que tem mais campos */
+    if (name === 'adocao' || name === 'cadastro') {
+      /* o formulário principal dessas páginas é o que tem mais campos */
       return forms.sort(function (a, b) { return b.elements.length - a.elements.length; })[0] || null;
     }
-    /* cadastro e login: o formulário que tem campo de senha */
+    /* login: o formulário que tem campo de senha */
     return forms.filter(function (f) { return f.querySelector('input[type="password"]'); })[0] || forms[0] || null;
   }
 
@@ -280,6 +280,7 @@
         email: email,
         salt: salt,
         senhaHash: hash,
+        perfil: collectProfile(form, emailEl, nameEl),
         criadoEm: new Date().toISOString()
       });
       if (!writeJSON(KEY_USERS, users)) {
@@ -361,6 +362,64 @@
     e.stopImmediatePropagation();
     handler();
   }, true);
+
+  /* O formulário de cadastro não tinha e-mail nem senha, então não dava para
+     criar uma conta que depois conseguisse entrar. Estes campos são criados
+     aqui, copiando o visual dos campos que já existem na página. */
+  function injectFields(form, specs) {
+    var inputs = textInputs(form).filter(function (el) { return el.tagName === 'INPUT'; });
+    var tpl = inputs.filter(function (el) { return /cpf/.test(fieldInfo(el)); })[0] || inputs[inputs.length - 1] || null;
+    var tplLabel = form.querySelector('label');
+    var anchor = tpl ? tpl.parentElement : null;
+    var submitBtn = form.querySelector('button[type="submit"], input[type="submit"], button:not([type])');
+    var after = anchor;
+    specs.forEach(function (s) {
+      var wrap = document.createElement('div');
+      if (anchor && anchor !== form && anchor.tagName !== 'LABEL') wrap.className = anchor.className;
+      var label = document.createElement('label');
+      label.htmlFor = s.id;
+      label.textContent = s.label;
+      label.className = tplLabel ? tplLabel.className : 'block mb-1 font-bold';
+      var input = document.createElement('input');
+      input.type = s.type;
+      input.id = s.id;
+      input.name = s.id;
+      input.placeholder = s.placeholder || '';
+      input.setAttribute('autocomplete', s.autocomplete);
+      input.className = tpl ? tpl.className : 'w-full rounded-lg px-4 py-3 border';
+      wrap.appendChild(label);
+      wrap.appendChild(input);
+      if (after && after.parentNode) { after.parentNode.insertBefore(wrap, after.nextSibling); after = wrap; }
+      else if (submitBtn && submitBtn.parentNode) { submitBtn.parentNode.insertBefore(wrap, submitBtn); }
+      else { form.appendChild(wrap); }
+    });
+  }
+
+  /* Telefone, endereço, CPF etc. do cadastro (tudo que não é nome, e-mail ou senha) */
+  function collectProfile(form, emailEl, nameEl) {
+    var perfil = {};
+    textInputs(form).forEach(function (el, i) {
+      if (el === emailEl || el === nameEl || !el.value.trim()) return;
+      perfil[el.name || el.id || ('campo' + (i + 1))] = el.value.trim();
+    });
+    return perfil;
+  }
+
+  var signupForm = authForm('cadastro');
+  if (signupForm) {
+    var missing = [];
+    var passCount = passwordInputs(signupForm).length;
+    if (!findEmailField(signupForm)) {
+      missing.push({ id: 'pc-email', label: 'E-mail:', type: 'email', autocomplete: 'email', placeholder: 'voce@exemplo.com' });
+    }
+    if (passCount < 1) {
+      missing.push({ id: 'pc-senha', label: 'Senha:', type: 'password', autocomplete: 'new-password', placeholder: 'Mínimo de 8 caracteres' });
+    }
+    if (passCount < 2) {
+      missing.push({ id: 'pc-confirmar', label: 'Confirmar senha:', type: 'password', autocomplete: 'new-password', placeholder: 'Repita a senha' });
+    }
+    if (missing.length) injectFields(signupForm, missing);
+  }
 
   /* Adoção exige login: quem clicar em "adotar" sem estar logado vai para o
      login e, depois de entrar, volta para o formulário de adoção. */
