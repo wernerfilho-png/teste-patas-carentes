@@ -1,0 +1,412 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#1f1b16","surface-bright":"#fff8f4","primary-fixed":"#efe0cf","surface-container-low":"#fcf2ea","surface":"#fff8f4","on-primary-fixed-variant":"#4f4539","on-primary-container":"#daccbb","on-secondary":"#ffffff","on-secondary-container":"#6a6456","on-secondary-fixed":"#1f1b11","on-tertiary-fixed-variant":"#43474e","error":"#ba1a1a","secondary-fixed":"#eae2d1","secondary":"#645e51","surface-container-lowest":"#ffffff","error-container":"#ffdad6","tertiary":"#3d4147","primary":"#483f33","on-surface-variant":"#4c463e","surface-container-high":"#f1e6de","inverse-surface":"#352f2a","background":"#fff8f4","on-error-container":"#93000a","surface-dim":"#e2d8d0","secondary-container":"#eae2d1","on-primary":"#ffffff","tertiary-container":"#54585f","surface-container-highest":"#ebe1d9","outline-variant":"#cfc5bb","secondary-fixed-dim":"#cec6b5","on-tertiary-fixed":"#181c22","tertiary-fixed":"#dfe2eb","on-background":"#1f1b16","surface-variant":"#ebe1d9","tertiary-fixed-dim":"#c3c6cf","outline":"#7d766d","primary-container":"#605649","on-primary-fixed":"#221a10","on-tertiary":"#ffffff","surface-tint":"#675d50","on-error":"#ffffff","on-secondary-fixed-variant":"#4b463a","inverse-primary":"#d2c4b4","primary-fixed-dim":"#d2c4b4","inverse-on-surface":"#f9efe7","surface-container":"#f6ece4","on-tertiary-container":"#cbced7"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"md":"1rem","lg":"1.5rem","xl":"2.5rem","xs":"0.25rem","container-max":"1200px","gutter":"1.5rem","sm":"0.5rem"},"fontFamily":{"headline-lg-mobile":["Plus Jakarta Sans"],"label-md":["Work Sans"],"display-lg":["Plus Jakarta Sans"],"body-lg":["Work Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Work Sans"],"headline-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low flex flex-col z-50 shadow-[0_1px_8px_rgba(96,86,73,0.08)]"><div class="p-lg flex items-center gap-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">pets</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md leading-none text-on-surface font-bold tracking-tight">Patas Carentes</span><span class="font-label-md text-label-md text-on-surface-variant font-medium mt-xs uppercase tracking-wider">Painel ONG</span></div></div><nav class="flex-1 px-md py-sm flex flex-col gap-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="px-sm py-xs"><span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Principal</span></div><a aria-current="page" class="flex items-center gap-sm px-md py-sm rounded-lg transition-all bg-primary-container text-on-primary font-semibold shadow-sm" data-path="visao-geral" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Visão Geral</span></a><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="animais-cadastrados" href="#"><span class="material-symbols-outlined text-[20px]">sound_detection_dog_barking</span><span class="font-label-md text-label-md">Animais Cadastrados</span></a><a class="flex items-center justify-between px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pedidos-de-adocao" href="#"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-[20px]">volunteer_activism</span><span class="font-label-md text-label-md">Pedidos de Adoção</span></div><span class="px-sm py-xs rounded-full bg-primary-fixed-dim text-on-primary-fixed font-label-md text-label-md leading-none">12</span></a><div class="px-sm py-xs mt-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Gestão</span></div><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="padrinhos-e-doacoes" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="font-label-md text-label-md">Padrinhos &amp; Doações</span></a><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="relatorios-de-transparencia" href="#"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-label-md text-label-md">Relatórios</span></a><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuracoes-da-ong" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Configurações</span></a></nav><div class="p-md bg-surface-container m-md rounded-xl flex flex-col gap-sm"><div class="flex items-center gap-sm"><div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">home_health</span></div><div class="flex-1 min-w-0"><div class="font-label-md text-label-md font-semibold text-on-surface truncate">Anjos de Quatro Patas</div><div class="font-label-md text-label-md text-outline truncate">São Paulo - SP</div></div></div><div class="pt-xs flex items-center justify-between"><a class="flex items-center gap-xs font-label-md text-label-md text-error hover:text-on-surface transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[18px]">logout</span>Sair da conta</a><div class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface-variant">Online</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(96,86,73,0.06)] z-40 flex items-center justify-between px-lg"><div class="flex items-center gap-md"><div class="relative flex items-center w-72"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest rounded-full font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="Buscar animais, pedidos..." type="text"></div><span class="inline-flex items-center gap-xs px-sm py-xs bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-md font-semibold"><span class="material-symbols-outlined text-[16px]">verified</span>Verificada</span></div><div class="flex items-center gap-md"><a class="hidden sm:inline-flex items-center gap-xs px-md py-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="portal-publico" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span>Site Público</a><a class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary transition-all font-label-md text-label-md shadow-sm" data-path="novo-pet" href="#"><span class="material-symbols-outlined text-[18px]">add</span>Novo Pet</a><button aria-label="Notificações" class="relative p-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full min-h-screen px-lg py-lg bg-background"><div class="flex flex-col w-full gap-xl">
+<!-- Top Welcome Bar with Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-md bg-surface-container-low p-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center gap-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Olá, Equipe Anjos de Quatro Patas</span>
+<span class="text-2xl animate-pulse">🐾</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-sm">
+<span class="inline-flex items-center gap-xs text-outline font-medium">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+          24 de Outubro, 2024
+        </span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>Acompanhe o andamento dos resgates, solicitações de adoção e arrecadações do seu abrigo.</span>
+</p>
+</div>
+<div class="flex items-center gap-sm shrink-0">
+<button class="inline-flex items-center gap-xs px-md py-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">assessment</span>
+<span>Relatório de Transparência</span>
+</button>
+<button class="inline-flex items-center gap-xs px-md py-sm bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md rounded-lg transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Cadastrar Novo Pet</span>
+</button>
+</div>
+</div>
+<!-- Metric KPI Cards (4 Column Grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- KPI 1 -->
+<div class="p-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-surface-container-high rounded-full opacity-40 pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">pets</span>
+</div>
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md text-xs">
+          +3 este mês
+        </span>
+</div>
+<div class="mt-md">
+<div class="font-display-lg text-display-lg text-on-surface leading-none">42</div>
+<div class="font-label-md text-label-md text-outline mt-xs uppercase tracking-wider">Pets Acolhidos</div>
+<div class="mt-sm pt-xs border-t-0 flex items-center gap-xs">
+<span class="px-sm py-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-[12px] font-medium">34 cães</span>
+<span class="px-sm py-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-[12px] font-medium">8 gatos</span>
+</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-error-container/30 rounded-full opacity-40 pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">assignment</span>
+</div>
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-error text-on-error font-label-md text-[12px] font-bold">
+          7 urgentes
+        </span>
+</div>
+<div class="mt-md">
+<div class="font-display-lg text-display-lg text-on-surface leading-none">18</div>
+<div class="font-label-md text-label-md text-outline mt-xs uppercase tracking-wider">Pedidos de Adoção</div>
+<div class="mt-sm flex items-center gap-xs text-on-surface-variant font-body-md text-xs">
+<span class="material-symbols-outlined text-[16px] text-error">priority_high</span>
+<span>Requerem triagem nas próximas 24h</span>
+</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-surface-container-high rounded-full opacity-40 pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">favorite</span>
+</div>
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-surface-container-high text-on-surface font-label-md text-[12px]">
+          Planos ativos
+        </span>
+</div>
+<div class="mt-md">
+<div class="font-display-lg text-display-lg text-on-surface leading-none">64</div>
+<div class="font-label-md text-label-md text-outline mt-xs uppercase tracking-wider">Padrinhos Mensais</div>
+<div class="mt-sm flex items-center justify-between font-label-md text-xs text-on-surface-variant">
+<span>Arrecadação mensal</span>
+<span class="font-bold text-on-surface">R$ 4.380/mês</span>
+</div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-surface-container-high rounded-full opacity-40 pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">payments</span>
+</div>
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-secondary-container text-on-secondary-container font-label-md text-[12px] font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+          +15%
+        </span>
+</div>
+<div class="mt-md">
+<div class="font-display-lg text-display-lg text-on-surface leading-none text-[34px]">R$ 12.850</div>
+<div class="font-label-md text-label-md text-outline mt-xs uppercase tracking-wider">Doações Recebidas (Mês)</div>
+<div class="mt-sm flex items-center gap-xs text-xs text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>PIX direto e campanhas pontuais</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Asymmetric 2-Column Core Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-start">
+<!-- Left Column (approx 65% / 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-lg">
+<!-- Recent Adoption Requests List -->
+<div class="bg-surface-container-lowest p-lg rounded-xl shadow-sm flex flex-col gap-md">
+<div class="flex items-center justify-between pb-xs">
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">Pedidos de Adoção Recentes</h2>
+<span class="font-body-md text-body-md text-outline text-xs">Candidatos aguardando retorno e validação da equipe</span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container inline-flex items-center gap-xs transition-colors" href="#">
+            Ver todos (18)
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="flex flex-col gap-sm">
+<!-- Item 1 -->
+<div class="p-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-md">
+<div class="flex items-center gap-md">
+<img class="w-14 h-14 rounded-xl object-cover shrink-0 shadow-sm" data-alt="Close up photo of an adorable golden retriever puppy named Bob with warm amber eyes looking happily into the camera with soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7fTwB6u-khJR0Ac6ptK3SBUQ42imRXEyTxahCH-ruSVjdDcdNDg3rxc4eovXAphLqFjXzK7BfgKnV3sYkeU8E0XyIaLOwOgrqWuccYhnhW6pEur84oTSlE0z4aqMmpcXN-y6tQM0Pllhh2oIKD8FJJp5-AQsTQyDorcGjK63DbZMdaXvABe8c6FVbrb-0bhWhfdnrSUf11JiUoTYnSfZ1unmV5pJuKywLtCSIaDYJeHnBl1aSHDLF">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Mariana Silva</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-md text-xs text-outline">Campinas, SP</span>
+</div>
+<div class="flex items-center gap-xs mt-xs text-on-surface-variant font-body-md text-xs">
+<span>Interessada no pet:</span>
+<span class="font-semibold text-primary">Bob (Filhote Golden)</span>
+</div>
+<div class="flex items-center gap-xs mt-xs">
+<span class="inline-flex items-center px-sm py-xs rounded-full bg-error-container text-on-error-container font-label-md text-[11px] font-bold">
+                    Triagem Inicial
+                  </span>
+<span class="text-[11px] text-outline">Há 2 horas</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-xs w-full md:w-auto justify-end">
+<button class="inline-flex items-center justify-center p-sm rounded-lg bg-surface-container-lowest text-secondary hover:text-on-surface transition-colors shadow-sm" title="Conversar no WhatsApp" type="button">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-all shadow-sm" type="button">
+<span>Avaliar Proposta</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-md">
+<div class="flex items-center gap-md">
+<img class="w-14 h-14 rounded-xl object-cover shrink-0 shadow-sm" data-alt="Charming Siamese domestic cat named Mel with intense deep blue eyes resting peacefully on a warm beige textured blanket in cozy soft light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8izifCpUa2NP-yLgmB1wgOMYvannyGNKyTVLnfHWPhRym07jUlWF1TBy8ZSY6zuhlcwn3vYD2APwgXI4KolvnFuPS2PJ35R0caGgODmx2ll7c0_yCjgNUieKzG1mus8mNeGeTdu_bky3g6sBKSfm8sX-biHtnFv30wWs5VAkdzBaQOal8Rt_94bWD0bRUyOknN6Mq8m5aOqF-gHjfdag-Zn1ruQRHMi0YaTQOChLioFJ1IN0PzcxJ">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Lucas Ferreira</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-md text-xs text-outline">São Paulo, SP</span>
+</div>
+<div class="flex items-center gap-xs mt-xs text-on-surface-variant font-body-md text-xs">
+<span>Interessado no pet:</span>
+<span class="font-semibold text-primary">Mel (Gata Siamês)</span>
+</div>
+<div class="flex items-center gap-xs mt-xs">
+<span class="inline-flex items-center px-sm py-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-[11px] font-semibold">
+                    Entrevista Agendada
+                  </span>
+<span class="text-[11px] text-outline">Hoje às 16:30</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-xs w-full md:w-auto justify-end">
+<button class="inline-flex items-center justify-center p-sm rounded-lg bg-surface-container-lowest text-secondary hover:text-on-surface transition-colors shadow-sm" title="Conversar no WhatsApp" type="button">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-all shadow-sm" type="button">
+<span>Avaliar Proposta</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-md">
+<div class="flex items-center gap-md">
+<img class="w-14 h-14 rounded-xl object-cover shrink-0 shadow-sm" data-alt="Noble and resilient adult mixed breed dog named Thor with glossy brown fur and friendly trusting eyes outdoor in sun-dappled warm shelter courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvs0zW5AuFWixDetic1ARV6ajtrgsvnWkI5EAUXLFZMZdXSEfzXnAGVNjrvH19098wdw_ZTKY1BQGVmGZ5LMg1ZSVpCtRwjUB-zKSvhXQzkL9ycYUqb9eefqwv2gWzUQxp3pPCL8sy4TwIUlF9eRVyxZ9EwZ0jL1Wld6rnLyms4rCaGTZeWLsxuqEnZ8k9P-SmZ0wuiP8_jYkbgdz-Rqauu0ActoNBE5V6ey--yIjIS9htpgAw-au8">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Beatriz Costa</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-md text-xs text-outline">Santos, SP</span>
+</div>
+<div class="flex items-center gap-xs mt-xs text-on-surface-variant font-body-md text-xs">
+<span>Interessada no pet:</span>
+<span class="font-semibold text-primary">Thor (Cão Adulto)</span>
+</div>
+<div class="flex items-center gap-xs mt-xs">
+<span class="inline-flex items-center px-sm py-xs rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-[11px] font-semibold">
+                    Documentos em Análise
+                  </span>
+<span class="text-[11px] text-outline">Ontem</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-xs w-full md:w-auto justify-end">
+<button class="inline-flex items-center justify-center p-sm rounded-lg bg-surface-container-lowest text-secondary hover:text-on-surface transition-colors shadow-sm" title="Conversar no WhatsApp" type="button">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-all shadow-sm" type="button">
+<span>Avaliar Proposta</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Chart / Visual Performance Section -->
+<div class="bg-surface-container-lowest p-lg rounded-xl shadow-sm flex flex-col gap-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-xs">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Evolução: Adoções vs. Resgates</h2>
+<p class="font-body-md text-body-md text-outline text-xs">Equilíbrio da capacidade do abrigo nos últimos 6 meses</p>
+</div>
+<div class="flex items-center gap-md font-label-md text-xs">
+<span class="flex items-center gap-xs text-on-surface">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+              Adoções Concluídas
+            </span>
+<span class="flex items-center gap-xs text-on-surface-variant">
+<span class="w-3 h-3 rounded-full bg-secondary-fixed-dim"></span>
+              Novos Resgates
+            </span>
+</div>
+</div>
+<!-- Custom Warm SVG Bar Chart -->
+<div class="w-full pt-md">
+<div class="h-56 w-full flex items-end justify-between gap-sm sm:gap-md px-xs pb-xs border-b-0">
+<!-- Maio -->
+<div class="flex-1 flex flex-col items-center gap-xs h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-1.5 h-full">
+<div class="w-1/2 max-w-[20px] bg-secondary-fixed-dim rounded-t-md transition-all group-hover:brightness-95" style="height: 60%;" title="Resgates: 14"></div>
+<div class="w-1/2 max-w-[20px] bg-primary rounded-t-md transition-all group-hover:brightness-110" style="height: 50%;" title="Adoções: 11"></div>
+</div>
+<span class="font-label-md text-[11px] text-outline">Mai</span>
+</div>
+<!-- Junho -->
+<div class="flex-1 flex flex-col items-center gap-xs h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-1.5 h-full">
+<div class="w-1/2 max-w-[20px] bg-secondary-fixed-dim rounded-t-md transition-all group-hover:brightness-95" style="height: 75%;" title="Resgates: 18"></div>
+<div class="w-1/2 max-w-[20px] bg-primary rounded-t-md transition-all group-hover:brightness-110" style="height: 65%;" title="Adoções: 15"></div>
+</div>
+<span class="font-label-md text-[11px] text-outline">Jun</span>
+</div>
+<!-- Julho -->
+<div class="flex-1 flex flex-col items-center gap-xs h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-1.5 h-full">
+<div class="w-1/2 max-w-[20px] bg-secondary-fixed-dim rounded-t-md transition-all group-hover:brightness-95" style="height: 85%;" title="Resgates: 21"></div>
+<div class="w-1/2 max-w-[20px] bg-primary rounded-t-md transition-all group-hover:brightness-110" style="height: 70%;" title="Adoções: 17"></div>
+</div>
+<span class="font-label-md text-[11px] text-outline">Jul</span>
+</div>
+<!-- Agosto -->
+<div class="flex-1 flex flex-col items-center gap-xs h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-1.5 h-full">
+<div class="w-1/2 max-w-[20px] bg-secondary-fixed-dim rounded-t-md transition-all group-hover:brightness-95" style="height: 55%;" title="Resgates: 13"></div>
+<div class="w-1/2 max-w-[20px] bg-primary rounded-t-md transition-all group-hover:brightness-110" style="height: 80%;" title="Adoções: 20"></div>
+</div>
+<span class="font-label-md text-[11px] text-outline">Ago</span>
+</div>
+<!-- Setembro -->
+<div class="flex-1 flex flex-col items-center gap-xs h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-1.5 h-full">
+<div class="w-1/2 max-w-[20px] bg-secondary-fixed-dim rounded-t-md transition-all group-hover:brightness-95" style="height: 65%;" title="Resgates: 15"></div>
+<div class="w-1/2 max-w-[20px] bg-primary rounded-t-md transition-all group-hover:brightness-110" style="height: 90%;" title="Adoções: 23"></div>
+</div>
+<span class="font-label-md text-[11px] text-outline">Set</span>
+</div>
+<!-- Outubro (Atual) -->
+<div class="flex-1 flex flex-col items-center gap-xs h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-1.5 h-full">
+<div class="w-1/2 max-w-[20px] bg-secondary-fixed-dim rounded-t-md transition-all group-hover:brightness-95" style="height: 45%;" title="Resgates: 10"></div>
+<div class="w-1/2 max-w-[20px] bg-primary rounded-t-md transition-all group-hover:brightness-110" style="height: 95%;" title="Adoções: 26"></div>
+</div>
+<span class="font-label-md text-[11px] text-on-surface font-bold">Out (Hoje)</span>
+</div>
+</div>
+<div class="mt-md p-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-xs text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">insights</span>
+<span>Tendência positiva: O volume de adoções ultrapassou os resgates pelo 3º mês consecutivo.</span>
+</div>
+<span class="font-label-md text-[12px] text-primary font-bold">+18% eficácia</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (approx 35% / 4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-lg">
+<!-- Urgent Actions & Reminders -->
+<div class="bg-surface-container-lowest p-lg rounded-xl shadow-sm flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-error text-[22px]">notification_important</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-[20px]">Lembretes Críticos</h3>
+</div>
+<span class="px-sm py-xs rounded-full bg-error-container text-on-error-container font-label-md text-xs font-semibold">3 pendências</span>
+</div>
+<div class="flex flex-col gap-sm">
+<!-- Reminder 1 -->
+<div class="p-sm rounded-lg bg-surface-container-low flex items-start gap-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0 mt-xs">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Check-up de 5 filhotes</span>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Avaliação pediátrica e vermifugação com a Dra. Camila no abrigo às 15h.</p>
+<div class="flex items-center gap-xs mt-xs text-[11px] text-outline">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Hoje • 15:00</span>
+</div>
+</div>
+</div>
+<!-- Reminder 2 -->
+<div class="p-sm rounded-lg bg-surface-container-low flex items-start gap-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0 mt-xs">
+<span class="material-symbols-outlined text-[18px]">vaccines</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Vacinação antirrábica em lote</span>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Imunização anual programada para o pavilhão dos cães seniores.</p>
+<div class="flex items-center gap-xs mt-xs text-[11px] text-outline">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span>
+<span>Sexta-feira • Manhã</span>
+</div>
+</div>
+</div>
+<!-- Reminder 3 -->
+<div class="p-sm rounded-lg bg-surface-container-low flex items-start gap-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface shrink-0 mt-xs">
+<span class="material-symbols-outlined text-[18px]">card_giftcard</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">3 Dindos 'Ouro' Aprovados</span>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Enviar kit boas-vindas digital e convite para o grupo de padrinhos VIP.</p>
+<div class="flex items-center gap-xs mt-xs text-[11px] text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">send</span>
+<span>Disparar comunicados</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Transparency & Welfare Summary -->
+<div class="bg-surface-container-lowest p-lg rounded-xl shadow-sm flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface text-[20px]">Metas &amp; Transparência</h3>
+<span class="material-symbols-outlined text-outline text-[20px]">verified</span>
+</div>
+<div class="flex flex-col gap-md">
+<!-- Ração Progress -->
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between font-label-md text-xs">
+<span class="text-on-surface font-semibold">Alimentação Coletiva (Ração)</span>
+<span class="text-primary font-bold">450kg / 500kg (85%)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000" style="width: 85%;"></div>
+</div>
+<span class="text-[11px] text-outline">Faltam apenas 50kg para garantir o mês completo</span>
+</div>
+<!-- Gastos Veterinários -->
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between font-label-md text-xs">
+<span class="text-on-surface font-semibold">Tratamentos Veterinários</span>
+<span class="text-secondary font-bold">100% Quitados</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-1000" style="width: 100%;"></div>
+</div>
+<span class="text-[11px] text-outline">Todas as clínicas conveniadas estão com faturas zeradas</span>
+</div>
+<!-- Social Feed Action Card -->
+<div class="mt-xs p-md bg-surface-container-low rounded-xl flex flex-col gap-sm">
+<div class="flex items-center gap-sm">
+<img class="w-12 h-12 rounded-lg object-cover shadow-sm" data-alt="A touching scene showing an adopted rescue dog hugging its new loving human owner smiling under warm soft sunset tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMVCgrm1EX6rP8vd5CLAUYVNOxJM9aAtTUNvH0ujry1ziXfPxBvwXy6bK5VKi8dxXdxEfIMGOhWhsGzQ571j3h5cvFSfvoHWswq3QFF944cwxP4_8WkZZpIkQVk1RFXWpVKLa1yRiioTD6XtztOhV6evg-P7IvbmNYBamUMwHVJyYKkiC0P5DbS08fe5OxpJyMDCpxrPanwbIOzb9j8_8JjYo3jqsJmQSoTt2kKgZt3oABtx6tqyQs">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight truncate">Mural de Finais Felizes</span>
+<span class="text-xs text-on-surface-variant truncate">Pipoca foi adotada no sábado!</span>
+</div>
+</div>
+<button class="w-full mt-xs py-sm px-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>Publicar Atualização</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#1f1b16","surface-bright":"#fff8f4","primary-fixed":"#efe0cf","surface-container-low":"#fcf2ea","surface":"#fff8f4","on-primary-fixed-variant":"#4f4539","on-primary-container":"#daccbb","on-secondary":"#ffffff","on-secondary-container":"#6a6456","on-secondary-fixed":"#1f1b11","on-tertiary-fixed-variant":"#43474e","error":"#ba1a1a","secondary-fixed":"#eae2d1","secondary":"#645e51","surface-container-lowest":"#ffffff","error-container":"#ffdad6","tertiary":"#3d4147","primary":"#483f33","on-surface-variant":"#4c463e","surface-container-high":"#f1e6de","inverse-surface":"#352f2a","background":"#fff8f4","on-error-container":"#93000a","surface-dim":"#e2d8d0","secondary-container":"#eae2d1","on-primary":"#ffffff","tertiary-container":"#54585f","surface-container-highest":"#ebe1d9","outline-variant":"#cfc5bb","secondary-fixed-dim":"#cec6b5","on-tertiary-fixed":"#181c22","tertiary-fixed":"#dfe2eb","on-background":"#1f1b16","surface-variant":"#ebe1d9","tertiary-fixed-dim":"#c3c6cf","outline":"#7d766d","primary-container":"#605649","on-primary-fixed":"#221a10","on-tertiary":"#ffffff","surface-tint":"#675d50","on-error":"#ffffff","on-secondary-fixed-variant":"#4b463a","inverse-primary":"#d2c4b4","primary-fixed-dim":"#d2c4b4","inverse-on-surface":"#f9efe7","surface-container":"#f6ece4","on-tertiary-container":"#cbced7"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"md":"1rem","lg":"1.5rem","xl":"2.5rem","xs":"0.25rem","container-max":"1200px","gutter":"1.5rem","sm":"0.5rem"},"fontFamily":{"headline-lg-mobile":["Plus Jakarta Sans"],"label-md":["Work Sans"],"display-lg":["Plus Jakarta Sans"],"body-lg":["Work Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Work Sans"],"headline-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low flex flex-col z-50 shadow-[0_1px_8px_rgba(96,86,73,0.08)]"><div class="p-lg flex items-center gap-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">pets</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md leading-none text-on-surface font-bold tracking-tight">Patas Carentes</span><span class="font-label-md text-label-md text-on-surface-variant font-medium mt-xs uppercase tracking-wider">PAINEL ONG</span></div></div><nav class="flex-1 px-md py-sm flex flex-col gap-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="px-sm py-xs"><span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Principal</span></div><a class="flex items-center px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="visao-geral" href="#">Visão Geral</a><a class="flex items-center px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="animais-cadastrados" href="#">Animais Cadastrados</a><a class="flex items-center justify-between px-md py-sm rounded-lg bg-primary-container text-on-primary font-semibold shadow-sm transition-all font-label-md text-label-md" data-path="pedidos-de-adocao" href="#"><span>Pedidos de Adoção</span><span class="px-sm py-xs rounded-full bg-surface text-primary font-label-md text-label-md leading-none font-bold shadow-sm">12</span></a><div class="px-sm py-xs mt-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Gestão</span></div><a class="flex items-center px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="padrinhos-e-doacoes" href="#">Padrinhos &amp; Doações</a><a class="flex items-center px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="relatorios" href="#">Relatórios</a><a class="flex items-center px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="configuracoes" href="#">Configurações</a></nav><div class="p-md bg-surface-container m-md rounded-xl flex flex-col gap-sm"><div class="flex items-center gap-sm"><div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">home_health</span></div><div class="flex-1 min-w-0"><div class="font-label-md text-label-md font-semibold text-on-surface truncate">Anjos de Quatro Patas</div><div class="font-label-md text-label-md text-outline truncate">São Paulo - SP</div></div></div><div class="pt-xs flex items-center justify-between"><a class="flex items-center font-label-md text-label-md text-error hover:text-on-surface transition-colors" data-path="logout" href="#">Sair da conta</a><div class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface-variant">Online</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(96,86,73,0.06)] z-40 flex items-center justify-between px-lg"><div class="flex items-center gap-md"><div class="relative flex items-center w-72"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest rounded-full font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="Buscar animais, pedidos..." type="text"></div><span class="inline-flex items-center gap-xs px-sm py-xs bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-md font-semibold"><span class="material-symbols-outlined text-[16px]">verified</span>Verificada</span></div><div class="flex items-center gap-md"><a class="hidden sm:inline-flex items-center px-md py-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="portal-publico" href="#">Site Público</a><a class="inline-flex items-center px-md py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary transition-all font-label-md text-label-md shadow-sm" data-path="novo-pet" href="#">+ Novo Pet</a><button aria-label="Notificações" class="relative p-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full min-h-screen px-lg py-lg bg-background"><div class="flex flex-col w-full">
+<!-- Breadcrumbs & Quick Header Bar -->
+<div class="flex flex-col gap-sm mb-lg">
+<nav class="flex items-center gap-xs text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary transition-colors flex items-center gap-xs" href="#">
+<span class="material-symbols-outlined text-[18px]">home</span>
+        Painel ONG
+      </a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Pedidos de Adoção</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">Proposta #AD-8492</span>
+</nav>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-md pt-xs">
+<div class="flex flex-col gap-xs">
+<div class="flex flex-wrap items-center gap-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Avaliação da Proposta de Adoção
+          </h1>
+<span class="inline-flex items-center gap-xs px-md py-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Triagem Prioritária • Em Análise
+          </span>
+<span class="px-sm py-xs rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md">
+            ID #AD-8492
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Candidata: <strong class="text-on-surface font-semibold">Mariana Silva</strong> para o filhote <strong class="text-primary font-semibold">Bob</strong> (Golden Retriever)
+        </p>
+</div>
+<!-- Quick Action Buttons Top -->
+<div class="flex flex-wrap items-center gap-xs">
+<a class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-md text-label-md shadow-sm transition-all hover:shadow" href="https://wa.me/5511984523321" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-primary">chat</span>
+          WhatsApp
+        </a>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed font-label-md text-label-md shadow-sm transition-all" id="btn-open-interview">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+          Agendar Entrevista
+        </button>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-error-container text-on-error-container hover:bg-error/20 font-label-md text-label-md shadow-sm transition-all" id="btn-quick-reject">
+<span class="material-symbols-outlined text-[18px]">close</span>
+          Recusar
+        </button>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" id="btn-quick-approve">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          Aprovar Candidatura
+        </button>
+</div>
+</div>
+</div>
+<!-- Main Split Layout (65% Profile / Questionnaire / Evidences | 35% Pet / Audit / Notes) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-start">
+<!-- LEFT COLUMN (col-span-12 lg:col-span-7 or 8) -->
+<div class="lg:col-span-7 flex flex-col gap-lg">
+<!-- Card 1: Perfil do Adotante -->
+<div class="bg-surface-container-lowest rounded-xl p-lg shadow-sm flex flex-col gap-md">
+<div class="flex items-start justify-between pb-sm">
+<div class="flex items-center gap-md">
+<div class="relative">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-md text-headline-md font-bold overflow-hidden shadow-inner">
+                MS
+              </div>
+<span class="absolute bottom-0 right-0 w-4 h-4 bg-primary rounded-full flex items-center justify-center text-on-primary shadow" title="Perfil Verificado">
+<span class="material-symbols-outlined text-[12px]">done</span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Mariana Silva</h2>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-md text-[11px] font-semibold">29 anos</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">Médica Veterinária em formação • Designer Home Office</span>
+<span class="font-label-md text-label-md text-secondary mt-0.5 flex items-center gap-xs">
+<span class="material-symbols-outlined text-[15px]">location_on</span>
+                São Paulo, SP (Pinheiros) • A 4.2 km da ONG
+              </span>
+</div>
+</div>
+<span class="px-sm py-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">verified_user</span> Idoneidade 100%
+          </span>
+</div>
+<!-- Detail Data Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-sm pt-xs">
+<div class="bg-surface-container-low p-md rounded-lg flex flex-col gap-xs">
+<span class="font-label-md text-[12px] uppercase text-outline tracking-wider font-semibold">Contatos Oficiais</span>
+<span class="font-body-md text-body-md text-on-surface font-medium flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">phone</span>
+              (11) 98452-3321
+            </span>
+<span class="font-body-md text-body-md text-on-surface font-medium flex items-center gap-xs truncate">
+<span class="material-symbols-outlined text-[18px] text-secondary">mail</span>
+              mariana.silva@email.com
+            </span>
+</div>
+<div class="bg-surface-container-low p-md rounded-lg flex flex-col gap-xs">
+<span class="font-label-md text-[12px] uppercase text-outline tracking-wider font-semibold">Tipo de Residência</span>
+<div class="flex items-center gap-xs text-on-surface font-body-md text-body-md font-medium">
+<span class="material-symbols-outlined text-[18px] text-secondary">apartment</span>
+              Apartamento 85m² (4º andar)
+            </div>
+<span class="font-label-md text-label-md text-primary font-semibold flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">shield</span> 100% Telado (Redes homologadas)
+            </span>
+</div>
+<div class="bg-surface-container-low p-md rounded-lg flex flex-col gap-xs">
+<span class="font-label-md text-[12px] uppercase text-outline tracking-wider font-semibold">Composição Familiar &amp; Pets</span>
+<p class="font-body-md text-body-md text-on-surface">
+              Mora com o parceiro • Sem crianças
+            </p>
+<span class="font-label-md text-label-md text-on-surface-variant">
+              Sem pets no momento (Cão anterior viveu 14 anos com a família até falecer de velhice).
+            </span>
+</div>
+<div class="bg-surface-container-low p-md rounded-lg flex flex-col gap-xs">
+<span class="font-label-md text-[12px] uppercase text-outline tracking-wider font-semibold">Renda &amp; Disponibilidade</span>
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">R$ 8.500 <span class="font-body-md text-body-md font-normal text-on-surface-variant">/mês</span></span>
+<span class="px-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-[11px] font-semibold">Comprovada</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">
+              Trabalho remoto/híbrido: pet ficará sozinho max 2h a 3h por dia.
+            </p>
+</div>
+</div>
+</div>
+<!-- Card 2: Questionário de Consciência e Adoção Responsável -->
+<div class="bg-surface-container-lowest rounded-xl p-lg shadow-sm flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Respostas da Entrevista Prévia</h2>
+<p class="font-label-md text-label-md text-outline">Questionário de maturidade e cuidados contínuos</p>
+</div>
+</div>
+<span class="px-sm py-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold">
+            3/3 Perguntas Críticas Aprovadas
+          </span>
+</div>
+<div class="space-y-sm">
+<!-- Item 1 -->
+<div class="p-md rounded-xl bg-surface-container-low flex flex-col gap-xs">
+<div class="flex items-center gap-xs text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">flight_takeoff</span>
+<span>1. O que fará em caso de mudança de residência ou viagens longas?</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface pl-md italic">
+              "O pet é membro pleno da família e se muda conosco sem qualquer dúvida. Para viagens curtas a trabalho ou férias, já temos um hotelzinho parceiro de confiança onde nosso veterinário atende e meus sogros que moram próximos."
+            </p>
+<div class="pl-md flex items-center gap-xs text-secondary font-label-md text-[12px] font-semibold mt-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">check</span> Coerência e plano de contingência estruturado
+            </div>
+</div>
+<!-- Item 2 -->
+<div class="p-md rounded-xl bg-surface-container-low flex flex-col gap-xs">
+<div class="flex items-center gap-xs text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+<span>2. Como lidará com despesas veterinárias imprevistas ou de alto custo?</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface pl-md italic">
+              "Possuímos uma reserva financeira exclusiva para emergências domésticas e de saúde. Além disso, por ser aluna de veterinária, pretendo contratar convênio pet completo logo na primeira semana de adaptação."
+            </p>
+<div class="pl-md flex items-center gap-xs text-secondary font-label-md text-[12px] font-semibold mt-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">check</span> Preparação orçamentária excelente para porte do cão
+            </div>
+</div>
+<!-- Item 3 -->
+<div class="p-md rounded-xl bg-surface-container-low flex flex-col gap-xs">
+<div class="flex items-center gap-xs text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">pets</span>
+<span>3. Qual sua experiência prévia com manejo e criação de filhotes?</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface pl-md italic">
+              "Criei meu último cão (mistura de Labrador) desde os 2 meses. Fiz adestramento por reforço positivo, sei lidar com fase de roer móveis, xixi fora do lugar e a importância de gastar energia física e mental diariamente."
+            </p>
+<div class="pl-md flex items-center gap-xs text-secondary font-label-md text-[12px] font-semibold mt-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">check</span> Experiência comprovada com cães de grande porte
+            </div>
+</div>
+</div>
+</div>
+<!-- Card 3: Documentos & Evidências Anexadas -->
+<div class="bg-surface-container-lowest rounded-xl p-lg shadow-sm flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">folder_open</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Documentos &amp; Fotos da Vistoria</h2>
+<p class="font-label-md text-label-md text-outline">4 arquivos anexados e prontos para inspeção</p>
+</div>
+</div>
+<button class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[16px]">download</span> Baixar Dossiê (.zip)
+          </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<!-- Doc 1 -->
+<div class="p-md rounded-lg bg-surface-container-low flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-[32px] text-primary">badge</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">RG e CPF Frente/Verso</span>
+<span class="font-label-md text-[12px] text-outline">PDF • 1.4 MB • Validado</span>
+</div>
+</div>
+<button class="p-xs rounded-full hover:bg-surface-container-highest text-primary" title="Visualizar documento">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+<!-- Doc 2 -->
+<div class="p-md rounded-lg bg-surface-container-low flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-[32px] text-primary">receipt_long</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Comprovante Residência</span>
+<span class="font-label-md text-[12px] text-outline">Conta Luz (Fev/2025) • Validado</span>
+</div>
+</div>
+<button class="p-xs rounded-full hover:bg-surface-container-highest text-primary" title="Visualizar comprovante">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+<!-- Doc 3: Fotos das Redes -->
+<div class="p-md rounded-lg bg-surface-container-low flex flex-col gap-sm sm:col-span-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">window</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Vistoria das Janelas &amp; Sacada (Telas de Proteção)</span>
+</div>
+<span class="px-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-[11px] font-bold">3 Fotos Nítidas</span>
+</div>
+<div class="grid grid-cols-3 gap-sm">
+<div class="relative group rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High-resolution, well-lit interior photo of an apartment living room with modern light beige walls. A large sliding glass balcony door is visibly protected with tightly installed high-strength nylon safety netting, clear daylight streaming in softly, pristine condition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqBa6w4oIGW_0aHKmurLM66IdPCTjnnwDzNXP8ViOUjwsJ85QR3l8pPCdvK53aHKwQGf2dulH7y9iCbiQo9UIlUmgR5h9hBFbXiNLb8uSYbu3eOLxN5x4lHNadwKdOqYsjvn4gYexdje_pk57ogK8T7-rYVZPFDEmSEayd7HyPC8NNZxkLLar3iq5OiCgTc84oIUC0H6cg9e-eVPS5QvxQTyDoCydElGAH0I0Px5b7xx59KOH67U5N">
+<div class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-on-surface/70 backdrop-blur text-surface font-label-md text-[10px] rounded">Sacada Sala</div>
+</div>
+<div class="relative group rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close-up photograph of a bedroom window with aluminum framing fitted with tight safety protection netting in a modern city apartment. Natural sunlight illuminates the durable mesh and secure hooks drilled into the concrete wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYJr-weQzitfbguv07bZdrFsoGaNE1tIFH1aMh6FlWlYix8iDuJXx9CcAptVI0zehl3spjre2raBXFWaLc_Q3wt-Eev9gGXpmdRPu7xSoilHfFS6RRbT5zNjvUF5NgRmDRi_q6SCPVnl4S5Cyx2R_Vvjq5jCCqHp1hHXY9CcMe07uegYg9Q3MSS-H3W40LmbQkc_YN4GJ56JL_wi5lL4ns8iu_aQurzmgiI2Dul1klB0x7w16LnbRW">
+<div class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-on-surface/70 backdrop-blur text-surface font-label-md text-[10px] rounded">Quarto Casal</div>
+</div>
+<div class="relative group rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Warm cozy home office room interior showing a wide window with safety net mesh installed. A clean wooden desk with laptop in the foreground, bright and spacious atmosphere matching warm earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0XZPV8u-NOhio_J6Hg5lH-pM-hH2sdSz2umKgZKOd0VUaFh5fWyjsPc0ggPZD877Kznc8SFn72x_lco4aGTIcRaGxtq9jmNE2lxrlVJQZbEFipNsCj0Qkx2coGlQ4zMr7eV-J2b8H9GhZW2lrp_C167bMhSERYHsJFfSpDiHCY2m-aPOHRZ-aAqjxffYxqYZWWcZyqrLA_Gx4CLw9QF6ySxbbNPpRB9n4ZIk5hqjV2XgLvDKh05s8">
+<div class="absolute bottom-1 left-1 px-1.5 py-0.5 bg-on-surface/70 backdrop-blur text-surface font-label-md text-[10px] rounded">Home Office</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Pet Pretendido, Triagem & Decisão (lg:col-span-5) -->
+<div class="lg:col-span-5 flex flex-col gap-lg">
+<!-- Card Pet Pretendido com Algoritmo de Match -->
+<div class="bg-surface-container-lowest rounded-xl p-lg shadow-sm flex flex-col gap-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-outline uppercase font-semibold tracking-wider">Pet Solicitado</span>
+<span class="px-sm py-xs rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm">
+            Filhote Disponível
+          </span>
+</div>
+<div class="flex gap-md items-center">
+<div class="relative w-28 h-28 rounded-xl overflow-hidden shadow-sm flex-shrink-0">
+<img alt="Bob Golden Retriever filhote" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VfdmOKnrWKrv3LyKNfxeiI_g1w6hq_b72GaoEhgM9yGkHW9QDidmy79Gh6GaN1XS5NwMIExT2hoBwxkn2GOc9fLsNY9KeJRBZRYkLsi0_pKMKWQhNG1fO0G0pOiTWak8j28oR9nKab64rJTItuSWy0hts5fjHa0lgbHhQ0eoHHvDTJMYEBC-cr6AiKpwlay2QtcZTe_Av_Ffv-F1BQi2YnIil0Jgj0qvoudedZm_K7lcuqiy3G9Pg-zRk">
+<div class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-primary/80 backdrop-blur text-on-primary font-label-md text-[10px] font-semibold">
+              Macho
+            </div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight truncate">Bob</h3>
+<span class="font-body-md text-body-md text-on-surface-variant">Golden Retriever Puro • ~5 meses</span>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-md text-[11px]">Porte Médio/Grande</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-md text-[11px]">Microchipado</span>
+</div>
+</div>
+</div>
+<!-- Compatibility Score Banner -->
+<div class="p-md rounded-xl bg-surface-container-low flex items-center justify-between gap-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">auto_awesome</span>
+              Compatibilidade Algorítmica
+            </span>
+<span class="font-label-md text-[12px] text-on-surface-variant">
+              Espaço, rotina remota e perfil financeiro ideais para a raça
+            </span>
+</div>
+<div class="flex items-center gap-xs">
+<!-- Radial-like mini visual -->
+<div class="relative flex items-center justify-center w-14 h-14 rounded-full bg-secondary-fixed text-on-secondary-fixed font-headline-md text-headline-md font-bold shadow-sm">
+              98%
+            </div>
+</div>
+</div>
+<!-- Cuidados Específicos -->
+<div class="p-sm rounded-lg bg-surface-container-high flex flex-col gap-xs text-on-surface-variant font-label-md text-[13px]">
+<span class="text-on-surface font-semibold flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">warning</span> Necessidades Críticas do Bob:
+          </span>
+<p class="leading-relaxed">
+            Filhote muito ativo, desmame recente. Falta 3ª dose da vacina V10 (prevista para o dia 28/02) e prevenção contínua contra giardíase. Exige atenção diária e enriquecimento ambiental.
+          </p>
+</div>
+</div>
+<!-- Card: Checklist de Triagem da Equipe Voluntária -->
+<div class="bg-surface-container-lowest rounded-xl p-lg shadow-sm flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">checklist</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Checklist da Triagem</h3>
+</div>
+<span class="font-label-md text-label-md font-bold text-primary" id="checklist-progress">3 / 5 Concluídos</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-300" style="width: 60%;"></div>
+</div>
+<div class="flex flex-col gap-xs pt-xs">
+<!-- Check 1 -->
+<label class="flex items-start gap-sm p-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold line-through text-outline">Documentação pessoal e CPF checados</span>
+<span class="font-label-md text-[12px] text-outline">Verificado por Lucas (14/02 - 10:15)</span>
+</div>
+</label>
+<!-- Check 2 -->
+<label class="flex items-start gap-sm p-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold line-through text-outline">Redes de proteção vistoriadas digitalmente</span>
+<span class="font-label-md text-[12px] text-outline">Aprovado: 100% dos cômodos telados</span>
+</div>
+</label>
+<!-- Check 3 -->
+<label class="flex items-start gap-sm p-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold line-through text-outline">Capacidade financeira compatível</span>
+<span class="font-label-md text-[12px] text-outline">Renda declarada supera exigência mínima de R$ 4.000</span>
+</div>
+</label>
+<!-- Check 4 -->
+<label class="flex items-start gap-sm p-sm rounded-lg bg-secondary-fixed/50 hover:bg-secondary-fixed transition-colors cursor-pointer select-none">
+<input class="mt-1 w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Entrevista online por videochamada</span>
+<span class="font-label-md text-[12px] text-secondary font-medium">Agendada para hoje às 17h30 (Link enviado)</span>
+</div>
+</label>
+<!-- Check 5 -->
+<label class="flex items-start gap-sm p-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="mt-1 w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Parecer final da Coordenadora Geral</span>
+<span class="font-label-md text-[12px] text-outline">Aguardando resultado da entrevista</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Card: Histórico de Anotações Internas -->
+<div class="bg-surface-container-lowest rounded-xl p-lg shadow-sm flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">forum</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Notas Internas da Equipe</h3>
+</div>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-md text-[11px]">Apenas Staff</span>
+</div>
+<!-- Comentários Existentes -->
+<div class="flex flex-col gap-sm" id="notes-container">
+<div class="p-sm rounded-lg bg-surface-container-low flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Débora Reis (Triagem)</span>
+<span class="font-label-md text-[11px] text-outline">Hoje, 11:20</span>
+</div>
+<p class="font-body-md text-[14px] text-on-surface">
+              Conversei com a Mariana no WhatsApp para confirmar o horário de hoje. Perfil extremamente carinhoso e atencioso. Demonstrou conhecimento cirúrgico sobre a rotina de filhotes de grande porte.
+            </p>
+</div>
+<div class="p-sm rounded-lg bg-surface-container-low flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Carlos Vet (ONG)</span>
+<span class="font-label-md text-[11px] text-outline">Ontem, 16:45</span>
+</div>
+<p class="font-body-md text-[14px] text-on-surface">
+              Atestado de vacinação do Bob estará liberado após a entrevista. Como ela é estudante de veterinária, podemos facilitar o acompanhamento da 3ª dose diretamente com nosso protocolo.
+            </p>
+</div>
+</div>
+<!-- Adicionar Nova Nota -->
+<div class="flex flex-col gap-xs pt-xs">
+<div class="relative">
+<textarea class="w-full p-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary resize-none" id="note-input" placeholder="Adicionar nota da entrevista ou observação..." rows="2"></textarea>
+</div>
+<div class="flex justify-end">
+<button class="inline-flex items-center gap-xs px-md py-xs rounded bg-secondary text-on-secondary hover:bg-primary font-label-md text-label-md transition-all shadow-sm" id="btn-add-note">
+<span class="material-symbols-outlined text-[16px]">send</span> Adicionar Nota
+            </button>
+</div>
+</div>
+</div>
+<!-- Bloco de Conclusão e Decisão da ONG -->
+<div class="bg-surface-container-lowest rounded-xl p-lg shadow-sm flex flex-col gap-md">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Conclusão da Candidatura</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Após a conferência dos itens, selecione o encaminhamento oficial da solicitação para gerar as notificações e o termo de adoção.
+        </p>
+<div class="flex flex-col gap-sm pt-xs">
+<!-- Botão Primário Destaque -->
+<button class="w-full py-md px-lg rounded-xl bg-primary text-on-primary hover:bg-primary-container font-headline-md text-[18px] font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-sm" id="btn-final-approve">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+            Aprovar e Emitir Termo de Adoção
+          </button>
+<!-- Botão Secundário -->
+<button class="w-full py-sm px-md rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-xs" id="btn-request-docs">
+<span class="material-symbols-outlined text-[18px]">contact_support</span>
+            Solicitar Mais Documentos / Esclarecimentos
+          </button>
+<!-- Botão Recusa -->
+<button class="w-full py-sm px-md rounded-xl text-error hover:bg-error-container font-label-md text-label-md font-medium transition-all flex items-center justify-center gap-xs" id="btn-formal-reject">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+            Recusar Candidatura com Template Cordial
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Interativo de Confirmação de Aprovação (Simulação fluida) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-md" id="approval-modal">
+<div class="bg-surface-container-lowest rounded-2xl p-xl max-w-lg w-full shadow-2xl flex flex-col gap-md animate-in fade-in zoom-in duration-200">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div class="flex flex-col gap-xs">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Emitir Termo de Adoção Responsável</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Você está aprovando oficialmente a tutoria do filhote <strong>Bob</strong> para <strong>Mariana Silva</strong>. Um e-mail com o link do termo assinado digitalmente será enviado à adotante.
+        </p>
+</div>
+<div class="bg-surface-container-low p-md rounded-lg flex flex-col gap-xs font-label-md text-[13px] text-on-surface">
+<div class="flex items-center justify-between">
+<span class="text-outline">Taxa de Adoção / Castração:</span>
+<span class="font-bold">Isenta (ONG Parceira)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Retirada Agendada para:</span>
+<span class="font-bold">Sábado, 22/02 às 10:00</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-sm pt-sm">
+<button class="px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md" id="modal-cancel-btn">
+          Cancelar
+        </button>
+<button class="px-lg py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-bold shadow-sm" id="modal-confirm-btn">
+          Confirmar e Concluir
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const finalApproveBtn = document.getElementById('btn-final-approve');
+    const quickApproveBtn = document.getElementById('btn-quick-approve');
+    const modal = document.getElementById('approval-modal');
+    const modalCancel = document.getElementById('modal-cancel-btn');
+    const modalConfirm = document.getElementById('modal-confirm-btn');
+    const addNoteBtn = document.getElementById('btn-add-note');
+    const noteInput = document.getElementById('note-input');
+    const notesContainer = document.getElementById('notes-container');
+
+    function openModal() {
+      if (modal) modal.classList.remove('hidden');
+    }
+    function closeModal() {
+      if (modal) modal.classList.add('hidden');
+    }
+
+    if (finalApproveBtn) finalApproveBtn.addEventListener('click', openModal);
+    if (quickApproveBtn) quickApproveBtn.addEventListener('click', openModal);
+    if (modalCancel) modalCancel.addEventListener('click', closeModal);
+
+    if (modalConfirm) {
+      modalConfirm.addEventListener('click', function() {
+        modalConfirm.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> Emitindo Termo...';
+        setTimeout(function() {
+          closeModal();
+          alert('Proposta aprovada com sucesso! O Termo Digital e a cartilha do Bob foram enviados para mariana.silva@email.com');
+          modalConfirm.innerText = 'Confirmar e Concluir';
+        }, 800);
+      });
+    }
+
+    if (addNoteBtn && noteInput && notesContainer) {
+      addNoteBtn.addEventListener('click', function() {
+        const text = noteInput.value.trim();
+        if (!text) return;
+
+        const noteDiv = document.createElement('div');
+        noteDiv.className = 'p-sm rounded-lg bg-surface-container-low flex flex-col gap-xs animate-in fade-in duration-300';
+        noteDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="font-label-md text-label-md text-primary font-semibold">Você (Equipe ONG)</span>
+            <span class="font-label-md text-[11px] text-outline">Agora mesmo</span>
+          </div>
+          <p class="font-body-md text-[14px] text-on-surface">` + text.replace(/</g, "&lt;").replace(/>/g, "&gt;") + `</p>
+        `;
+        notesContainer.appendChild(noteDiv);
+        noteInput.value = '';
+      });
+    }
+
+    const openInterviewBtn = document.getElementById('btn-open-interview');
+    if (openInterviewBtn) {
+      openInterviewBtn.addEventListener('click', function() {
+        alert('Sala de entrevista aberta no Google Meet: meet.google.com/pats-mariana-bob');
+      });
+    }
+
+    const quickRejectBtn = document.getElementById('btn-quick-reject');
+    const formalRejectBtn = document.getElementById('btn-formal-reject');
+    function handleReject() {
+      const motive = prompt('Insira uma justificativa educada para envio do e-mail padrão à candidata:');
+      if (motive) {
+        alert('Candidatura arquivada com mensagem cordial enviada à Mariana.');
+      }
+    }
+    if (quickRejectBtn) quickRejectBtn.addEventListener('click', handleReject);
+    if (formalRejectBtn) formalRejectBtn.addEventListener('click', handleReject);
+  })();
+</script></main></div></body></html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#1f1b16","surface-bright":"#fff8f4","primary-fixed":"#efe0cf","surface-container-low":"#fcf2ea","surface":"#fff8f4","on-primary-fixed-variant":"#4f4539","on-primary-container":"#daccbb","on-secondary":"#ffffff","on-secondary-container":"#6a6456","on-secondary-fixed":"#1f1b11","on-tertiary-fixed-variant":"#43474e","error":"#ba1a1a","secondary-fixed":"#eae2d1","secondary":"#645e51","surface-container-lowest":"#ffffff","error-container":"#ffdad6","tertiary":"#3d4147","primary":"#483f33","on-surface-variant":"#4c463e","surface-container-high":"#f1e6de","inverse-surface":"#352f2a","background":"#fff8f4","on-error-container":"#93000a","surface-dim":"#e2d8d0","secondary-container":"#eae2d1","on-primary":"#ffffff","tertiary-container":"#54585f","surface-container-highest":"#ebe1d9","outline-variant":"#cfc5bb","secondary-fixed-dim":"#cec6b5","on-tertiary-fixed":"#181c22","tertiary-fixed":"#dfe2eb","on-background":"#1f1b16","surface-variant":"#ebe1d9","tertiary-fixed-dim":"#c3c6cf","outline":"#7d766d","primary-container":"#605649","on-primary-fixed":"#221a10","on-tertiary":"#ffffff","surface-tint":"#675d50","on-error":"#ffffff","on-secondary-fixed-variant":"#4b463a","inverse-primary":"#d2c4b4","primary-fixed-dim":"#d2c4b4","inverse-on-surface":"#f9efe7","surface-container":"#f6ece4","on-tertiary-container":"#cbced7"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"md":"1rem","lg":"1.5rem","xl":"2.5rem","xs":"0.25rem","container-max":"1200px","gutter":"1.5rem","sm":"0.5rem"},"fontFamily":{"headline-lg-mobile":["Plus Jakarta Sans"],"label-md":["Work Sans"],"display-lg":["Plus Jakarta Sans"],"body-lg":["Work Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Work Sans"],"headline-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low flex flex-col z-50 shadow-[0_1px_8px_rgba(96,86,73,0.08)]"><div class="p-lg flex items-center gap-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">pets</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md leading-none text-on-surface font-bold tracking-tight">Patas Carentes</span><span class="font-label-md text-label-md text-on-surface-variant font-medium mt-xs uppercase tracking-wider">Painel ONG</span></div></div><nav class="flex-1 px-md py-sm flex flex-col gap-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="px-sm py-xs"><span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Principal</span></div><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="visao-geral" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Visão Geral</span></a><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="animais-cadastrados" href="#"><span class="material-symbols-outlined text-[20px]">sound_detection_dog_barking</span><span class="font-label-md text-label-md">Animais Cadastrados</span></a><a class="flex items-center justify-between px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pedidos-de-adocao" href="#"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-[20px]">volunteer_activism</span><span class="font-label-md text-label-md">Pedidos de Adoção</span></div><span class="px-sm py-xs rounded-full bg-primary-fixed-dim text-on-primary-fixed font-label-md text-label-md leading-none">12</span></a><div class="px-sm py-xs mt-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Gestão</span></div><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="padrinhos-e-doacoes" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="font-label-md text-label-md">Padrinhos &amp; Doações</span></a><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="relatorios-de-transparencia" href="#"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-label-md text-label-md">Relatórios</span></a><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuracoes-da-ong" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Configurações</span></a></nav><div class="p-md bg-surface-container m-md rounded-xl flex flex-col gap-sm"><div class="flex items-center gap-sm"><div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">home_health</span></div><div class="flex-1 min-w-0"><div class="font-label-md text-label-md font-semibold text-on-surface truncate">Anjos de Quatro Patas</div><div class="font-label-md text-label-md text-outline truncate">São Paulo - SP</div></div></div><div class="pt-xs flex items-center justify-between"><a class="flex items-center gap-xs font-label-md text-label-md text-error hover:text-on-surface transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[18px]">logout</span>Sair da conta</a><div class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface-variant">Online</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(96,86,73,0.06)] z-40 flex items-center justify-between px-lg"><div class="flex items-center gap-md"><div class="relative flex items-center w-72"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest rounded-full font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="Buscar animais, pedidos..." type="text"/></div><span class="inline-flex items-center gap-xs px-sm py-xs bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-md font-semibold"><span class="material-symbols-outlined text-[16px]">verified</span>Verificada</span></div><div class="flex items-center gap-md"><a class="hidden sm:inline-flex items-center gap-xs px-md py-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="portal-publico" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span>Site Público</a><a class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary transition-all font-label-md text-label-md shadow-sm" data-path="novo-pet" href="#"><span class="material-symbols-outlined text-[18px]">add</span>Novo Pet</a><button aria-label="Notificações" class="relative p-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full min-h-screen px-lg py-lg bg-background"><div class="flex flex-col w-full">
+<!-- Stepper & Top Navigation Header -->
+<div class="flex flex-col gap-sm mb-lg">
+<div class="flex items-center gap-xs font-label-md text-label-md text-outline">
+<a class="hover:text-primary transition-colors" href="#">Painel ONG</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Animais Cadastrados</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Novo Pet (Etapa 1 de 3)</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-md pt-xs">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Cadastrar Novo Pet</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Adicione as fotos e os dados de identificação para acolher um novo amiguinho.</p>
+</div>
+<div class="inline-flex items-center gap-xs bg-surface-container-high px-md py-xs rounded-full self-start sm:self-auto shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Auto-salvamento ativo</span>
+</div>
+</div>
+<!-- Stepper Progress Bar -->
+<div class="mt-md bg-surface-container-lowest p-md sm:p-lg rounded-xl shadow-[0_2px_12px_rgba(96,86,73,0.06)]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md relative">
+<!-- Step 1 (Active) -->
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-md text-body-md shadow-sm">
+            1
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Fotos &amp; Identificação</span>
+<span class="font-label-md text-xs text-on-surface-variant">Etapa atual • Preenchimento</span>
+</div>
+</div>
+<!-- Step 2 (Pending) -->
+<div class="flex items-center gap-sm opacity-60">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-headline-md text-body-md">
+            2
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Saúde &amp; Cuidados</span>
+<span class="font-label-md text-xs text-outline">Vacinas, castração, histórico</span>
+</div>
+</div>
+<!-- Step 3 (Pending) -->
+<div class="flex items-center gap-sm opacity-60">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-headline-md text-body-md">
+            3
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Personalidade &amp; Destino</span>
+<span class="font-label-md text-xs text-outline">Comportamento e adoção</span>
+</div>
+</div>
+</div>
+<!-- Linear visual progress indicator -->
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-md overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 33.33%;"></div>
+</div>
+</div>
+</div>
+<form class="flex flex-col gap-lg" id="petForm" onsubmit="event.preventDefault();">
+<!-- Main Form Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+<!-- Bloco 1: Fotos e Mídia do Pet (5 cols on desktop) -->
+<section class="lg:col-span-5 flex flex-col gap-md bg-surface-container-lowest p-lg rounded-xl shadow-[0_2px_12px_rgba(96,86,73,0.06)]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">photo_camera</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Fotos &amp; Mídia</h2>
+</div>
+<span class="px-sm py-xs bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-xs font-semibold">Capa Obrigatória</span>
+</div>
+<p class="font-body-md text-label-md text-outline">Fotos iluminadas e nítidas aumentam em até 4x o interesse de potenciais adotantes.</p>
+<!-- Main Photo Box Preview -->
+<div class="relative group rounded-xl overflow-hidden bg-surface-container-high aspect-square shadow-sm flex items-center justify-center">
+<img alt="Foto principal do pet" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="A portrait of a cheerful, smiling golden retriever wearing a light blue knit scarf, seated comfortably indoors on a soft floor with warm natural window sunlight and gentle wooden wall accents in a modern sanctuary." id="mainPetPhoto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvhym8v2bKU8NshAgtvXMfGa5bYWJMHtdEmyfWfBoa62pcJQhY3LNZ8X2ZUvFvD_Uf8czRcxsfM6kWKFARZIx5A-_jTGi2tLhaaEt7kZ5T7Jan-S1vgdE_3i8vPKqZA8Us5H_LTWPnMPtqYVWYDqxIbZo9Uj0QMsELirPG1biqrLsSd30G-cwHlKtoExTP46hdFvZn0P0lge6bqxQLHbNcHQac50qxkLUONk0SBHodb9XLpngLyC3U"/>
+<!-- Overlay Badge & Quick Actions -->
+<div class="absolute top-3 left-3 bg-inverse-surface/80 backdrop-blur-sm text-inverse-on-surface px-sm py-xs rounded-full font-label-md text-xs flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span>Foto Principal</span>
+</div>
+<div class="absolute inset-0 bg-inverse-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-sm p-md">
+<button class="px-md py-sm rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold hover:bg-surface transition-all flex items-center gap-xs shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+              Substituir
+            </button>
+<button aria-label="Remover Foto" class="p-sm rounded-lg bg-surface-container-lowest text-error font-label-md hover:bg-error-container transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Secondary Miniatures Grid -->
+<div class="flex flex-col gap-xs pt-xs">
+<label class="font-label-md text-label-md text-on-surface-variant font-semibold">Fotos Adicionais (Até 3 fotos)</label>
+<div class="grid grid-cols-3 gap-sm">
+<!-- Slot 1 -->
+<div class="relative rounded-lg overflow-hidden aspect-square bg-surface-container-high flex flex-col items-center justify-center text-outline cursor-pointer hover:bg-surface-container hover:text-primary transition-all group">
+<img alt="Miniatura 1" class="w-full h-full object-cover" data-alt="Golden retriever running happily in an open grassy park with ears flopping in gentle warm morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhk-ISw_OzDwGEGgPNOzkgvsDmgwLtFAC0VULs4gCYvserpZqB3Rk-tr6vpZwKnE_Vw17WVA2SuwNCPCQkh9HPAGnnzWFa9vvRKaXNtvIWXvgKo7XNQk_YNndIxrU72g6OlIH9igOpY9B9KhJmdrYb44vLwS26w4pz0ZtMfpv_obvgv438jt73Ea2aYu16d-jIC_JXsNwNtzkgE5g-wMLDyuTq2hNXeoSev0xf3ukW7uz6g0LkNKHi"/>
+<button class="absolute top-1 right-1 w-6 h-6 rounded-full bg-inverse-surface/80 text-inverse-on-surface flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<!-- Slot 2 -->
+<div class="relative rounded-lg overflow-hidden aspect-square bg-surface-container-high flex flex-col items-center justify-center text-outline cursor-pointer hover:bg-surface-container hover:text-primary transition-all group">
+<img alt="Miniatura 2" class="w-full h-full object-cover" data-alt="Close-up of golden dog paws and snout resting peacefully on a beige knitted blanket." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyEhwEr7YDfnZmztZItTecNWJ7H2ZORlsa3n8hlIVKmQ4oLlkmfqQ2fetASidBZOp6jkQ1xfeD4ohva_-HeZ1c4llaCWEdLhwBF72wjpUzSBITUa2Ze5vs74ENIJgw4T-IYqyZriv9u23pAunM3_EM9upOVQqzGI1LC3zfq0HUF_x4x4eVVqq6UA18IlVfKDfEfy_MM9N_leSyOYNn4z40OsQ6HxzQLTXXZD9wIHMiwkN5ty9TLiB-"/>
+<button class="absolute top-1 right-1 w-6 h-6 rounded-full bg-inverse-surface/80 text-inverse-on-surface flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<!-- Slot 3 (Empty upload slot) -->
+<button class="rounded-lg aspect-square bg-surface-container flex flex-col items-center justify-center gap-xs text-outline hover:text-primary hover:bg-surface-container-high transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]">add_photo_alternate</span>
+<span class="font-label-md text-xs font-medium">Adicionar</span>
+</button>
+</div>
+</div>
+<!-- Video Reel / Clip Input -->
+<div class="flex flex-col gap-xs pt-xs">
+<label class="font-label-md text-label-md text-on-surface-variant font-semibold flex items-center justify-between" for="videoUrl">
+<span>Vídeo Curto (Opcional)</span>
+<span class="text-xs font-normal text-outline">Instagram Reels ou TikTok</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">videocam</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="videoUrl" placeholder="https://www.instagram.com/reel/..." type="url"/>
+</div>
+<span class="font-label-md text-xs text-outline">Vídeos mostram o temperamento espontâneo do animal.</span>
+</div>
+</section>
+<!-- Bloco 2: Informações de Identificação (7 cols on desktop) -->
+<section class="lg:col-span-7 flex flex-col gap-md bg-surface-container-lowest p-lg rounded-xl shadow-[0_2px_12px_rgba(96,86,73,0.06)]">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">badge</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Identificação Básica</h2>
+</div>
+<p class="font-body-md text-label-md text-outline">Preencha os dados primários que aparecerão no catálogo de adoção.</p>
+<!-- Pet Name -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-xs" for="petName">
+<span>Nome do Pet</span>
+<span class="text-error font-bold">*</span>
+</label>
+<input class="w-full px-md py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="petName" placeholder="Ex: Bento, Pipoca, Mel, Thor..." required="" type="text" value="Bento"/>
+</div>
+<!-- Espécie (Pill Buttons) -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-xs">
+<span>Espécie</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="grid grid-cols-3 gap-sm" id="speciesSelector">
+<button class="species-btn flex items-center justify-center gap-xs py-2.5 px-md rounded-lg font-label-md text-label-md font-semibold transition-all bg-primary text-on-primary shadow-sm" data-group="species" data-selected="true" type="button">
+<span class="material-symbols-outlined text-[18px]">sound_detection_dog_barking</span>
+<span>Cachorro</span>
+</button>
+<button class="species-btn flex items-center justify-center gap-xs py-2.5 px-md rounded-lg font-label-md text-label-md font-medium transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-group="species" data-selected="false" type="button">
+<span class="material-symbols-outlined text-[18px]">pets</span>
+<span>Gato</span>
+</button>
+<button class="species-btn flex items-center justify-center gap-xs py-2.5 px-md rounded-lg font-label-md text-label-md font-medium transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-group="species" data-selected="false" type="button">
+<span class="material-symbols-outlined text-[18px]">cruelty_free</span>
+<span>Outro</span>
+</button>
+</div>
+</div>
+<!-- Sexo & Porte (Two Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Sexo -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-xs">
+<span>Sexo</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="grid grid-cols-2 gap-sm" id="genderSelector">
+<button class="gender-btn flex items-center justify-center gap-xs py-2.5 px-md rounded-lg font-label-md text-label-md font-semibold transition-all bg-primary text-on-primary shadow-sm" data-group="gender" data-selected="true" type="button">
+<span class="material-symbols-outlined text-[18px]">male</span>
+<span>Macho</span>
+</button>
+<button class="gender-btn flex items-center justify-center gap-xs py-2.5 px-md rounded-lg font-label-md text-label-md font-medium transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-group="gender" data-selected="false" type="button">
+<span class="material-symbols-outlined text-[18px]">female</span>
+<span>Fêmea</span>
+</button>
+</div>
+</div>
+<!-- Porte Estimado -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-xs">
+<span>Porte Estimado</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="grid grid-cols-3 gap-xs" id="sizeSelector">
+<button class="size-btn flex flex-col items-center justify-center py-2 px-xs rounded-lg font-label-md text-xs font-medium transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-group="size" data-selected="false" type="button">
+<span class="font-semibold text-label-md">Pequeno</span>
+<span class="text-[10px] text-outline">&lt; 10kg</span>
+</button>
+<button class="size-btn flex flex-col items-center justify-center py-2 px-xs rounded-lg font-label-md text-xs font-semibold transition-all bg-primary text-on-primary shadow-sm" data-group="size" data-selected="true" type="button">
+<span class="font-semibold text-label-md">Médio</span>
+<span class="text-[10px] opacity-80">10 a 25kg</span>
+</button>
+<button class="size-btn flex flex-col items-center justify-center py-2 px-xs rounded-lg font-label-md text-xs font-medium transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-group="size" data-selected="false" type="button">
+<span class="font-semibold text-label-md">Grande</span>
+<span class="text-[10px] text-outline">&gt; 25kg</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Idade & Raça (Two Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Idade Estimada -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-xs" for="petAge">
+<span>Faixa Etária</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<select class="w-full px-md py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer shadow-inner" id="petAge">
+<option value="filhote">Filhote (&lt; 1 ano)</option>
+<option selected="" value="jovem">Jovem (1 a 3 anos)</option>
+<option value="adulto">Adulto (3 a 7 anos)</option>
+<option value="senior">Sênior (+7 anos)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 pointer-events-none text-outline text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Raça / Mistura -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-xs" for="petBreed">
+<span>Raça / Mistura</span>
+<span class="text-error font-bold">*</span>
+</label>
+<input class="w-full px-md py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="petBreed" placeholder="Ex: SRD, Poodle, Labrador..." type="text" value="SRD - Vira-lata Caramelo Dourado"/>
+</div>
+</div>
+<!-- Cor Predominante & Microchip -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="petColor">Cor Predominante</label>
+<input class="w-full px-md py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="petColor" placeholder="Ex: Preto, Caramelo, Branco, Malhado" type="text" value="Dourado / Caramelo Claro"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="petMicrochip">
+<span>Número do Microchip</span>
+<span class="text-xs font-normal text-outline">Opcional</span>
+</label>
+<input class="w-full px-md py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="petMicrochip" placeholder="Ex: 981098123456789" type="text"/>
+</div>
+</div>
+<!-- Resumo Visual Warm Paws Card -->
+<div class="p-md rounded-xl bg-surface-container-low flex items-start gap-md mt-xs">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Pronto para a Etapa 2?</span>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Na próxima etapa você registrará dados clínicos essenciais: vacinas aplicadas, histórico de castração e exames realizados pela ONG.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Wizard Action Footer Bar -->
+<div class="sticky bottom-0 bg-surface/95 backdrop-blur-md p-md rounded-xl shadow-[0_-2px_12px_rgba(96,86,73,0.06)] flex flex-col sm:flex-row items-center justify-between gap-md mt-sm">
+<div class="flex items-center gap-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto px-lg py-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md font-semibold transition-all" id="btnCancel" type="button">
+          Cancelar
+        </button>
+<button class="w-full sm:w-auto px-lg py-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-xs" id="btnDraft" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Salvar Rascunho</span>
+</button>
+</div>
+<div class="flex items-center gap-sm w-full sm:w-auto justify-end">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-sm px-xl py-3 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-bold shadow-md hover:shadow-lg transition-all transform active:scale-95" id="btnNext" type="button">
+<span>Avançar para Saúde e Vacinas</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+<script>
+  (function() {
+    function setupGroupSelection(buttons, selectedClasses, defaultClasses) {
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => {
+            b.setAttribute('data-selected', 'false');
+            b.classList.remove(...selectedClasses);
+            b.classList.add(...defaultClasses);
+          });
+          btn.setAttribute('data-selected', 'true');
+          btn.classList.remove(...defaultClasses);
+          btn.classList.add(...selectedClasses);
+        });
+      });
+    }
+
+    const speciesBtns = document.querySelectorAll('.species-btn');
+    setupGroupSelection(
+      speciesBtns, 
+      ['bg-primary', 'text-on-primary', 'shadow-sm'], 
+      ['bg-surface-container-low', 'text-on-surface-variant']
+    );
+
+    const genderBtns = document.querySelectorAll('.gender-btn');
+    setupGroupSelection(
+      genderBtns, 
+      ['bg-primary', 'text-on-primary', 'shadow-sm'], 
+      ['bg-surface-container-low', 'text-on-surface-variant']
+    );
+
+    const sizeBtns = document.querySelectorAll('.size-btn');
+    setupGroupSelection(
+      sizeBtns, 
+      ['bg-primary', 'text-on-primary', 'shadow-sm'], 
+      ['bg-surface-container-low', 'text-on-surface-variant']
+    );
+
+    // Feedback visual do botão de rascunho
+    const draftBtn = document.getElementById('btnDraft');
+    if (draftBtn) {
+      draftBtn.addEventListener('click', () => {
+        const originalText = draftBtn.innerHTML;
+        draftBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>Salvo!</span>';
+        draftBtn.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+        setTimeout(() => {
+          draftBtn.innerHTML = originalText;
+          draftBtn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+        }, 1800);
+      });
+    }
+
+    // Ação avançar com validação simples
+    const btnNext = document.getElementById('btnNext');
+    if (btnNext) {
+      btnNext.addEventListener('click', () => {
+        const petName = document.getElementById('petName');
+        if (!petName.value.trim()) {
+          petName.focus();
+          petName.classList.add('ring-2', 'ring-error');
+          return;
+        }
+        petName.classList.remove('ring-2', 'ring-error');
+        // Simulação de transição de etapa
+        btnNext.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> Carregando etapa 2...';
+        setTimeout(() => {
+          btnNext.innerHTML = '<span>Etapa 2: Saúde</span><span class="material-symbols-outlined text-[18px]">done</span>';
+        }, 600);
+      });
+    }
+  })();
+</script></main></div></body></html>

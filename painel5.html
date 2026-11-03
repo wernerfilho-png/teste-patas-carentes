@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#1f1b16","surface-bright":"#fff8f4","primary-fixed":"#efe0cf","surface-container-low":"#fcf2ea","surface":"#fff8f4","on-primary-fixed-variant":"#4f4539","on-primary-container":"#daccbb","on-secondary":"#ffffff","on-secondary-container":"#6a6456","on-secondary-fixed":"#1f1b11","on-tertiary-fixed-variant":"#43474e","error":"#ba1a1a","secondary-fixed":"#eae2d1","secondary":"#645e51","surface-container-lowest":"#ffffff","error-container":"#ffdad6","tertiary":"#3d4147","primary":"#483f33","on-surface-variant":"#4c463e","surface-container-high":"#f1e6de","inverse-surface":"#352f2a","background":"#fff8f4","on-error-container":"#93000a","surface-dim":"#e2d8d0","secondary-container":"#eae2d1","on-primary":"#ffffff","tertiary-container":"#54585f","surface-container-highest":"#ebe1d9","outline-variant":"#cfc5bb","secondary-fixed-dim":"#cec6b5","on-tertiary-fixed":"#181c22","tertiary-fixed":"#dfe2eb","on-background":"#1f1b16","surface-variant":"#ebe1d9","tertiary-fixed-dim":"#c3c6cf","outline":"#7d766d","primary-container":"#605649","on-primary-fixed":"#221a10","on-tertiary":"#ffffff","surface-tint":"#675d50","on-error":"#ffffff","on-secondary-fixed-variant":"#4b463a","inverse-primary":"#d2c4b4","primary-fixed-dim":"#d2c4b4","inverse-on-surface":"#f9efe7","surface-container":"#f6ece4","on-tertiary-container":"#cbced7"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"md":"1rem","lg":"1.5rem","xl":"2.5rem","xs":"0.25rem","container-max":"1200px","gutter":"1.5rem","sm":"0.5rem"},"fontFamily":{"headline-lg-mobile":["Plus Jakarta Sans"],"label-md":["Work Sans"],"display-lg":["Plus Jakarta Sans"],"body-lg":["Work Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Work Sans"],"headline-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low flex flex-col z-50 shadow-[0_1px_8px_rgba(96,86,73,0.08)]"><div class="p-lg flex items-center gap-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">pets</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md leading-none text-on-surface font-bold tracking-tight">Patas Carentes</span><span class="font-label-md text-label-md text-on-surface-variant font-medium mt-xs uppercase tracking-wider">Painel ONG</span></div></div><nav class="flex-1 px-md py-sm flex flex-col gap-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="px-sm py-xs"><span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Principal</span></div><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="visao-geral" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Visão Geral</span></a><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="animais-cadastrados" href="#"><span class="material-symbols-outlined text-[20px]">sound_detection_dog_barking</span><span class="font-label-md text-label-md">Animais Cadastrados</span></a><a class="flex items-center justify-between px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pedidos-de-adocao" href="#"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-[20px]">volunteer_activism</span><span class="font-label-md text-label-md">Pedidos de Adoção</span></div><span class="px-sm py-xs rounded-full bg-primary-fixed-dim text-on-primary-fixed font-label-md text-label-md leading-none">12</span></a><div class="px-sm py-xs mt-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Gestão</span></div><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="padrinhos-e-doacoes" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="font-label-md text-label-md">Padrinhos &amp; Doações</span></a><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="relatorios-de-transparencia" href="#"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-label-md text-label-md">Relatórios</span></a><a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuracoes-da-ong" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Configurações</span></a></nav><div class="p-md bg-surface-container m-md rounded-xl flex flex-col gap-sm"><div class="flex items-center gap-sm"><div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">home_health</span></div><div class="flex-1 min-w-0"><div class="font-label-md text-label-md font-semibold text-on-surface truncate">Anjos de Quatro Patas</div><div class="font-label-md text-label-md text-outline truncate">São Paulo - SP</div></div></div><div class="pt-xs flex items-center justify-between"><a class="flex items-center gap-xs font-label-md text-label-md text-error hover:text-on-surface transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[18px]">logout</span>Sair da conta</a><div class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface-variant">Online</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(96,86,73,0.06)] z-40 flex items-center justify-between px-lg"><div class="flex items-center gap-md"><div class="relative flex items-center w-72"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest rounded-full font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="Buscar animais, pedidos..." type="text"/></div><span class="inline-flex items-center gap-xs px-sm py-xs bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-md font-semibold"><span class="material-symbols-outlined text-[16px]">verified</span>Verificada</span></div><div class="flex items-center gap-md"><a class="hidden sm:inline-flex items-center gap-xs px-md py-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="portal-publico" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span>Site Público</a><a class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary transition-all font-label-md text-label-md shadow-sm" data-path="novo-pet" href="#"><span class="material-symbols-outlined text-[18px]">add</span>Novo Pet</a><button aria-label="Notificações" class="relative p-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full min-h-screen px-lg py-lg bg-background"><div class="flex flex-col w-full gap-xl">
+<!-- Breadcrumb & Top Actions Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center gap-xs font-label-md text-label-md text-outline">
+<span>Painel ONG</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Relatórios &amp; Transparência</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-xs">Relatórios &amp; Prestação de Contas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Acompanhe demonstrativos financeiros, custos operacionais por animal e gere balanços públicos com certificação de transparência em tempo real.
+      </p>
+</div>
+<!-- Header CTAs -->
+<div class="flex items-center flex-wrap gap-sm shrink-0">
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Exportar Balancete
+      </button>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">public</span>
+        Publicar Relatório
+      </button>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-all shadow-md">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+        + Adicionar Comprovante
+      </button>
+</div>
+</div>
+<!-- Top KPI Cards (Metrics of Responsibility) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl shadow-sm flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1">
+<div class="flex items-start justify-between gap-sm">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">Arrecadado no Mês</span>
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+</div>
+<div class="mt-md flex flex-col gap-xs">
+<div class="flex items-baseline gap-xs">
+<span class="font-display-lg text-headline-lg font-bold text-on-surface">R$ 12.850</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">,00</span>
+</div>
+<div class="flex items-center gap-xs font-label-md text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span>100% categorizado com comprovantes</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-md overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl shadow-sm flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1">
+<div class="flex items-start justify-between gap-sm">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">Custos Operacionais</span>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">outbox</span>
+</div>
+</div>
+<div class="mt-md flex flex-col gap-xs">
+<div class="flex items-baseline gap-xs">
+<span class="font-display-lg text-headline-lg font-bold text-on-surface">R$ 10.420</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">,00</span>
+</div>
+<div class="flex items-center gap-xs font-label-md text-label-md text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
+<span>Ração 52% • Vet 34% • Manut. 14%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-md flex overflow-hidden">
+<div class="bg-primary h-full" style="width: 52%;"></div>
+<div class="bg-secondary h-full" style="width: 34%;"></div>
+<div class="bg-primary-fixed-dim h-full" style="width: 14%;"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl shadow-sm flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1">
+<div class="flex items-start justify-between gap-sm">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">Fundo de Emergência</span>
+<div class="w-10 h-10 rounded-lg bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[22px]">chevron_left</span>
+</div>
+</div>
+<div class="mt-md flex flex-col gap-xs">
+<div class="flex items-baseline gap-xs">
+<span class="font-display-lg text-headline-lg font-bold text-on-surface">R$ 2.430</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">,00</span>
+</div>
+<div class="flex items-center gap-xs font-label-md text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[16px]">healing</span>
+<span>Para cirurgias e resgates críticos</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-md overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl shadow-sm flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1">
+<div class="flex items-start justify-between gap-sm">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">Índice Transparência</span>
+<div class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+</div>
+</div>
+<div class="mt-md flex flex-col gap-xs">
+<div class="flex items-center gap-xs">
+<span class="font-display-lg text-headline-lg font-bold text-on-surface">98%</span>
+<span class="px-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-[12px] font-bold">SELO OURO</span>
+</div>
+<div class="flex items-center gap-xs font-label-md text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Auditoria interna aprovada e pública</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-md overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 98%;"></div>
+</div>
+</div>
+</div>
+<!-- Resource Allocation & Financial Breakdown -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left: Categorized Expenditure Bars -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-lg rounded-xl shadow-sm flex flex-col justify-between gap-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-sm pb-xs">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Alocação de Recursos</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Execução orçamentária por núcleo de atendimento aos animais acolhidos.</p>
+</div>
+<!-- Period Toggle Chips -->
+<div class="inline-flex p-xs bg-surface-container rounded-lg gap-xs">
+<button class="px-sm py-xs rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-xs">Outubro/24</button>
+<button class="px-sm py-xs rounded text-outline hover:text-on-surface font-label-md text-label-md transition-colors">Setembro/24</button>
+<button class="px-sm py-xs rounded text-outline hover:text-on-surface font-label-md text-label-md transition-colors hidden sm:block">Ano 2024</button>
+</div>
+</div>
+<!-- Bars List -->
+<div class="flex flex-col gap-lg my-auto">
+<!-- Item 1 -->
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">restaurant</span>
+              Ração &amp; Nutrição Especial
+            </span>
+<span class="text-on-surface font-semibold">R$ 4.200,00 <span class="text-outline font-normal">/ R$ 4.200 (100%)</span></span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-label-md text-[12px]">
+<span>68 cães e 34 gatos alimentados</span>
+<span class="text-on-surface-variant font-medium">Meta mensal cumprida</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">medical_services</span>
+              Cuidados Clínicos &amp; Castrações
+            </span>
+<span class="text-on-surface font-semibold">R$ 3.850,00 <span class="text-outline font-normal">/ R$ 4.800 (80%)</span></span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 80%;"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-label-md text-[12px]">
+<span>12 castrações e 4 cirurgias de ortopedia realizadas</span>
+<span class="text-on-surface-variant font-medium">R$ 950,00 restante</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary-container">vaccines</span>
+              Medicamentos, Vermífugos &amp; Vacinas
+            </span>
+<span class="text-on-surface font-semibold">R$ 1.850,00 <span class="text-outline font-normal">/ R$ 1.850 (100%)</span></span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-label-md text-[12px]">
+<span>Lote V10 &amp; Antirrábica para filhotes</span>
+<span class="text-on-surface-variant font-medium">Meta mensal cumprida</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-outline">cleaning_services</span>
+              Estrutura &amp; Higiene dos Recintos
+            </span>
+<span class="text-on-surface font-semibold">R$ 520,00 <span class="text-outline font-normal">/ R$ 1.200 (43%)</span></span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-outline-variant h-full rounded-full transition-all duration-500" style="width: 43%;"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-label-md text-[12px]">
+<span>Desinfecção de canis e manutenção de telas</span>
+<span class="text-on-surface-variant font-medium">Economia programada</span>
+</div>
+</div>
+</div>
+<div class="pt-sm flex items-center justify-between border-t-0 bg-surface-container-low p-md rounded-lg">
+<div class="flex items-center gap-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<span>Todos os valores são auditados por conciliação bancária automática PIX e Cartão.</span>
+</div>
+<a class="font-label-md text-label-md text-primary font-bold hover:underline shrink-0" href="#">Ver extrato analítico →</a>
+</div>
+</div>
+<!-- Right: Mini Visual Chart & Transparency Badge -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Mini Visual Donut / Breakdown -->
+<div class="bg-surface-container-lowest p-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Origem da Renda</span>
+<span class="material-symbols-outlined text-outline">pie_chart</span>
+</div>
+<!-- SVG Donut Chart -->
+<div class="relative flex items-center justify-center my-md">
+<svg class="w-44 h-44 -rotate-90" viewbox="0 0 100 100">
+<!-- Background circle -->
+<circle class="text-surface-container" cx="50" cy="50" fill="none" r="38" stroke="currentColor" stroke-width="12"></circle>
+<!-- Segment 1: Assinaturas/Padrinhos (58%) -->
+<circle class="text-primary" cx="50" cy="50" fill="none" r="38" stroke="currentColor" stroke-dasharray="238.76" stroke-dashoffset="100.28" stroke-linecap="round" stroke-width="12"></circle>
+<!-- Segment 2: Doações Únicas (28%) -->
+<circle class="origin-center rotate-45" cx="50" cy="50" fill="none" r="38" stroke="currentColor" stroke-dasharray="238.76" stroke-dashoffset="171.9" stroke-linecap="round" stroke-width="12"></circle>
+<!-- Segment 3: Campanhas Específicas (14%) -->
+<circle class="origin-center rotate-90" cx="50" cy="50" fill="none" r="38" stroke="currentColor" stroke-dasharray="238.76" stroke-dashoffset="205.3" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface leading-none">R$ 12,8k</span>
+<span class="font-label-md text-[12px] text-outline mt-1 uppercase">Entradas</span>
+</div>
+</div>
+<!-- Donut Legend -->
+<div class="flex flex-col gap-xs font-label-md text-label-md">
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-xs">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-on-surface">Padrinhos Mensais (58%)</span>
+</div>
+<span class="font-semibold text-on-surface">R$ 7.453</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-xs">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Doações Avulsas PIX (28%)</span>
+</div>
+<span class="font-semibold text-on-surface">R$ 3.598</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-xs">
+<span class="w-3 h-3 rounded-full bg-primary-fixed-dim"></span>
+<span class="text-on-surface">Campanhas Emergenciais (14%)</span>
+</div>
+<span class="font-semibold text-on-surface">R$ 1.799</span>
+</div>
+</div>
+</div>
+<!-- Trust Seal Card -->
+<div class="bg-surface-container p-lg rounded-xl flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Auditoria Aberta</span>
+<span class="font-body-md text-[13px] leading-snug text-on-surface-variant">Cada centavo pode ser inspecionado por doadores registrados com chave pública de validação.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Reports & Audit History (Card / Table List) -->
+<div class="flex flex-col gap-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Histórico de Relatórios Publicados</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Demonstrativos aprovados pela diretoria e disponibilizados para download de doadores e autoridades.</p>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-label-md text-label-md text-outline">Filtrar por ano:</span>
+<select class="bg-surface-container-lowest px-md py-xs rounded-lg font-label-md text-label-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary shadow-xs">
+<option>2024 (Todos)</option>
+<option>2023</option>
+<option>2022</option>
+</select>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Report Item 1 -->
+<div class="p-lg flex flex-col md:flex-row md:items-center justify-between gap-md transition-colors hover:bg-surface-container-low">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<div class="flex flex-col gap-xs">
+<div class="flex items-center flex-wrap gap-xs">
+<span class="font-headline-md text-[18px] text-on-surface font-bold">Relatório Financeiro &amp; Clínico - Setembro 2024</span>
+<span class="px-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-[11px] font-bold uppercase tracking-wider">Publicado na Vitrine</span>
+</div>
+<p class="font-body-md text-[14px] text-on-surface-variant">
+              142 doadores notificados por e-mail • R$ 11.940,00 arrecadados • 28 resgates e 14 animais tratados
+            </p>
+<div class="flex items-center gap-md font-label-md text-[12px] text-outline mt-xs">
+<span>Publicado em: 05/10/2024</span>
+<span>•</span>
+<span>Assinatura Digital: SHA-256 Validada</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-sm shrink-0 self-end md:self-center">
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+            Ver Detalhes
+          </button>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+            Baixar PDF
+          </button>
+</div>
+</div>
+<!-- Report Item 2 -->
+<div class="p-lg flex flex-col md:flex-row md:items-center justify-between gap-md transition-colors hover:bg-surface-container-low">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">assessment</span>
+</div>
+<div class="flex flex-col gap-xs">
+<div class="flex items-center flex-wrap gap-xs">
+<span class="font-headline-md text-[18px] text-on-surface font-bold">Relatório Trimestral Q3 (Julho - Setembro 2024)</span>
+<span class="px-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-[11px] font-bold uppercase tracking-wider">Auditoria Concluída</span>
+</div>
+<p class="font-body-md text-[14px] text-on-surface-variant">
+              42 pets diretamente beneficiados • 18 adoções bem-sucedidas • R$ 34.200,00 geridos com saldo positivo
+            </p>
+<div class="flex items-center gap-md font-label-md text-[12px] text-outline mt-xs">
+<span>Publicado em: 30/09/2024</span>
+<span>•</span>
+<span>Revisão do Conselho Fiscal: Aprovado sem ressalvas</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-sm shrink-0 self-end md:self-center">
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+            Ver Detalhes
+          </button>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+            Baixar PDF
+          </button>
+</div>
+</div>
+<!-- Report Item 3 -->
+<div class="p-lg flex flex-col md:flex-row md:items-center justify-between gap-md transition-colors hover:bg-surface-container-low">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">campaign</span>
+</div>
+<div class="flex flex-col gap-xs">
+<div class="flex items-center flex-wrap gap-xs">
+<span class="font-headline-md text-[18px] text-on-surface font-bold">Prestação de Contas: Campanha Vacinação Bob &amp; Filhotes</span>
+<span class="px-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-[11px] font-bold uppercase tracking-wider">100% Concluído</span>
+</div>
+<p class="font-body-md text-[14px] text-on-surface-variant">
+              R$ 2.400,00 arrecadados em 48h • 8 filhotes imunizados com 3 doses + castração garantida
+            </p>
+<div class="flex items-center gap-md font-label-md text-[12px] text-outline mt-xs">
+<span>Publicado em: 15/09/2024</span>
+<span>•</span>
+<span>Comprovantes de vacina anexados com CRMV</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-sm shrink-0 self-end md:self-center">
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+            Ver Detalhes
+          </button>
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+            Baixar PDF
+          </button>
+</div>
+</div>
+<!-- Report Item 4 (Draft) -->
+<div class="p-lg flex flex-col md:flex-row md:items-center justify-between gap-md transition-colors hover:bg-surface-container-low opacity-90">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">pending_actions</span>
+</div>
+<div class="flex flex-col gap-xs">
+<div class="flex items-center flex-wrap gap-xs">
+<span class="font-headline-md text-[18px] text-on-surface font-bold">Balanço Mensal - Outubro 2024 (Prévia em Aberto)</span>
+<span class="px-sm py-0.5 rounded-full bg-surface-container-highest text-outline font-label-md text-[11px] font-bold uppercase tracking-wider">Rascunho • 18 dias restantes</span>
+</div>
+<p class="font-body-md text-[14px] text-on-surface-variant">
+              Em consolidação contínua • 26 comprovantes inseridos • Falta fechamento do lote de farmácia
+            </p>
+<div class="flex items-center gap-md font-label-md text-[12px] text-outline mt-xs">
+<span>Última atualização: Hoje, 10:45</span>
+<span>•</span>
+<span>Conciliação: 91% dos lançamentos batidos</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-sm shrink-0 self-end md:self-center">
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[16px]">edit_document</span>
+            Editar Prévia
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Linked Receipts & Invoices (Comprovantes & Notas Fiscais) -->
+<div class="flex flex-col gap-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Comprovantes &amp; Notas Fiscais Recentes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Documentos fiscais e recibos vinculados a cada gasto da ONG, auditados eletronicamente.</p>
+</div>
+<div class="flex items-center gap-sm">
+<button class="inline-flex items-center gap-xs px-md py-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-xs">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+          Filtrar Tags
+        </button>
+</div>
+</div>
+<!-- Cards Grid of Receipts -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Receipt 1 -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between gap-md group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-sm">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">receipt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface leading-tight">NF-e 004.891</span>
+<span class="font-body-md text-[13px] text-outline">Agropecuária São Francisco</span>
+</div>
+</div>
+<span class="px-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-[11px] font-bold">Validado</span>
+</div>
+<div class="flex flex-col gap-xs bg-surface-container-low p-sm rounded-lg">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Valor total:</span>
+<span class="font-bold text-on-surface">R$ 2.450,00</span>
+</div>
+<div class="flex justify-between font-label-md text-[12px] text-outline">
+<span>Data de Emissão:</span>
+<span>12/10/2024</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-xs">
+<div class="flex items-center gap-xs">
+<span class="px-sm py-xs rounded-full bg-surface-container text-on-surface font-label-md text-[11px] font-semibold">#Ração</span>
+<span class="px-sm py-xs rounded-full bg-surface-container text-on-surface font-label-md text-[11px] font-semibold">#Nutrição</span>
+</div>
+<button class="p-xs text-outline hover:text-primary transition-colors" title="Visualizar arquivo">
+<span class="material-symbols-outlined text-[20px]">file_open</span>
+</button>
+</div>
+</div>
+<!-- Receipt 2 -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between gap-md group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-sm">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_hospital</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface leading-tight">Recibo CRMV #9012</span>
+<span class="font-body-md text-[13px] text-outline">Hospital Vet Quatro Patas</span>
+</div>
+</div>
+<span class="px-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-[11px] font-bold">Validado</span>
+</div>
+<div class="flex flex-col gap-xs bg-surface-container-low p-sm rounded-lg">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Valor total:</span>
+<span class="font-bold text-on-surface">R$ 1.850,00</span>
+</div>
+<div class="flex justify-between font-label-md text-[12px] text-outline">
+<span>Data de Procedimento:</span>
+<span>08/10/2024</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-xs">
+<div class="flex items-center gap-xs">
+<span class="px-sm py-xs rounded-full bg-surface-container text-on-surface font-label-md text-[11px] font-semibold">#ClínicaVet</span>
+<span class="px-sm py-xs rounded-full bg-surface-container text-on-surface font-label-md text-[11px] font-semibold">#Castração</span>
+</div>
+<button class="p-xs text-outline hover:text-primary transition-colors" title="Visualizar arquivo">
+<span class="material-symbols-outlined text-[20px]">file_open</span>
+</button>
+</div>
+</div>
+<!-- Receipt 3 -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between gap-md group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-sm">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-[20px]">medical_information</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface leading-tight">Fatura Ortopédica - Pet Thor</span>
+<span class="font-body-md text-[13px] text-outline">Centro Cirúrgico VetMed</span>
+</div>
+</div>
+<span class="px-sm py-0.5 rounded-full bg-primary-fixed-dim text-on-primary-fixed font-label-md text-[11px] font-bold">Aguardando Nota</span>
+</div>
+<div class="flex flex-col gap-xs bg-surface-container-low p-sm rounded-lg">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Valor estimado:</span>
+<span class="font-bold text-on-surface">R$ 1.200,00</span>
+</div>
+<div class="flex justify-between font-label-md text-[12px] text-outline">
+<span>Previsão de envio da NF:</span>
+<span>Até 16/10/2024</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-xs">
+<div class="flex items-center gap-xs">
+<span class="px-sm py-xs rounded-full bg-surface-container text-on-surface font-label-md text-[11px] font-semibold">#Cirurgia</span>
+<span class="px-sm py-xs rounded-full bg-surface-container text-on-surface font-label-md text-[11px] font-semibold">#Emergência</span>
+</div>
+<button class="p-xs text-outline hover:text-primary transition-colors" title="Adicionar arquivo pendente">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Public Trust Callout / Banner -->
+<div class="relative overflow-hidden bg-primary text-on-primary rounded-xl p-lg md:p-xl shadow-md">
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-lg">
+<div class="flex flex-col gap-xs max-w-2xl">
+<div class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-primary-container text-on-primary-container font-label-md text-[12px] font-semibold w-max mb-xs">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+          Impacto Comprovado em Doações
+        </div>
+<h3 class="font-headline-lg text-headline-lg font-bold leading-tight">
+          Transparência gera até 3x mais confiança &amp; doações recorrentes
+        </h3>
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+          Cada relatório mensal publicado por este painel alimenta instantaneamente a aba pública de <span class="font-semibold text-on-primary">Transparência &amp; Prestação de Contas</span> no site da ONG, permitindo que a comunidade acompanhe os resgates com segurança absoluta.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-sm shrink-0">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-xs px-lg py-md rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-bright font-label-md text-label-md font-bold transition-all shadow-md" href="#">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+          Ver Vitrine Pública
+        </a>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-xs px-lg py-md rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[18px]">settings_suggest</span>
+          Configurar Exibição
+        </button>
+</div>
+</div>
+<!-- Decorative background elements -->
+<div class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-primary-container/20 pointer-events-none blur-2xl"></div>
+<div class="absolute right-32 top-0 w-32 h-32 rounded-full bg-secondary/10 pointer-events-none blur-xl"></div>
+</div>
+</div></main></div></body></html>
