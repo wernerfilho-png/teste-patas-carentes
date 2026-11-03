@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Patas Carentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="components.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col" data-nav="inicio">
+<site-header></site-header>
+<main class="flex-grow">
+<section class="w-full" aria-labelledby="hero-title">
+  <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[614px]">
+    <div class="relative overflow-hidden">
+      <img class="w-full h-full object-cover" alt="Filhote de golden retriever correndo feliz por um campo ensolarado ao entardecer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk0z9LqXPjQeMOA5c28Em-duV4d9Gyewe_jwnCYPGcn3pyUdtxRCeZl3Fwj8pyFNgxHydD8EzQ91L65fk04wFJS9lfHr8KZlBDXV1JdRbYnnog3QM93STimCX2D7wRHlT5GMkGhRDWk5NgAmoj3Xk_XCpRzEqFelC1kpQyjx2MKZs4bqar860EJmgEaQdHIFR_h4D17WmtRe9VFwm9ojzZqC8LNrmOPCz-wh0fwnwluy6-NtVgYiAgiB4QWLNQ6-xSQUCqjn_fnzs">
+    </div>
+    <div class="bg-surface-container flex flex-col justify-center items-center px-xl py-xl text-center">
+      <h1 id="hero-title" class="text-display-lg font-display-lg text-primary mb-md">Uma história de superação!</h1>
+      <div class="w-3/4 h-1 bg-primary relative mb-lg" aria-hidden="true"><div class="absolute -right-1 -top-1 w-3 h-3 bg-primary rotate-45"></div></div>
+      <p class="text-headline-md font-headline-md text-on-surface-variant mb-xl">Clique aqui e conheça a história de Bob</p>
+      <a href="pet-bob.html" class="inline-block bg-primary-container text-on-primary-container px-xl py-md rounded-lg font-bold text-headline-md hover:opacity-90 transition-all active:scale-95 min-w-[160px]">BOB</a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-xl" aria-label="Formas de ajudar">
+  <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 gap-lg md:grid-cols-4">
+    <a href="busca.html" class="bg-surface-container hover:bg-surface-container-high transition-colors p-xl rounded-xl flex flex-col items-center text-center shadow-sm group">
+      <div class="bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center mb-lg group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[32px]">pets</span></div>
+      <h2 class="text-headline-md font-headline-md text-primary mb-sm">ADOTE</h2>
+      <p class="text-body-md text-on-surface-variant">Encontre seu novo melhor amigo e dê um lar para quem precisa.</p>
+    </a>
+    <a href="apadrinhamento.html" class="bg-surface-container hover:bg-surface-container-high transition-colors p-xl rounded-xl flex flex-col items-center text-center shadow-sm group">
+      <div class="bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center mb-lg group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[32px]">favorite</span></div>
+      <h2 class="text-headline-md font-headline-md text-primary mb-sm">APADRINHE</h2>
+      <p class="text-body-md text-on-surface-variant">Ajude no custeio mensal de um animalzinho resgatado.</p>
+    </a>
+    <a href="#" class="bg-surface-container hover:bg-surface-container-high transition-colors p-xl rounded-xl flex flex-col items-center text-center shadow-sm group">
+      <div class="bg-primary-container text-on-primary w-16 h-16 rounded-full flex items-center justify-center mb-lg group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[32px]">volunteer_activism</span></div>
+      <h2 class="text-headline-md font-headline-md text-primary mb-sm">DOE</h2>
+      <p class="text-body-md text-on-surface-variant">Contribua com qualquer valor para apoiar nossa causa animal.</p>
+    </a>
+    <a href="#" class="bg-surface-container hover:bg-surface-container-high transition-colors p-xl rounded-xl flex flex-col items-center text-center shadow-sm group">
+      <div class="bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center mb-lg group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[32px]">groups</span></div>
+      <h2 class="text-headline-md font-headline-md text-primary mb-sm">Seja um Voluntário</h2>
+      <p class="text-body-md text-on-surface-variant">Doe seu tempo e amor para transformar a vida de centenas de animais carentes.</p>
+    </a>
+  </div>
+</section>
+
+<section class="bg-surface-container-low py-xl" aria-labelledby="petvip-title">
+  <div class="max-w-container-max mx-auto px-gutter text-center">
+    <h2 id="petvip-title" class="text-display-lg font-display-lg text-primary mb-sm">PetVip</h2>
+    <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl max-w-2xl mx-auto">Benefícios exclusivos para quem faz a diferença na vida dos nossos animais.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-lg mb-xl">
+      <div class="bg-surface p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+        <span class="material-symbols-outlined text-primary text-[40px] mb-md">sell</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Descontos em parceiros</h3>
+        <p class="text-body-md text-on-surface-variant">Economize em pet shops, clínicas e serviços de banho e tosa.</p>
+      </div>
+      <div class="bg-surface p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+        <span class="material-symbols-outlined text-primary text-[40px] mb-md">menu_book</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Conteúdo exclusivo</h3>
+        <p class="text-body-md text-on-surface-variant">Acesso a guias de cuidados, vídeos e dicas de especialistas.</p>
+      </div>
+      <div class="bg-surface p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+        <span class="material-symbols-outlined text-primary text-[40px] mb-md">redeem</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Brindes mensais</h3>
+        <p class="text-body-md text-on-surface-variant">Receba mimos e produtos selecionados diretamente na sua casa.</p>
+      </div>
+    </div>
+    <a href="#" class="inline-block bg-primary text-on-primary px-xl py-md rounded-lg font-bold text-label-md hover:bg-primary-container transition-all active:scale-95 shadow-lg">SAIBA MAIS</a>
+  </div>
+</section>
+
+<section class="bg-primary-container py-md text-center"><h2 class="text-headline-lg font-headline-lg text-on-primary-container uppercase tracking-widest">Matéria de Capa</h2></section>
+
+<section class="max-w-container-max mx-auto px-gutter py-xl relative overflow-hidden">
+  <div class="absolute -top-10 -right-20 w-80 h-80 bg-[#FF9CA6] opacity-30 blur-3xl rounded-full z-0" aria-hidden="true"></div>
+  <div class="absolute -bottom-10 -left-20 w-80 h-80 bg-primary opacity-10 blur-3xl rounded-full z-0" aria-hidden="true"></div>
+  <article class="relative z-10 bg-white/60 backdrop-blur-sm rounded-xl p-lg md:p-xl shadow-sm border border-surface-container-high grid grid-cols-1 md:grid-cols-12 gap-xl items-center">
+    <div class="md:col-span-7 flex flex-col items-center text-center">
+      <h3 class="text-headline-lg font-headline-lg text-primary mb-lg uppercase tracking-wider">ENTRETENIMENTO ANIMAL</h3>
+      <p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl leading-relaxed mb-xl">Já aconteceu de você sair para trabalhar e quando chega em casa vê seu sofá completamente destruído? Ou tentar sair para o mercado, mas o cachorro fica pulando em você, ou chorando por sua saída? Pois é, isso não é legal nem para você, nem para o seu pet. Vem com a gente descobrir 7 dicas para entreter seu aumigo!</p>
+      <a href="#" class="inline-block bg-primary-container text-on-primary-container px-lg py-md rounded-lg font-bold hover:opacity-95 transition-all active:scale-95 shadow-lg">SAIBA MAIS</a>
+    </div>
+    <div class="md:col-span-5 relative group">
+      <div class="absolute -inset-2 bg-[#FF9CA6] rounded-xl opacity-20 group-hover:opacity-40 transition-opacity" aria-hidden="true"></div>
+      <img class="relative w-full aspect-square object-cover rounded-xl shadow-md" loading="lazy" alt="Filhote curioso sentado na grama, olhando para cima com um olhar carinhoso" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdqR5VpdPABgrYSl3deTSJSh2wYJduU33f2YBOf6PVAYsA4jXu1vriach6Y6hsdhi2ngLVci4w8F-OyjMmH8e4yeAtX8o7tMXHw2JGbORRd86Wej2FYoU6m7JLzfIRbLj6vOjhHvAjYiWhNon1GXlABJbmTquyINEP3Gck3EVRknufchwbNzI-TdS6MhWbz7PlxIkGpqi-9C4gJmmELCbJGYYsCaJza5P2qHMFpUwdbRHCoCzI_TsUEaj3XNFwFqCNmSaltCZfXhY">
+    </div>
+  </article>
+</section>
+
+<section class="bg-surface-container-low py-xl w-full">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-lg bg-surface p-xl rounded-xl shadow-sm border border-outline-variant">
+      <h2 class="text-headline-md font-headline-md text-on-surface text-center md:text-left">Saiba como seu dinheiro é usado</h2>
+      <a href="#" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-on-primary px-xl py-md rounded-lg font-bold text-label-md transition-all active:scale-95">TRANSPARÊNCIA</a>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-container-max mx-auto px-gutter py-xl" aria-label="Parceiros">
+  <div class="flex flex-wrap justify-center items-center gap-xl opacity-80">
+    <div class="bg-white rounded-full w-24 h-24 flex items-center justify-center shadow-sm border border-surface-variant">
+      <img class="max-w-[70%] grayscale hover:grayscale-0 transition-all" loading="lazy" alt="Fatec" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwkko1uI3ARHHIFpTqtVuj_qNyJ-lBN76hKRrkYsUaohQJyQAhBs3NkvP8dFUDuG2f1_Ca0kAh27Xoxb1n9Ve3jrZ4wDDnS_u657PjMrFk-CjKnpc3mHq99RsXIy42olY0rOLyuXkvTZxfeu-b4rpOVfFZznG5bJeReQG5I7sYqfN9gQxCfn7C9T1H8eKBZlBJjdGVVKrR6_FeLMU1elTQWXXM3UvBd50_g2rItYin-TPrK0noKkQqpR9pLsOrtJmZIKXOF51ybCU">
+    </div>
+    <div class="bg-white rounded-full w-24 h-24 flex items-center justify-center shadow-sm border border-surface-variant">
+      <img class="max-w-[70%] grayscale hover:grayscale-0 transition-all" loading="lazy" alt="Fatec" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE14cbnHcGVXoEBn2QZNExCCXOb9UyugPpKHqEzB8MdhcqLhcfGAmYn01MZXvvC3yLB8TTT1w31vYxM0ZmjWZrcX8Jbr8FTS7BJgjUDBTVFdJe2KrKp3kxVzv2-k1lLXCqw-I32iPktLAodHrpM3gh7f5YmKHzYCKwz6olkKvF4Sw5cHFZYj5IOzaYGAP0tLHUTfL3A6tpNHrVOskbxJBIRhokJrCgIJCaUUYfgEApHv70B_lx226e_EQuqwxuzT-WciopOGxzqYk">
+    </div>
+  </div>
+</section>
+</main>
+<site-footer></site-footer>
+<script src="script.js" defer></script>
+</body>
+</html>

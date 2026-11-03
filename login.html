@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar | Patas Carentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="components.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md" data-nav="">
+<site-header></site-header>
+<main class="flex-grow flex items-center justify-center py-xl px-gutter relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-fixed opacity-20 rounded-full blur-3xl" aria-hidden="true"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-surface-container-highest opacity-30 rounded-full blur-3xl" aria-hidden="true"></div>
+<div class="w-full max-w-md z-10">
+  <div class="bg-white rounded-xl shadow-lg border border-surface-container overflow-hidden">
+    <div class="p-lg md:p-xl">
+      <div class="text-center mb-lg">
+        <h1 class="font-headline-lg text-headline-lg text-primary mb-xs">Bem-vindo de volta</h1>
+        <p class="text-on-surface-variant font-body-md">Acesse sua conta para continuar ajudando nossos patudos.</p>
+      </div>
+      <form class="space-y-lg" data-redirect="index.html">
+        <div class="space-y-xs">
+          <label class="font-label-md text-label-md text-on-surface-variant" for="email">E-MAIL</label>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline">mail</span>
+            <input class="w-full pl-xl pr-md py-md bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-container text-body-md" id="email" name="email" placeholder="seu@email.com" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="space-y-xs">
+          <label class="font-label-md text-label-md text-on-surface-variant" for="password">SENHA</label>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline">lock</span>
+            <input class="w-full pl-xl pr-md py-md bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-container text-body-md" id="password" name="password" placeholder="••••••••" type="password" autocomplete="current-password" required>
+          </div>
+        </div>
+        <div class="flex justify-end"><a class="text-label-md font-label-md text-primary hover:underline" href="#">Esqueci minha senha</a></div>
+        <button class="w-full bg-primary py-md rounded-lg text-white font-headline-md text-headline-md shadow-md hover:brightness-110 active:scale-95 transition-all" type="submit">Entrar</button>
+      </form>
+      <div class="relative my-lg flex items-center" role="separator">
+        <div class="flex-grow border-t border-surface-variant"></div>
+        <span class="px-md text-label-md text-outline font-label-md">OU</span>
+        <div class="flex-grow border-t border-surface-variant"></div>
+      </div>
+      <a href="index.html" class="w-full flex items-center justify-center gap-md border-2 border-surface-variant py-md rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-lowest transition-colors">
+        <img alt="" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpzwTmmGI3iwAQurWFvx7aodf9zlXK5kj0L3Wjm7I3g7xprWMonI5v5pbCL3W7iTgsLPpzPBEBDsCX16YaYDewbT6NXcE84Y5h7LuuzVarpXaNwKjqU6t8gbL9DidXe-vdQsKIAm3z-o6jGvErgj-MrlYN14VBbjmrtfI-kqFDvCcsNBE6u8Zm4bp9Za8oIeLAhnqT0viPsPCNfITR5mzfL7eqx1qUbrzcBhTG-3B5IK0L6a2N78CwGFgm8bIsHBmcaRXhdSyKS30">
+        Entrar com o Google
+      </a>
+    </div>
+    <div class="bg-surface-container px-lg py-md text-center">
+      <p class="text-body-md text-on-surface-variant">Não tem uma conta? <a class="font-bold text-primary hover:underline" href="cadastro.html">Cadastre-se</a></p>
+    </div>
+  </div>
+  <div class="mt-lg flex items-center justify-center gap-sm">
+    <span class="material-symbols-outlined text-accent-pink is-filled">favorite</span>
+    <a href="apadrinhamento.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary">Ajude um animal hoje</a>
+  </div>
+</div>
+</main>
+<site-footer></site-footer>
+<script src="script.js" defer></script>
+</body>
+</html>

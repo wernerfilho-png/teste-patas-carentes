@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bento, o Explorador | Patas Carentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="components.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md" data-nav="">
+<site-header></site-header>
+<main class="flex-grow">
+<div class="max-w-container-max mx-auto px-gutter py-xl grid grid-cols-1 md:grid-cols-2 gap-xl items-start">
+  <div class="rounded-xl overflow-hidden card-shadow">
+    <img alt="Bento, um beagle amigável sentado em um ambiente claro e aconchegante" class="w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_lD_xPlWgRADAuxaYtkBY57gXpwrMxwuskS-cLrgk3lmSurnHOYSzrPjUKZ39GZ36cPJpcAqrU8f0ZRUNsXlNUjo58AF9bIPtt3qvZQ65X8RqM80w1ZD8QvjNOShJfbUQkV5TtnmsADbCYkhG0DLZlOj2FqF85LBUDjw7-KvhIVNnDN3E-fXeb1kiGv-4SqRxDm28Br2eFFcbZacz6GXGLDNi8vmI0Yo43xFzTEGHqzn_LF_LaS7YdUnheNO958W8SLab6U-m7EE">
+  </div>
+  <div class="space-y-lg">
+    <div>
+      <h1 class="font-headline-lg text-headline-lg text-primary">Bento, o Explorador</h1>
+      <div class="flex gap-sm mt-sm">
+        <span class="bg-secondary-container text-on-secondary-container px-md py-xs rounded-full font-label-md text-label-md">2 Anos</span>
+        <span class="bg-secondary-container text-on-secondary-container px-md py-xs rounded-full font-label-md text-label-md">Macho</span>
+        <span class="bg-secondary-container text-on-secondary-container px-md py-xs rounded-full font-label-md text-label-md">Vacinado</span>
+      </div>
+    </div>
+    <p class="text-body-lg font-body-lg text-on-surface-variant">Bento é um Beagle cheio de energia que adora longas caminhadas e farejar novas aventuras. Ele é extremamente dócil com crianças e outros animais, sendo o companheiro ideal para famílias ativas.</p>
+    <div class="bg-surface-container p-lg rounded-xl">
+      <h2 class="font-headline-md text-headline-md text-primary mb-md">Como Ajudar o Bento?</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+        <a href="formulario-adocao.html" class="bg-primary text-white py-md rounded-lg font-label-md text-label-md flex items-center justify-center gap-sm"><span class="material-symbols-outlined">favorite</span> ADOTE</a>
+        <button type="button" data-open-modal="plans-modal" class="border-2 border-primary text-primary py-md rounded-lg font-label-md text-label-md flex items-center justify-center gap-sm"><span class="material-symbols-outlined">volunteer_activism</span> APADRINHE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="plans-modal" role="dialog" aria-modal="true" aria-labelledby="plans-title" data-close-modal class="hidden fixed inset-0 z-50 items-center justify-center p-gutter modal-blur">
+  <div class="bg-surface-bright w-full max-w-5xl rounded-xl overflow-hidden card-shadow max-h-[90vh] overflow-y-auto">
+    <div class="px-xl pt-lg pb-lg text-center">
+      <div class="flex justify-end"><button type="button" data-close-modal aria-label="Fechar" class="p-sm text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined">close</span></button></div>
+      <h2 id="plans-title" class="font-headline-lg text-headline-lg text-primary">Escolha seu Plano de Apadrinhamento</h2>
+      <p class="text-body-md font-body-md text-on-surface-variant mt-sm">Sua contribuição mensal garante saúde e felicidade para nossos protegidos.</p>
+    </div>
+    <div class="px-xl pt-md pb-xl grid grid-cols-1 md:grid-cols-3 gap-lg">
+
+      <div class="bg-surface-container-low p-lg rounded-xl border border-outline-variant flex flex-col items-center text-center hover:bg-surface-container transition-all">
+        <span class="material-symbols-outlined text-secondary text-5xl mb-md is-filled">pets</span>
+        <h3 class="font-label-md text-label-md text-secondary tracking-widest">DINDO BRONZE</h3>
+        <div class="mt-md mb-lg"><span class="text-headline-md font-headline-md text-primary">R$30</span><span class="text-label-md font-label-md text-on-surface-variant">/mês</span></div>
+        <ul class="text-left w-full space-y-sm mb-xl flex-grow"><li class="flex items-center gap-sm text-body-md font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-[#FF9CA6] text-sm">check_circle</span>Relatórios mensais</li><li class="flex items-center gap-sm text-body-md font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-[#FF9CA6] text-sm">check_circle</span>Nome no mural do abrigo</li></ul>
+        <a href="identificacao-padrinho.html" class="w-full bg-primary text-white py-sm rounded-lg font-label-md text-label-md hover:scale-105 transition-transform">SELECIONAR</a>
+      </div>
+
+      <div class="relative bg-white p-lg rounded-xl border-2 border-[#FF9CA6] flex flex-col items-center text-center shadow-lg md:-translate-y-4"><div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FF9CA6] text-white px-md py-1 rounded-full text-xs font-bold whitespace-nowrap">MAIS POPULAR</div>
+        <span class="material-symbols-outlined text-[#FF9CA6] text-5xl mb-md is-filled">favorite</span>
+        <h3 class="font-label-md text-label-md text-primary tracking-widest">DINDO PRATA</h3>
+        <div class="mt-md mb-lg"><span class="text-headline-md font-headline-md text-primary">R$60</span><span class="text-label-md font-label-md text-on-surface-variant">/mês</span></div>
+        <ul class="text-left w-full space-y-sm mb-xl flex-grow"><li class="flex items-center gap-sm text-body-md font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-[#FF9CA6] text-sm">check_circle</span>Todos os benefícios Bronze</li><li class="flex items-center gap-sm text-body-md font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-[#FF9CA6] text-sm">check_circle</span>Certificado Digital Dindo</li><li class="flex items-center gap-sm text-body-md font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-[#FF9CA6] text-sm">check_circle</span>Vídeo mensal exclusivo</li></ul>
+        <a href="identificacao-padrinho.html" class="w-full bg-[#FF9CA6] text-white py-sm rounded-lg font-label-md text-label-md hover:scale-105 transition-transform">SELECIONAR</a>
+      </div>
+
+      <div class="bg-surface-container-low p-lg rounded-xl border border-outline-variant flex flex-col items-center text-center hover:bg-surface-container transition-all">
+        <span class="material-symbols-outlined text-primary text-5xl mb-md is-filled">stars</span>
+        <h3 class="font-label-md text-label-md text-secondary tracking-widest">DINDO OURO</h3>
+        <div class="mt-md mb-lg"><span class="text-headline-md font-headline-md text-primary">R$100</span><span class="text-label-md font-label-md text-on-surface-variant">/mês</span></div>
+        <ul class="text-left w-full space-y-sm mb-xl flex-grow"><li class="flex items-center gap-sm text-body-md font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-[#FF9CA6] text-sm">check_circle</span>Benefícios Bronze e Prata</li><li class="flex items-center gap-sm text-body-md font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-[#FF9CA6] text-sm">check_circle</span>Visita agendada ao pet</li><li class="flex items-center gap-sm text-body-md font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-[#FF9CA6] text-sm">check_circle</span>Kit exclusivo Patas Carentes</li></ul>
+        <a href="identificacao-padrinho.html" class="w-full bg-primary text-white py-sm rounded-lg font-label-md text-label-md hover:scale-105 transition-transform">SELECIONAR</a>
+      </div>
+    </div>
+    <div class="px-xl py-lg bg-surface-container-highest flex items-center justify-center gap-sm text-on-surface-variant"><span class="material-symbols-outlined text-sm">security</span><span class="font-label-md text-label-md">Pagamento seguro via PIX ou Cartão</span></div>
+  </div>
+</div>
+</main>
+<site-footer></site-footer>
+<script src="script.js" defer></script>
+</body>
+</html>

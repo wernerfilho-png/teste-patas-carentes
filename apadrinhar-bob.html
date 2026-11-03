@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apadrinhar o Bob | Patas Carentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="components.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md" data-nav="">
+<site-header></site-header>
+<main class="flex-grow">
+<div class="max-w-container-max mx-auto px-gutter py-xl">
+  <section class="rounded-xl overflow-hidden mb-xl shadow-lg bg-surface-container-lowest grid md:grid-cols-2 min-h-[400px]">
+    <div class="relative min-h-[300px] md:min-h-full"><img alt="Bob, cão adulto sendo apadrinhado" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG_w24s-ZhiuLwOPZYHZF8q1vqRZUYBsQHU_nGbGrapOcOX6ycsrwWlaOlZrykmKhgnuRLDqCu1OFQB2AKaey1o7tnD3ULaTmjYn9f9-aQQyuO0MHhb5vXgKoZrhFugr3AktlDoyYEV57PsI5UF_gZ2PM4g-Sp9BsOoYXR_3HcVhElE1aHRdRGOlbHVYGLLDYzHC1PgggD2BnI3sApr_X9S8SRgbSxA4L7s3dYNPXxM9Wv1yVTDQ-lhLRzq_Kz0Xjpgvi7rbjKptNCcg"></div>
+    <div class="p-xl flex flex-col justify-center bg-surface-container-low">
+      <p class="flex items-center gap-sm mb-md"><span class="material-symbols-outlined text-accent-pink is-filled">favorite</span><span class="font-label-md text-label-md text-secondary tracking-widest uppercase">Apadrinhamento Especial</span></p>
+      <h1 class="font-display-lg text-display-lg text-primary mb-md">Bob</h1>
+      <p class="font-headline-md text-headline-md text-on-surface-variant leading-relaxed">Você está prestes a mudar a vida do Bob.</p>
+      <div class="mt-lg flex gap-md"><span class="px-md py-xs bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md">Adulto</span><span class="px-md py-xs bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md">Vacinado</span></div>
+    </div>
+  </section>
+
+  <form action="identificacao-padrinho.html" method="get">
+    <section class="mb-xl">
+      <div class="text-center mb-lg">
+        <h2 class="font-headline-lg text-headline-lg text-primary">Escolha um Plano de Apadrinhamento</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-sm">Sua contribuição mensal garante que o Bob receba todo o carinho e cuidados que ele merece.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-lg mb-xl">
+
+      <label class="group relative block cursor-pointer">
+        <input type="radio" name="plano" value="amigo" class="peer sr-only">
+        <div class="h-full bg-surface-container-lowest p-lg rounded-xl border border-transparent shadow-[0_4px_16px_rgba(96,86,73,0.08)] flex flex-col items-center text-center transition-all hover:border-accent-pink peer-checked:border-2 peer-checked:border-accent-pink peer-checked:shadow-lg peer-focus-visible:outline peer-focus-visible:outline-2">
+          <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-secondary">potted_plant</span></div>
+          <h3 class="font-headline-md text-primary mb-xs">Dindo Amigo</h3>
+          <p class="font-display-lg text-display-lg text-primary mb-md">R$ 30<span class="text-body-md text-on-surface-variant font-normal">/mês</span></p>
+          <p class="font-body-md text-on-surface-variant">Cobre alimentação básica e mimos essenciais.</p>
+        </div>
+      </label>
+
+      <label class="group relative block cursor-pointer">
+        <input type="radio" name="plano" value="protetor" class="peer sr-only" checked>
+        <div class="h-full bg-surface-container-lowest p-lg rounded-xl border-2 border-accent-pink shadow-lg flex flex-col items-center text-center transition-all hover:border-accent-pink peer-checked:border-2 peer-checked:border-accent-pink peer-checked:shadow-lg peer-focus-visible:outline peer-focus-visible:outline-2"><div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent-pink text-primary font-bold px-md py-1 rounded-full font-label-md text-label-md shadow-sm whitespace-nowrap">MAIS ESCOLHIDO</div>
+          <div class="w-12 h-12 rounded-full bg-accent-pink/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-accent-pink is-filled">shield_spark</span></div>
+          <h3 class="font-headline-md text-primary mb-xs">Dindo Protetor</h3>
+          <p class="font-display-lg text-display-lg text-primary mb-md">R$ 60<span class="text-body-md text-on-surface-variant font-normal">/mês</span></p>
+          <p class="font-body-md text-on-surface-variant">Cobre alimentação de alta qualidade + vacinas anuais.</p>
+        </div>
+      </label>
+
+      <label class="group relative block cursor-pointer">
+        <input type="radio" name="plano" value="heroi" class="peer sr-only">
+        <div class="h-full bg-surface-container-lowest p-lg rounded-xl border border-transparent shadow-[0_4px_16px_rgba(96,86,73,0.08)] flex flex-col items-center text-center transition-all hover:border-accent-pink peer-checked:border-2 peer-checked:border-accent-pink peer-checked:shadow-lg peer-focus-visible:outline peer-focus-visible:outline-2">
+          <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center mb-md group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-tertiary">workspace_premium</span></div>
+          <h3 class="font-headline-md text-primary mb-xs">Dindo Herói</h3>
+          <p class="font-display-lg text-display-lg text-primary mb-md">R$ 100<span class="text-body-md text-on-surface-variant font-normal">/mês</span></p>
+          <p class="font-body-md text-on-surface-variant">Cobre cuidados completos, exames periódicos e check-ups.</p>
+        </div>
+      </label>
+      </div>
+      <div class="max-w-md mx-auto bg-surface-container-high p-lg rounded-xl border border-outline-variant">
+        <label for="valor" class="font-label-md text-label-md text-on-surface-variant mb-sm block">Outro valor mensal (opcional)</label>
+        <div class="relative"><span class="absolute left-md top-1/2 -translate-y-1/2 text-on-surface-variant">R$</span>
+          <input id="valor" name="valor" type="number" min="1" step="0.01" placeholder="0,00" class="w-full bg-surface-container-lowest border-outline focus:border-accent-pink focus:ring-1 focus:ring-accent-pink rounded-lg py-md pl-10 transition-all"></div>
+      </div>
+    </section>
+    <div class="flex flex-col items-center gap-md">
+      <button type="submit" class="w-full max-w-md py-xl bg-[#FF9CA6] text-primary font-bold font-headline-md rounded-xl shadow-lg hover:shadow-xl active:scale-95 transition-all text-center">Confirmar Apadrinhamento</button>
+      <p class="font-body-md text-on-surface-variant flex items-center gap-xs"><span class="material-symbols-outlined text-sm">lock</span> Pagamento seguro e cancelamento a qualquer momento</p>
+    </div>
+  </form>
+</div>
+</main>
+<site-footer></site-footer>
+<script src="script.js" defer></script>
+</body>
+</html>

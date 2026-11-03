@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetStory | Patas Carentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="feed-body font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- Barra superior (celular) -->
+<div class="md:hidden sticky top-0 z-50 h-14 flex items-center justify-between px-md bg-inverse-surface border-b border-outline/20">
+  <a href="index.html" class="text-headline-md font-headline-md font-bold text-primary-fixed-dim">Patas Carentes</a>
+  <nav aria-label="Atalhos" class="flex gap-md text-surface-variant">
+    <a href="busca.html" aria-label="Pesquisar"><span class="material-symbols-outlined">search</span></a>
+    <a href="apadrinhamento.html" aria-label="Explorar"><span class="material-symbols-outlined">explore</span></a>
+    <a href="login.html" aria-label="Perfil"><span class="material-symbols-outlined">person</span></a>
+  </nav>
+</div>
+
+<!-- Menu lateral (desktop) -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full w-64 flex-col p-lg border-r border-outline/20 bg-inverse-surface z-50">
+  <div class="mb-xl px-md">
+    <a href="index.html" class="block text-headline-md font-headline-md font-bold text-primary-fixed-dim leading-tight">Patas Carentes</a>
+    <p class="text-label-md font-label-md text-surface-variant/70">Amor em cada pata</p>
+  </div>
+  <nav class="flex-1 space-y-md" aria-label="Principal">
+    <a class="flex items-center gap-md px-md py-sm rounded-lg hover:bg-primary-container/20 transition-colors duration-200 sidebar-active" href="feed.html" aria-current="page"><span class="material-symbols-outlined is-filled">home</span><span class="font-label-md text-label-md">Feed</span></a>
+    <a class="flex items-center gap-md px-md py-sm rounded-lg hover:bg-primary-container/20 transition-colors duration-200 text-surface-variant" href="busca.html"><span class="material-symbols-outlined">search</span><span class="font-label-md text-label-md">Pesquisar</span></a>
+    <a class="flex items-center gap-md px-md py-sm rounded-lg hover:bg-primary-container/20 transition-colors duration-200 text-surface-variant" href="apadrinhamento.html"><span class="material-symbols-outlined">explore</span><span class="font-label-md text-label-md">Explorar</span></a>
+    <a class="flex items-center gap-md px-md py-sm rounded-lg hover:bg-primary-container/20 transition-colors duration-200 text-surface-variant" href="#"><span class="material-symbols-outlined">add_box</span><span class="font-label-md text-label-md">Novo Post</span></a>
+    <a class="flex items-center gap-md px-md py-sm rounded-lg hover:bg-primary-container/20 transition-colors duration-200 text-surface-variant" href="#"><span class="material-symbols-outlined">help_outline</span><span class="font-label-md text-label-md">Ajuda</span></a>
+    <a class="flex items-center gap-md px-md py-sm rounded-lg hover:bg-primary-container/20 transition-colors duration-200 text-surface-variant" href="login.html"><span class="material-symbols-outlined">person</span><span class="font-label-md text-label-md">Perfil</span></a>
+  </nav>
+  <div class="mt-auto px-md"><a href="#" class="block text-center w-full py-md bg-primary-container text-on-primary-container font-bold rounded-xl text-label-md tracking-wider hover:opacity-90 transition-opacity active:scale-95">DOE AGORA</a></div>
+</aside>
+
+<main class="md:ml-64 min-h-screen flex flex-col items-center">
+  <header class="glass-header sticky top-14 md:top-0 w-full flex justify-center py-md px-gutter z-40 border-b border-outline/10">
+    <div data-chips class="w-full max-w-[600px] flex gap-sm overflow-x-auto no-scrollbar pb-xs" role="group" aria-label="Filtrar publicações"><button type="button" aria-pressed="true" class="px-lg py-sm bg-primary-fixed-dim text-inverse-surface shadow-sm rounded-full font-label-md text-label-md whitespace-nowrap">Tudo</button><button type="button" aria-pressed="false" class="px-lg py-sm bg-inverse-surface border border-outline/30 text-surface-variant hover:border-primary-fixed-dim transition-colors rounded-full font-label-md text-label-md whitespace-nowrap">Cães</button><button type="button" aria-pressed="false" class="px-lg py-sm bg-inverse-surface border border-outline/30 text-surface-variant hover:border-primary-fixed-dim transition-colors rounded-full font-label-md text-label-md whitespace-nowrap">Gatos</button><button type="button" aria-pressed="false" class="px-lg py-sm bg-inverse-surface border border-outline/30 text-surface-variant hover:border-primary-fixed-dim transition-colors rounded-full font-label-md text-label-md whitespace-nowrap">Adoções</button><button type="button" aria-pressed="false" class="px-lg py-sm bg-inverse-surface border border-outline/30 text-surface-variant hover:border-primary-fixed-dim transition-colors rounded-full font-label-md text-label-md whitespace-nowrap">Histórias de Sucesso</button></div>
+  </header>
+  <section class="w-full max-w-[600px] px-md py-xl space-y-xl" aria-label="Publicações">
+
+    <article class="bg-[#1e2022] rounded-xl overflow-hidden border border-outline/10 shadow-xl">
+      <div class="flex items-center gap-md p-md"><img alt="" class="w-10 h-10 rounded-full object-cover border border-outline/20" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1udvP_4gNkcjVP_P-obd2yezK6Z8SK3cjAp5UOk9CgFpgmYT88zFzObT_BWEnHKAy7xUj52m67MnanGCRvqYtyfaT0lAuQ7sLDsQdGHtqQLjKXcPj3E8I3aZF1aanKFpQxmNDOcWeD32erzSjHHA7_twjLLMGXTzDfrp7rbgvYMa-fKuNO-550qkO2wTy60O-jaEyPQ8mZvHZsWiLdTs3cMRvJ-4aZb7hruQoO2MLDMiq7fl11GefnQfrctv4wWPiZiksq8La-zE">
+        <div><h2 class="font-label-md text-label-md text-on-surface-variant font-bold">Anjos de Patas</h2><p class="text-xs text-surface-variant/50">São Paulo, SP</p></div>
+      </div>
+      <div class="aspect-[3/2] w-full overflow-hidden"><img alt="Bento, um golden retriever feliz sentado em um jardim ensolarado" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5ktCjw2HawBM91EDrIiMRKbWDMVkPynkKLo1sJSE0Xv4iRjPBmC1rmwuSRSGaGWd2gkqKuzfZSIFdLNa5aLKK5014bTrEtWwbMgEh9kabAmosESTj1E7wOM-29MR4Fk9eHLC-zV7SbwQzsEs2TnlUJWM1KpVePOpplk1XS7fTw5OTIq-HvV3SCLr-4E_MTQRfGIVT1gba1pX6RlOw_xGQct-onzOOzj4sULnn4C-XsdAMUMEqVMJ5ZDLAU76UI3lC8GAKBGNTgEU"></div>
+      <div class="p-md">
+        <div class="flex items-center justify-between mb-md">
+          <div class="flex items-center gap-lg">
+            <button type="button" data-toggle-fill data-toggle-color="text-error" aria-label="Curtir" class="hover:text-error transition-colors"><span class="material-symbols-outlined text-[28px]">favorite</span></button>
+            <button type="button" aria-label="Comentar" class="hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[28px]">chat_bubble</span></button>
+            <button type="button" aria-label="Compartilhar" class="hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[28px]">share</span></button>
+          </div>
+          <button type="button" data-toggle-fill aria-label="Salvar publicação" class="text-primary-fixed-dim"><span class="material-symbols-outlined text-[28px]">bookmark</span></button>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant"><span class="font-bold mr-xs">Anjos de Patas</span> Bento está procurando um lar cheio de amor! 🦴💛</p>
+        <p class="mt-sm text-xs text-surface-variant/40 uppercase tracking-widest font-bold">Há 2 horas</p>
+        <div class="mt-lg pt-md border-t border-outline/10"><a href="pet-bento.html" class="w-full py-md bg-[#2D4F3F] text-[#86EFAC] rounded-lg font-bold flex items-center justify-center gap-sm hover:brightness-110 transition-all active:scale-[0.98]"><span class="material-symbols-outlined">pets</span> Conhecer Bento / Adotar</a></div>
+      </div>
+    </article>
+
+    <article class="bg-[#1e2022] rounded-xl overflow-hidden border border-outline/10 shadow-xl">
+      <div class="flex items-center gap-md p-md"><img alt="" class="w-10 h-10 rounded-full object-cover border border-outline/20" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKkjxNFxifAM_48n54vbgQS1-D30x6KEeY3UsNujZgstF8jjVCiV6Sy4tCpEupWCrgILlGj2VHnWjdaU7jbEAWC4xch_8wAIHlJT5oLydJvnk6Vl5Gsz3rX_BXjs7cfzf1iz172GspgtvX81uOf0-JcbAIzgIn2mP8KnwjGO-WeBZuO6Qn1E3GtXdgAHu5KxnADgxGWS2sA33PhK3dKHU-BESJcoiXabZ-A39Mljr72v0TiV9hutGSzWiKG6pyIJT4TYaWa_vzkZw">
+        <div><h2 class="font-label-md text-label-md text-on-surface-variant font-bold">Abrigo Esperança</h2><p class="text-xs text-surface-variant/50">Curitiba, PR</p></div>
+      </div>
+      <div class="aspect-[3/2] w-full overflow-hidden"><img alt="Luna, uma gata preta e branca no colo da nova família" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCz8dDHFR2mngjySJoufOQ8frANn9ev8lUy1uchtH9SxCIJ21bf-eAHmRcl_FIn0Ri6D385rN7irqJDX9jT1JAmwanS1OHLK7IE186K2bMcEM6qYzD6V7OyyiJaVsnqG4WEnswo3UfVxAdLq6T0DheWy2uH9fp2y-KF5uwCXUifDthHFEC1C0SFWSyku9ThYbuO1kr0OWsTOtZUAHDwYhZf2o11plS04s1zODlq28J56jcJWIYXxDWzGssRzYyBuw6k07E853mPhs"></div>
+      <div class="p-md">
+        <div class="flex items-center justify-between mb-md">
+          <div class="flex items-center gap-lg">
+            <button type="button" data-toggle-fill data-toggle-color="text-error" aria-label="Curtir" class="hover:text-error transition-colors text-error"><span class="material-symbols-outlined text-[28px] is-filled">favorite</span></button>
+            <button type="button" aria-label="Comentar" class="hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[28px]">chat_bubble</span></button>
+            <button type="button" aria-label="Compartilhar" class="hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[28px]">share</span></button>
+          </div>
+          <button type="button" data-toggle-fill aria-label="Salvar publicação" class="text-primary-fixed-dim"><span class="material-symbols-outlined text-[28px]">bookmark</span></button>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant"><span class="font-bold mr-xs">Abrigo Esperança</span> Mais um final feliz! Luna agora tem uma família que a ama de verdade. ✨🏠</p>
+        <p class="mt-sm text-xs text-surface-variant/40 uppercase tracking-widest font-bold">Há 5 horas</p>
+      </div>
+    </article>
+
+    <article class="bg-[#1e2022] rounded-xl overflow-hidden border border-outline/10 shadow-xl">
+      <div class="flex items-center gap-md p-md"><div class="w-10 h-10 rounded-full bg-outline/20 flex items-center justify-center"><span class="material-symbols-outlined text-surface-variant/50">person</span></div>
+        <div><h2 class="font-label-md text-label-md text-on-surface-variant font-bold">Família Oliveira</h2><p class="text-xs text-surface-variant/50">São Paulo, SP</p></div>
+      </div>
+      <div class="aspect-[3/2] w-full overflow-hidden"><img alt="Thor, cão adotado e feliz" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeHqJP18qC7sHppofZ9lBwxa9dqhBept6MYx530XvDTAjK4z0WrICpUk5lZBEDVYpN3_-XedKYkfB25TmbfOlKXY68IORf7TXcjJxNVzZ2desPow7tzlE7So7-qN66nSVSYV0jRdDQhrF7EO_6IRijgXefJk-t8-vBgVIKhI4LM5Q5twlS1HtvHb2olKN_-MOxrDdEs_VeboXJaFOdEFzQ8g9JVAYM3gJNlYXDYHJ4xaRmNwhScFsqrd9iVZg6LTxfj9Rebs2Oy-c"></div>
+      <div class="p-md">
+        <div class="flex items-center justify-between mb-md">
+          <div class="flex items-center gap-lg">
+            <button type="button" data-toggle-fill data-toggle-color="text-error" aria-label="Curtir" class="hover:text-error transition-colors"><span class="material-symbols-outlined text-[28px]">favorite</span></button>
+            <button type="button" aria-label="Comentar" class="hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[28px]">chat_bubble</span></button>
+            <button type="button" aria-label="Compartilhar" class="hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[28px]">share</span></button>
+          </div>
+          <button type="button" data-toggle-fill aria-label="Salvar publicação" class="text-primary-fixed-dim"><span class="material-symbols-outlined text-[28px]">bookmark</span></button>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant"><span class="font-bold mr-xs">Família Oliveira</span> O Thor finalmente encontrou seu lar definitivo! Ele já é o dono do sofá.</p>
+        <p class="mt-sm text-xs text-surface-variant/40 uppercase tracking-widest font-bold">Há 1 dia</p>
+      </div>
+    </article>
+
+    <article class="bg-[#1e2022] rounded-xl overflow-hidden border border-outline/10 shadow-xl">
+      <div class="flex items-center gap-md p-md"><div class="w-10 h-10 rounded-full bg-outline/20 flex items-center justify-center"><span class="material-symbols-outlined text-surface-variant/50">person</span></div>
+        <div><h2 class="font-label-md text-label-md text-on-surface-variant font-bold">Mariana Silva</h2><p class="text-xs text-surface-variant/50">Rio de Janeiro, RJ</p></div>
+      </div>
+      <div class="aspect-[3/2] w-full overflow-hidden"><img alt="Luna, gata peluda cochilando" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0m9JRQLmVunhMKrem1bATwl5KG2myjnrtBbVUP8hQfMheXERF_IVxXip9EWalyQ122N83CfyVtA0FBhDbKmzpj8vqtMTCelJ7QA3m3nvqxTNUMaiEeRcMMnerm7zk_7Z1IZLTgT7x19SjYNZHkihpFuIBmlWr4c1MmHL-pLMVqKcizrYWnIvQ0g6lMDCNwh93J70ZfRf0mZBw5shfoXxmLm4cq2fPeBofKYi8F6PLweqoD2nymBvJgg7NXacb1ROtoeSONmvD9f8"></div>
+      <div class="p-md">
+        <div class="flex items-center justify-between mb-md">
+          <div class="flex items-center gap-lg">
+            <button type="button" data-toggle-fill data-toggle-color="text-error" aria-label="Curtir" class="hover:text-error transition-colors"><span class="material-symbols-outlined text-[28px]">favorite</span></button>
+            <button type="button" aria-label="Comentar" class="hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[28px]">chat_bubble</span></button>
+            <button type="button" aria-label="Compartilhar" class="hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[28px]">share</span></button>
+          </div>
+          <button type="button" data-toggle-fill aria-label="Salvar publicação" class="text-primary-fixed-dim"><span class="material-symbols-outlined text-[28px]">bookmark</span></button>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant"><span class="font-bold mr-xs">Mariana Silva</span> A Luna se adaptou super rápido. É puro amor e ronronadas o dia todo! 🐾❤️</p>
+        <p class="mt-sm text-xs text-surface-variant/40 uppercase tracking-widest font-bold">Há 2 dias</p>
+      </div>
+    </article>
+  </section>
+</main>
+<script src="script.js" defer></script>
+</body>
+</html>

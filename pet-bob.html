@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes de Bob | Patas Carentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="components.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md" data-nav="">
+<site-header></site-header>
+<main class="flex-grow bg-primary">
+<section class="max-w-container-max mx-auto px-gutter py-xl">
+  <nav aria-label="Você está em" class="flex items-center gap-xs mb-lg text-surface-container-highest font-label-md text-label-md">
+    <a href="busca.html" class="hover:underline">Adoção</a>
+    <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+    <span class="text-on-primary" aria-current="page">Detalhes de Bob</span>
+  </nav>
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
+    <div class="lg:col-span-7 space-y-lg">
+      <div class="aspect-[4/5] md:aspect-square relative rounded-xl overflow-hidden card-shadow">
+        <img id="main-photo" alt="Bob, filhote de golden retriever sentado em um campo ao entardecer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANpD4q-EFvVqCxiPwvurT8ku8ne5lnVpdengNph6h8e2F5dYkYv6znc1GyIfWmNbs4VxOav5aF2YkJJROCjF2XAFZSLecGwCasKwnECowY2TDVE156DrXqg7f5wQfLf6NuOjgNw6IhCjsqccoAPfb-sOAInxsU-VKJ5cW_7Q-zcQyWuoJh7m93g2b40RrPhdUYGFCbMhWqPCBw5xYhNoLyBLGzKlMu5jhdg2awwbC82iMDu5UnaNrUqCTmYloaOiSVjdj-JjV3yNo">
+        <div class="absolute bottom-md left-md flex gap-sm">
+          <span class="bg-surface/90 backdrop-blur-md px-md py-xs rounded-full text-primary font-label-md text-label-md flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">verified</span> Vacinado</span>
+          <span class="bg-surface/90 backdrop-blur-md px-md py-xs rounded-full text-primary font-label-md text-label-md flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">home</span> Castrado</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-4 gap-md">
+        <button type="button" data-gallery-thumb class="aspect-square rounded-lg overflow-hidden border-2 border-primary-fixed" aria-label="Ver foto 1"><img class="w-full h-full object-cover" alt="Bob olhando para cima com olhos grandes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPef_TvW8kzWdpqMlpbbw1bgqUretEFPXZrOumVW1KEwguqIHHSA5ydgwqiCyHzD6p7IrF8bx8WJIYxPk060RDPy5dvAih_DC68_C_Bg75L-ctaGQPMFDBm-jriqBytsosvq7-Oc8NSyqKIy_xoZg6uucCsoIxuRt9pECoJ3I7DvzjsMl6NONxp3YxuvxbaRdeyMZvqLIZgG8gzCK_UIeQYgSS4SKMnwPsMRbZ7X9Dd7RLtafxrxVyZ4DU4Qut-TYCtP4BwUAckpg"></button>
+        <button type="button" data-gallery-thumb class="aspect-square rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity" aria-label="Ver foto 2"><img class="w-full h-full object-cover" alt="Bob correndo feliz pela grama" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8iIKO9jW2bmdJ5gUnZ-2GwR5Fmo28okc0LibpwdyCe8uRjxpb2ocbzBtAFiEGQdIFy8pZ3_nYhKjtDWXSR3HIt7x8aFpKOYlDunxcT7uD854H1iuxyim6ioW4dYPqnw_HQWpkNA22cvol89u7s_KB5SOqrvsUaDJzmYdeHZUczhR5hSl7ehTt2473tYKD75-6hPeTfMtHdtrL9xrINViEhFh7AoRdFViC7wdSketvVevy9sJHRMMiX8QAx2EHS25Ha5w_zVwP3CA"></button>
+        <button type="button" data-gallery-thumb class="aspect-square rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity" aria-label="Ver foto 3"><img class="w-full h-full object-cover" alt="Retrato de Bob sentado diante de um fundo claro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLwjuKVWhFvX5-gkNNDCXIo_fdZkIYNrIQ6r116tugpnaODZp6Sq8q8FN9xGDPj_30mfC3T4Y4YPsSo1fLpBSrM1s_OrvTmU6PYPNGbxe_V3XD4h71GV3wknf-NG_qAl8aAvLi0uWbIsc4Vcn89_rzVlTJTi2wj6_9i4Nv0XDuR0pbzhkJx0F7mUBSfONw2vVAHKQD_L6-9tdVkG5lsm0NjDmw3woSlB_Wcmp6xal_vCewbdDOqAOEUj_EeGTfuXpescbFDgQWjfs"></button>
+        <div class="aspect-square rounded-lg overflow-hidden relative">
+          <img class="w-full h-full object-cover blur-[2px]" alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7JdnL2e-9O5y0fcwz_HPr3gnElxhYXedU-k4hcy30Y4Jmv3f_sBJgc3oQEU89xLgzSoMRNUUYL8EKuL9bb4sOqT9EVCgQLFNk5AeVU8oJ5_26JzWKeWVhxFz2WQE6ckw0I5q5x6aOTWOZbPlaH0eGL9nLGmuZPnsc4m9rbOPXoaCpGPzQRewuFjQyVsWqtjSEZGKHlxXRc2-7QXWv56qqwNFT9bWpskPumOH0ZIJvyfy7A_cwWGYrv2q8-chrgzL9W_ZSivVugi4">
+          <div class="absolute inset-0 bg-primary/40 flex items-center justify-center text-on-primary font-headline-md text-headline-md">+5</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-5 flex flex-col gap-lg">
+      <div class="bg-surface p-xl rounded-xl card-shadow">
+        <div class="flex justify-between items-start mb-md">
+          <div>
+            <h1 class="text-display-lg font-display-lg text-primary">Bob</h1>
+            <p class="text-secondary font-body-lg text-body-lg">Golden Retriever • 2 anos • Macho</p>
+          </div>
+          <button type="button" data-toggle-fill aria-label="Favoritar Bob" class="bg-surface-container-high p-md rounded-full text-error hover:scale-110 transition-transform"><span class="material-symbols-outlined is-filled">favorite</span></button>
+        </div>
+        <div class="flex flex-wrap gap-sm mb-xl">
+          <span class="bg-secondary-container text-on-secondary-container px-md py-xs rounded-full font-label-md text-label-md">Amigável</span>
+          <span class="bg-secondary-container text-on-secondary-container px-md py-xs rounded-full font-label-md text-label-md">Porte Médio</span>
+          <span class="bg-secondary-container text-on-secondary-container px-md py-xs rounded-full font-label-md text-label-md">Calmo</span>
+          <span class="bg-secondary-container text-on-secondary-container px-md py-xs rounded-full font-label-md text-label-md">Gosta de Crianças</span>
+        </div>
+        <div class="space-y-md border-t border-outline-variant pt-lg">
+          <h2 class="text-headline-md font-headline-md text-primary">Sobre o Bob</h2>
+          <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">Bob é uma história viva de superação. Resgatado em condições difíceis, ele transformou todo o seu passado em amor puro. É um cão extremamente dócil, que adora longas caminhadas e a companhia de humanos. Ele está pronto para encontrar um lar definitivo onde possa retribuir todo o cuidado com lealdade infinita.</p>
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-xl rounded-xl border border-outline-variant/30">
+        <h2 class="text-headline-md font-headline-md text-primary mb-lg flex items-center gap-sm"><span class="material-symbols-outlined">assignment</span> Requisitos para Adoção</h2>
+        <ul class="space-y-md">
+          <li class="flex gap-md items-start"><span class="material-symbols-outlined text-primary mt-xs">check_circle</span><span class="text-on-surface-variant font-body-md text-body-md">Espaço seguro e telado (se for apartamento)</span></li>
+          <li class="flex gap-md items-start"><span class="material-symbols-outlined text-primary mt-xs">check_circle</span><span class="text-on-surface-variant font-body-md text-body-md">Condições financeiras para alimentação premium e veterinário</span></li>
+          <li class="flex gap-md items-start"><span class="material-symbols-outlined text-primary mt-xs">check_circle</span><span class="text-on-surface-variant font-body-md text-body-md">Tempo disponível para passeios diários (mínimo 30 min)</span></li>
+          <li class="flex gap-md items-start"><span class="material-symbols-outlined text-primary mt-xs">check_circle</span><span class="text-on-surface-variant font-body-md text-body-md">Assinatura do Termo de Responsabilidade</span></li>
+        </ul>
+        <a href="formulario-adocao.html" class="w-full bg-[#F06292] text-white py-lg rounded-full mt-xl font-headline-md text-headline-md hover:brightness-105 active:scale-95 transition-all shadow-lg flex items-center justify-center gap-md">QUERO ADOTAR <span class="material-symbols-outlined">favorite</span></a>
+        <a href="apadrinhar-bob.html" class="w-full border-2 border-primary-container text-primary-container py-lg rounded-full mt-md font-headline-md text-headline-md hover:bg-primary-container/5 active:scale-95 transition-all flex items-center justify-center gap-md">APADRINHE <span class="material-symbols-outlined">volunteer_activism</span></a>
+      </div>
+      <div class="bg-surface p-lg rounded-xl flex items-center gap-lg card-shadow">
+        <div class="w-16 h-16 shrink-0 bg-primary-fixed rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[32px]">location_on</span></div>
+        <div>
+          <p class="text-label-md font-label-md text-secondary uppercase tracking-widest">Localização</p>
+          <p class="text-body-lg font-body-lg text-primary font-bold">Abrigo Central, São José dos Campos - SP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<site-footer></site-footer>
+<script src="script.js" defer></script>
+</body>
+</html>

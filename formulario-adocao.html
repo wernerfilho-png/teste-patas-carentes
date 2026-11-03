@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Adoção | Patas Carentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="components.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md" data-nav="">
+<site-header></site-header>
+<main class="flex-grow bg-[#F0E7D6] py-xl px-md">
+<div class="max-w-3xl mx-auto">
+  <div class="text-center mb-xl">
+    <h1 class="font-headline-lg text-headline-lg text-primary mb-sm">Formulário de Adoção</h1>
+    <p class="text-body-lg font-body-lg text-on-surface-variant">Complete os dados abaixo para iniciar o processo de encontro com seu novo melhor amigo.</p>
+  </div>
+  <div class="card-shadow bg-surface rounded-xl p-lg md:p-xl">
+    <form class="space-y-xl" data-redirect="proposta-enviada.html">
+      <section class="bg-surface-container-low rounded-lg p-md flex flex-col md:flex-row items-center gap-lg border border-outline-variant/30" aria-label="Animal em adoção">
+        <img alt="Bob, cão para adoção" class="w-32 h-32 md:w-40 md:h-40 rounded-lg object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwEnmRSnIJpgoUnvcc66N6KlatKgmgJdl796gR7NmzwQ8DMGWBBWKtVAYmYK9Rru6Y8eSEvREBixgp4zW4fwX-G9vEso8YWmPU7djwIFT2U6LBxJJ5NN1dMWvJb4UEW-PdIvzC7AlmzHrxtGKjFIEUBN6SaF8LaGKqwyKW_l1eA_dO6ckXOwZ4ONNLGdxFOiq0c10GSJDEGI2jHbLBdmwOF2EM-vraYltpwVf33XfqsZUxp2cuNKWke3BZdkE9nUpBoYP-IcUGrJ8m2A">
+        <div class="flex-1 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-sm mb-sm text-primary"><span class="material-symbols-outlined">pets</span><h2 class="font-headline-md text-headline-md">Animal em Adoção</h2></div>
+          <p class="font-headline-lg text-primary mb-md">Bob</p>
+          <div class="flex flex-wrap justify-center md:justify-start gap-sm">
+            <span class="bg-primary-container/10 text-primary px-md py-xs rounded-full font-label-md text-[12px]">Cão</span>
+            <span class="bg-primary-container/10 text-primary px-md py-xs rounded-full font-label-md text-[12px]">Macho</span>
+            <span class="bg-primary-container/10 text-primary px-md py-xs rounded-full font-label-md text-[12px]">1 ano</span>
+          </div>
+        </div>
+      </section>
+      <hr class="border-outline-variant opacity-30">
+
+      <section>
+        <div class="flex items-center gap-sm mb-lg text-primary"><span class="material-symbols-outlined">person</span><h2 class="font-headline-md text-headline-md">Informações Pessoais</h2></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+          <div class="md:col-span-2"><label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="nome">Nome Completo</label><input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim text-body-md p-md" id="nome" name="nome" placeholder="Como no seu documento" type="text" autocomplete="name" required></div>
+          <div class="md:col-span-2"><label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="endereco">Endereço Residencial</label><input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim text-body-md p-md" id="endereco" name="endereco" placeholder="Rua, número, bairro e cidade" type="text" autocomplete="street-address" required></div>
+          <div><label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="cpf">CPF</label><input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim text-body-md p-md" id="cpf" name="cpf" placeholder="000.000.000-00" type="text" inputmode="numeric" required></div>
+          <div class="grid grid-cols-2 gap-md">
+            <div><label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="idade">Idade</label><input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim text-body-md p-md" id="idade" name="idade" placeholder="Ex: 25" type="number" min="18" max="120" required></div>
+            <div><label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="sexo">Sexo</label><select class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim text-body-md p-md" id="sexo" name="sexo"><option>Masculino</option><option>Feminino</option><option>Outro</option></select></div>
+          </div>
+          <div class="md:col-span-2"><label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="renda">Renda Familiar</label><input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim text-body-md p-md" id="renda" name="renda" placeholder="Ex: R$ 5.000,00" type="text"></div>
+          <fieldset class="md:col-span-2"><legend class="block font-label-md text-label-md text-on-surface-variant mb-xs">Estado Civil</legend>
+            <div class="flex flex-wrap gap-md"><label class="flex items-center gap-xs cursor-pointer"><input class="text-primary focus:ring-primary" name="estado_civil" type="radio" value="Solteiro(a)"><span class="text-body-md">Solteiro(a)</span></label><label class="flex items-center gap-xs cursor-pointer"><input class="text-primary focus:ring-primary" name="estado_civil" type="radio" value="Casado(a)"><span class="text-body-md">Casado(a)</span></label><label class="flex items-center gap-xs cursor-pointer"><input class="text-primary focus:ring-primary" name="estado_civil" type="radio" value="Divorciado(a)"><span class="text-body-md">Divorciado(a)</span></label><label class="flex items-center gap-xs cursor-pointer"><input class="text-primary focus:ring-primary" name="estado_civil" type="radio" value="Viúvo(a)"><span class="text-body-md">Viúvo(a)</span></label></div>
+          </fieldset>
+        </div>
+      </section>
+      <hr class="border-outline-variant opacity-30">
+
+      <section>
+        <div class="flex items-center gap-sm mb-lg text-primary"><span class="material-symbols-outlined">family_restroom</span><h2 class="font-headline-md text-headline-md">Contexto Familiar</h2></div>
+        <div class="space-y-lg">
+          <fieldset><legend class="block font-label-md text-label-md text-on-surface-variant mb-xs">Você possui crianças em casa?</legend>
+            <div class="flex gap-xl"><label class="relative flex items-center cursor-pointer">
+              <input class="peer sr-only" name="criancas" type="radio" value="sim">
+              <div class="w-12 h-6 bg-surface-variant rounded-full peer-checked:bg-primary transition-colors"></div>
+              <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full peer-checked:translate-x-6 transition-transform"></div>
+              <span class="ml-md text-body-md">Sim</span>
+            </label><label class="relative flex items-center cursor-pointer">
+              <input class="peer sr-only" name="criancas" type="radio" value="nao" checked>
+              <div class="w-12 h-6 bg-surface-variant rounded-full peer-checked:bg-primary transition-colors"></div>
+              <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full peer-checked:translate-x-6 transition-transform"></div>
+              <span class="ml-md text-body-md">Não</span>
+            </label></div>
+          </fieldset>
+          <div><label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="filhos">Quantos filhos moram com você?</label><input class="w-full md:w-1/3 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim text-body-md p-md" id="filhos" name="filhos" placeholder="Ex: 2" type="number" min="0"></div>
+        </div>
+      </section>
+      <hr class="border-outline-variant opacity-30">
+
+      <section>
+        <div class="flex items-center gap-sm mb-lg text-primary"><span class="material-symbols-outlined">upload_file</span><h2 class="font-headline-md text-headline-md">Documentação</h2></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+          <div class="flex flex-col">
+          <span class="block font-label-md text-label-md text-on-surface-variant mb-sm" id="documento-label">Documento de Identidade (RG/CNH)</span>
+          <label for="documento" class="border-2 border-dashed border-outline-variant rounded-lg p-lg text-center bg-surface-container-low hover:border-primary transition-colors cursor-pointer group focus-within:outline focus-within:outline-2">
+            <span class="material-symbols-outlined text-outline text-[48px] mb-sm group-hover:text-primary">contact_page</span>
+            <p class="text-label-md font-label-md text-on-surface-variant">Arraste ou <span class="text-primary underline">clique aqui</span></p>
+            <p id="documento-nome" data-default="PDF, JPG ou PNG até 5MB" class="text-[12px] text-outline mt-xs break-words">PDF, JPG ou PNG até 5MB</p>
+            <input id="documento" name="documento" type="file" class="sr-only" accept=".pdf,.jpg,.jpeg,.png"  data-file-name="documento-nome" aria-labelledby="documento-label">
+          </label>
+        </div>
+          <div class="flex flex-col">
+          <span class="block font-label-md text-label-md text-on-surface-variant mb-sm" id="fotos-local-label">Fotos do Local da Residência</span>
+          <label for="fotos-local" class="border-2 border-dashed border-outline-variant rounded-lg p-lg text-center bg-surface-container-low hover:border-primary transition-colors cursor-pointer group focus-within:outline focus-within:outline-2">
+            <span class="material-symbols-outlined text-outline text-[48px] mb-sm group-hover:text-primary">add_a_photo</span>
+            <p class="text-label-md font-label-md text-on-surface-variant">Arraste ou <span class="text-primary underline">clique aqui</span></p>
+            <p id="fotos-local-nome" data-default="Envie até 3 fotos do ambiente" class="text-[12px] text-outline mt-xs break-words">Envie até 3 fotos do ambiente</p>
+            <input id="fotos-local" name="fotos-local" type="file" class="sr-only" accept="image/*" multiple data-file-name="fotos-local-nome" aria-labelledby="fotos-local-label">
+          </label>
+        </div>
+        </div>
+      </section>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-lg pt-xl">
+        <a href="pet-bob.html" class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors">CANCELAR</a>
+        <div class="flex gap-md w-full md:w-auto">
+          <button class="flex-1 md:flex-none border-2 border-accent text-primary font-label-md text-label-md px-xl py-md rounded-lg hover:bg-accent transition-all" type="button">SALVAR RASCUNHO</button>
+          <button class="flex-1 md:flex-none bg-primary text-on-primary font-label-md text-label-md px-xl py-md rounded-lg shadow-sm hover:opacity-95 transition-all" type="submit">ENVIAR PROPOSTA</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <aside class="mt-xl flex flex-col md:flex-row items-center gap-lg bg-surface-container-high rounded-lg p-lg">
+    <img alt="Filhote sorridente de pelo marrom e branco" class="w-24 h-24 rounded-full object-cover shadow-sm" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMS2DwcSgVwTHWFwqQfW5CrpEzhbGHrzbpVivxcYwhbeuINon1GXlABJbmTquyINEP3Gck3EVRknufchwbNzI-TdS6MhWbz7PlxIkGpqi-9C4gJmmELCbJGYYsCaJza5P2qHMFpUwdbRHCoCzI_TsUEaj3XNFwFqCNmSaltCZfXhY">
+    <div>
+      <p class="font-headline-md text-primary mb-xs">Por que pedimos esses dados?</p>
+      <p class="text-body-md text-on-surface-variant">A adoção é um ato de amor e compromisso. Verificamos as informações para garantir que tanto o animal quanto a família terão a melhor experiência possível de adaptação e segurança.</p>
+    </div>
+  </aside>
+</div>
+</main>
+<site-footer></site-footer>
+<script src="script.js" defer></script>
+</body>
+</html>

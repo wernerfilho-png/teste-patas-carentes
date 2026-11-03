@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identificação do Padrinho | Patas Carentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="components.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md" data-nav="">
+<site-header></site-header>
+<main class="flex-grow flex items-center justify-center py-xl px-gutter">
+<div class="max-w-4xl w-full grid md:grid-cols-2 bg-surface-container-lowest rounded-xl overflow-hidden card-shadow">
+  <div class="hidden md:block relative">
+    <img class="absolute inset-0 w-full h-full object-cover" alt="Cão e gato resgatados juntos em uma sala aconchegante" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfsYuLZjPtBcQcLtZFIxmoCvyt62IVlGY2GQLOuQBAaNtADBO4EvaI3LCX9lEPk4RR8FXdU5rxVfQGRBN2RnJGFCyimarTIxP8hx41b2lx31vVrII5KFIQ176fJiwx6BOIX-F53i5zw1xviJaIYdfCxc_HI0jkY1CsxH_Qz0x5YS1x4Q0IH9Ws7XA6xHk6shBRfWF8lFWGO4unb0JxXCY8lqp1DyBrqSuK7xjeXp9JclLMKLJSx2q9mDVMtH9z4BJGfv5c_nRDXE4">
+    <div class="absolute inset-0 bg-primary/40 flex flex-col justify-end p-xl">
+      <h2 class="font-headline-lg text-headline-lg text-white mb-sm">Torne-se um Padrinho</h2>
+      <p class="font-body-md text-body-md text-white">Sua contribuição mensal garante saúde e felicidade para quem mais precisa.</p>
+    </div>
+  </div>
+  <div class="p-lg md:p-xl flex flex-col gap-lg">
+    <div class="text-center md:text-left">
+      <h1 class="font-headline-md text-headline-md text-primary mb-xs">Identificação do Padrinho</h1>
+      <p class="font-body-md text-body-md text-on-surface-variant italic">"Ao se identificar, você cria um vínculo oficial com seu afilhado"</p>
+    </div>
+    <div class="flex flex-col gap-sm">
+      <a href="parabens-padrinho.html" class="flex items-center justify-center gap-md w-full py-md px-lg border-2 border-outline-variant rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-all active:scale-95"><img alt="" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Ga313BRwNypribvH1exfeEUxEYdfepOSbcUlV2eerN6mhrhSsjLBusQlNzT8Kapyq66AhS8yGBKX9Cs8pxD5p7TYQ0BTvc7qAse7k6czs5RBxM7BNbXbUTpCjtnoJuzjDurzjda8DAE6FnhZGXdLkHVcRMgC48ADdD0Nc_eI1ZCvIO-H4jF-5NGFqTV6rt2QstI8BR4C7lmg6e1jFHouNIR6ZOQZUoGQ0v8n_p91FbWX5b8OsY6bWu6ima9cJ1G-0c5SKN4fOtg"> Entrar com Google</a>
+      <a href="parabens-padrinho.html" class="flex items-center justify-center gap-md w-full py-md px-lg border-2 border-outline-variant rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-all active:scale-95"><span class="material-symbols-outlined is-filled">ios</span> Entrar com Apple</a>
+    </div>
+    <div class="relative flex items-center justify-center py-sm" role="separator"><div class="w-full border-t border-outline-variant"></div><span class="absolute bg-surface-container-lowest px-md font-label-md text-label-md text-outline">OU</span></div>
+    <form class="flex flex-col gap-md" data-redirect="parabens-padrinho.html">
+      <div class="flex flex-col gap-xs"><label class="font-label-md text-label-md text-on-surface-variant ml-xs" for="nome">Nome Completo</label><input class="w-full bg-surface-container-low border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg p-md font-body-md" id="nome" name="nome" placeholder="Como quer ser chamado?" type="text" autocomplete="name" required></div>
+      <div class="flex flex-col gap-xs"><label class="font-label-md text-label-md text-on-surface-variant ml-xs" for="email">E-mail</label><input class="w-full bg-surface-container-low border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg p-md font-body-md" id="email" name="email" placeholder="exemplo@email.com" type="email" autocomplete="email" required></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+        <div class="flex flex-col gap-xs"><label class="font-label-md text-label-md text-on-surface-variant ml-xs" for="whatsapp">WhatsApp</label><input class="w-full bg-surface-container-low border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg p-md font-body-md" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" type="tel" autocomplete="tel" required></div>
+        <div class="flex flex-col gap-xs"><label class="font-label-md text-label-md text-on-surface-variant ml-xs" for="cpf">CPF</label><input class="w-full bg-surface-container-low border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg p-md font-body-md" id="cpf" name="cpf" placeholder="000.000.000-00" type="text" inputmode="numeric" required><span class="text-[11px] text-on-surface-variant mt-1 leading-tight">* Exigido para cobranças recorrentes</span></div>
+      </div>
+      <button class="mt-lg w-full bg-accent-pink text-primary font-bold py-lg rounded-xl font-headline-md text-headline-md shadow-lg hover:brightness-105 transition-all active:scale-95 flex items-center justify-center gap-md" type="submit">Seguir para Pagamento <span class="material-symbols-outlined">arrow_forward</span></button>
+    </form>
+  </div>
+</div>
+</main>
+<site-footer></site-footer>
+<script src="script.js" defer></script>
+</body>
+</html>
