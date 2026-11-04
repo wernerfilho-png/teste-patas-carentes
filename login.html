@@ -112,10 +112,30 @@
       registerLink.href = "cadastro.html";
     });
 
-    // Intercepta o envio do formulário
+   // Intercepta o envio do formulário
     loginForm.addEventListener('submit', (e) => {
-      e.preventDefault(); // Impede o recarregamento da página
+      e.preventDefault(); // Impede o recarregamento padrão da página
+      e.stopImmediatePropagation(); // Bloqueia outros scripts (como o script.js) de forçarem o redirecionamento
+
       const email = emailInput.value.trim();
+
+      if (isOngMode) {
+        // E-mail simulando uma ONG que já possui cadastro no banco de dados
+        const ongCadastrada = "ong@teste.com";
+
+        if (email === ongCadastrada) {
+          // ONG já possui conta -> Vai para o painel
+          window.location.href = "painel.html";
+        } else {
+          // ONG não possui conta -> Alerta e redireciona para o cadastro
+          alert("Nenhuma conta de ONG encontrada com este e-mail. Redirecionando para o cadastro...");
+          window.location.href = "cadastroONG.html";
+        }
+      } else {
+        // Fluxo normal de usuário padrão
+        window.location.href = "index.html";
+      }
+    });
 
       if (isOngMode) {
         // E-mail simulando uma ONG que já possui cadastro no banco de dados
