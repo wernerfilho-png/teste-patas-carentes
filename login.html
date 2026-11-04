@@ -25,15 +25,18 @@
         <h1 class="font-headline-lg text-headline-lg text-primary mb-xs">Bem-vindo de volta</h1>
         <p class="text-on-surface-variant font-body-md">Acesse sua conta para continuar ajudando nossos patudos.</p>
       </div>
+      
       <!-- Seletor de Tipo de Login -->
-<div class="flex bg-surface-container-low rounded-lg p-1 mb-lg">
-  <button type="button" id="tab-user" class="flex-1 py-2 text-label-md font-bold rounded-md bg-white shadow text-primary transition-all">
-    Usuário Padrão
-  </button>
-  <button type="button" id="tab-ong" class="flex-1 py-2 text-label-md font-bold rounded-md text-on-surface-variant hover:bg-surface-container-highest transition-all">
-    Entrar como ONG
-  </button>
-</div>
+      <div class="flex bg-surface-container-low rounded-lg p-1 mb-lg">
+        <button type="button" id="tab-user" class="flex-1 py-2 text-label-md font-bold rounded-md bg-white shadow text-primary transition-all">
+          Usuário Padrão
+        </button>
+        <button type="button" id="tab-ong" class="flex-1 py-2 text-label-md font-bold rounded-md text-on-surface-variant hover:bg-surface-container-highest transition-all">
+          Entrar como ONG
+        </button>
+      </div>
+
+      <!-- Formulário com ID e sem data-redirect para não conflitar com script.js -->
       <form id="form-login" class="space-y-lg">
         <div class="space-y-xs">
           <label class="font-label-md text-label-md text-on-surface-variant" for="email">E-MAIL</label>
@@ -52,6 +55,7 @@
         <div class="flex justify-end"><a class="text-label-md font-label-md text-primary hover:underline" href="#">Esqueci minha senha</a></div>
         <button class="w-full bg-primary py-md rounded-lg text-white font-headline-md text-headline-md shadow-md hover:brightness-110 active:scale-95 transition-all" type="submit">Entrar</button>
       </form>
+
       <div class="relative my-lg flex items-center" role="separator">
         <div class="flex-grow border-t border-surface-variant"></div>
         <span class="px-md text-label-md text-outline font-label-md">OU</span>
@@ -63,7 +67,8 @@
       </a>
     </div>
     <div class="bg-surface-container px-lg py-md text-center">
-      <p class="text-body-md text-on-surface-variant">Não tem uma conta? <a class="font-bold text-primary hover:underline" href="cadastro.html">Cadastre-se</a></p>
+      <!-- ID register-link adicionado aqui -->
+      <p class="text-body-md text-on-surface-variant">Não tem uma conta? <a id="register-link" class="font-bold text-primary hover:underline" href="cadastro.html">Cadastre-se</a></p>
     </div>
   </div>
   <div class="mt-lg flex items-center justify-center gap-sm">
@@ -74,49 +79,12 @@
 </main>
 <site-footer></site-footer>
 <script src="script.js" defer></script>
-  <!-- Altere a linha do link de cadastro no final da página para incluir id="register-link" -->
-<p class="text-body-md text-on-surface-variant">Não tem uma conta? <a id="register-link" class="font-bold text-primary hover:underline" href="cadastro.html">Cadastre-se</a></p>
-  <script>
+
+<script>
   document.addEventListener('DOMContentLoaded', () => {
     const tabUser = document.getElementById('tab-user');
     const tabOng = document.getElementById('tab-ong');
-    const loginForm = document.querySelector('form');
-    const emailInput = document.getElementById('email');
-    const registerLink = document.getElementById('register-link');
-
-    let isOngMode = false;
-
-    // Função para alternar para o modo ONG
-    tabOng.addEventListener('click', () => {
-      isOngMode = true;
-      // Estiliza a aba ativa
-      tabOng.classList.add('bg-white', 'shadow', 'text-primary');
-      tabOng.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-highest');
-      // Remove estilo da aba inativa
-      tabUser.classList.remove('bg-white', 'shadow', 'text-primary');
-      tabUser.classList.add('text-on-surface-variant', 'hover:bg-surface-container-highest');
-      // Altera o link de cadastro dinamicamente
-      registerLink.href = "cadastroONG.html";
-    });
-
-    // Função para alternar para o modo Usuário
-    tabUser.addEventListener('click', () => {
-      isOngMode = false;
-      // Estiliza a aba ativa
-      tabUser.classList.add('bg-white', 'shadow', 'text-primary');
-      tabUser.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-highest');
-      // Remove estilo da aba inativa
-      tabOng.classList.remove('bg-white', 'shadow', 'text-primary');
-      tabOng.classList.add('text-on-surface-variant', 'hover:bg-surface-container-highest');
-      // Altera o link de cadastro dinamicamente
-      registerLink.href = "cadastro.html";
-    });
-
-   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const tabUser = document.getElementById('tab-user');
-    const tabOng = document.getElementById('tab-ong');
-    const loginForm = document.getElementById('form-login'); // Agora busca pelo ID correto
+    const loginForm = document.getElementById('form-login');
     const emailInput = document.getElementById('email');
     const registerLink = document.getElementById('register-link');
 
@@ -162,26 +130,6 @@
       } else {
         // Validação de Usuário Padrão
         window.location.href = "index.html"; // Vai para a home se logar como usuário
-      }
-    });
-  });
-</script>
-
-      if (isOngMode) {
-        // E-mail simulando uma ONG que já possui cadastro no banco de dados
-        const ongCadastrada = "ong@teste.com";
-
-        if (email === ongCadastrada) {
-          // ONG já possui conta -> Vai para o painel
-          window.location.href = "painel.html";
-        } else {
-          // ONG não possui conta -> Alerta e redireciona para o cadastro
-          alert("Nenhuma conta de ONG encontrada com este e-mail. Redirecionando para o cadastro...");
-          window.location.href = "cadastroONG.html";
-        }
-      } else {
-        // Fluxo normal de usuário padrão
-        window.location.href = "index.html";
       }
     });
   });
