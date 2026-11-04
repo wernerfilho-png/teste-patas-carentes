@@ -48,7 +48,8 @@
 </nav>
 </header>
 <!-- Formulário em Cartões Espaçados -->
-<form class="flex flex-col gap-lg" id="ong-registration-form" onsubmit="event.preventDefault();">
+<!-- novalidate: a validação é feita pelo script no final da página -->
+<form class="flex flex-col gap-lg" id="ong-registration-form" novalidate>
 <!-- CARD 1: Identificação -->
 <section class="bg-surface-container-lowest p-lg md:p-xl rounded-xl shadow-[0_2px_14px_rgba(96,86,73,0.06)] flex flex-col gap-lg">
 <div class="flex items-center gap-sm">
@@ -85,9 +86,9 @@
 </div>
 <div class="flex flex-col gap-xs">
 <label class="font-label-md text-label-md text-on-surface" for="ong-cnpj">
-                CNPJ da Instituição
-              </label>
-<input class="w-full px-md py-sm bg-surface-container-low focus:bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/25 transition-all" id="ong-cnpj" placeholder="00.000.000/0001-00" type="text"/>
+                CNPJ da Instituição <span aria-hidden="true" class="text-error">*</span>
+</label>
+<input class="w-full px-md py-sm bg-surface-container-low focus:bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/25 transition-all" id="ong-cnpj" inputmode="numeric" placeholder="00.000.000/0001-00" type="text"/>
 </div>
 <!-- Alternativa Protetor Independente -->
 <label class="flex items-start gap-sm p-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors mt-xs">
@@ -115,8 +116,8 @@
 <div class="md:col-span-4 flex flex-col gap-xs">
 <label class="font-label-md text-label-md text-on-surface" for="cep">CEP Base</label>
 <div class="flex gap-xs">
-<input class="w-full px-md py-sm bg-surface-container-low focus:bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/25 transition-all" id="cep" placeholder="00000-000" type="text"/>
-<button class="px-md py-sm bg-secondary-container hover:bg-surface-container-high text-on-secondary-fixed font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap" type="button">
+<input class="w-full px-md py-sm bg-surface-container-low focus:bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/25 transition-all" id="cep" inputmode="numeric" placeholder="00000-000" type="text"/>
+<button class="px-md py-sm bg-secondary-container hover:bg-surface-container-high text-on-secondary-fixed font-label-md text-label-md rounded-lg transition-colors whitespace-nowrap" id="btn-buscar-cep" type="button">
                 Buscar
               </button>
 </div>
@@ -164,7 +165,7 @@
 </label>
 <div class="relative flex items-center">
 <span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">chat</span>
-<input class="w-full pl-10 pr-md py-sm bg-surface-container-low focus:bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/25 transition-all" id="whatsapp" placeholder="(11) 99999-9999" required="" type="tel"/>
+<input class="w-full pl-10 pr-md py-sm bg-surface-container-low focus:bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/25 transition-all" id="whatsapp" inputmode="tel" placeholder="(11) 99999-9999" required="" type="tel"/>
 </div>
 </div>
 <div class="flex flex-col gap-xs">
@@ -173,7 +174,7 @@
 </label>
 <div class="relative flex items-center">
 <span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">mail</span>
-<input class="w-full pl-10 pr-md py-sm bg-surface-container-low focus:bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/25 transition-all" id="email" placeholder="contato@suaong.org.br" required="" type="email"/>
+<input class="w-full pl-10 pr-md py-sm bg-surface-container-low focus:bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/25 transition-all" id="email" placeholder="contato@suaong.org.br" required="" type="email" autocomplete="email"/>
 </div>
 </div>
 <div class="flex flex-col gap-xs">
@@ -208,7 +209,7 @@
 <p class="font-body-md text-[14px] text-secondary">Quais animais você atende? Selecione as opções cabíveis</p>
 </div>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md" id="rescue-types">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md rounded-xl" id="rescue-types">
 <!-- Opção Cães (Ativa por padrão) -->
 <label class="group relative flex items-center gap-sm p-md rounded-xl bg-secondary-container cursor-pointer transition-all select-none">
 <input checked="" class="sr-only peer" name="animal-type" type="checkbox" value="caes"/>
@@ -283,20 +284,38 @@
 <label class="font-label-md text-label-md text-on-surface" for="responsavel-cpf">
               CPF do Responsável <span aria-hidden="true" class="text-error">*</span>
 </label>
-<input class="w-full px-md py-sm bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/25 transition-all" id="responsavel-cpf" placeholder="000.000.000-00" required="" type="text"/>
+<input class="w-full px-md py-sm bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/25 transition-all" id="responsavel-cpf" inputmode="numeric" placeholder="000.000.000-00" required="" type="text"/>
 </div>
 </div>
 </section>
 <!-- Finalização e Termos -->
 <div class="flex flex-col gap-md pt-xs">
-<label class="flex items-start gap-sm p-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-colors">
+<label class="flex items-start gap-sm p-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-colors" id="termos-wrapper">
 <input class="mt-1 w-4 h-4 rounded text-primary accent-primary focus:ring-primary cursor-pointer" id="termos-consentimento" required="" type="checkbox"/>
 <span class="font-body-md text-[14px] text-on-surface">
             Declaro que as informações são verdadeiras e aceito os <a class="font-semibold text-primary underline underline-offset-2" href="#">Termos de Responsabilidade e Convivência</a> da rede Patas Carentes.
           </span>
 </label>
+
+<!-- Caixa de erros da validação -->
+<div class="hidden p-md rounded-xl bg-error-container text-on-error-container" id="form-errors" role="alert" tabindex="-1">
+<div class="flex items-center gap-sm mb-xs">
+<span class="material-symbols-outlined text-[20px]">error</span>
+<span class="font-label-md text-label-md font-semibold">Revise os campos abaixo para continuar:</span>
+</div>
+<ul class="list-disc pl-lg font-body-md text-[14px] space-y-xs" id="form-errors-list"></ul>
+</div>
+
+<!-- Mensagem de sucesso -->
+<div class="hidden p-md rounded-xl bg-secondary-container text-on-secondary-fixed" id="form-success" role="status">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md font-semibold">Cadastro realizado com sucesso! Redirecionando para o painel...</span>
+</div>
+</div>
+
 <div class="flex flex-col items-center gap-sm">
-<button class="w-full sm:w-auto min-w-[320px] px-xl py-md bg-primary hover:bg-primary-container text-on-primary font-headline-md text-[18px] rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-sm group" type="submit">
+<button class="w-full sm:w-auto min-w-[320px] px-xl py-md bg-primary hover:bg-primary-container text-on-primary font-headline-md text-[18px] rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-sm group disabled:opacity-60 disabled:cursor-not-allowed" id="btn-submit" type="submit">
 <span class="material-symbols-outlined text-[24px] transition-transform group-hover:scale-110" style="font-variation-settings: 'FILL' 1;">pets</span>
 <span>Criar Conta e Ajudar Pets</span>
 </button>
@@ -308,8 +327,9 @@
 </form>
 </div>
 </div>
+
+<!-- Chips de espécies + campo de CNPJ para protetor independente -->
 <script>
-  // Feedback dinâmico e amigável nos chips de seleção de espécies atendidas
   (function() {
     const rescueContainer = document.getElementById('rescue-types');
     if (!rescueContainer) return;
@@ -344,6 +364,7 @@
           cnpjInput.value = '';
           cnpjInput.placeholder = 'Dispensado para protetor independente';
           cnpjInput.classList.add('opacity-50', 'cursor-not-allowed');
+          cnpjInput.classList.remove('ring-2', '!ring-error');
         } else {
           cnpjInput.disabled = false;
           cnpjInput.placeholder = '00.000.000/0001-00';
@@ -351,5 +372,304 @@
         }
       });
     }
+  })();
+</script>
+
+<!-- Validação e cadastro da ONG -->
+<script>
+  (function () {
+    const form = document.getElementById('ong-registration-form');
+    if (!form) return;
+
+    const errorBox = document.getElementById('form-errors');
+    const errorList = document.getElementById('form-errors-list');
+    const successBox = document.getElementById('form-success');
+    const btnSubmit = document.getElementById('btn-submit');
+    const $ = (id) => document.getElementById(id);
+    const onlyDigits = (v) => (v || '').replace(/\D/g, '');
+
+    const EMAIL_ONG_TESTE = 'ong@teste.com'; // conta de teste já existente no login
+
+    /* ---------- Máscaras ---------- */
+    function fmt(digits, pattern) {
+      let out = '';
+      let i = 0;
+      for (const ch of pattern) {
+        if (i >= digits.length) break;
+        out += ch === '#' ? digits[i++] : ch;
+      }
+      return out;
+    }
+
+    const masks = {
+      'ong-cnpj': (d) => fmt(d.slice(0, 14), '##.###.###/####-##'),
+      'responsavel-cpf': (d) => fmt(d.slice(0, 11), '###.###.###-##'),
+      'cep': (d) => fmt(d.slice(0, 8), '#####-###'),
+      'whatsapp': (d) => {
+        d = d.slice(0, 11);
+        return fmt(d, d.length > 10 ? '(##) #####-####' : '(##) ####-####');
+      }
+    };
+
+    Object.keys(masks).forEach((id) => {
+      const el = $(id);
+      if (!el) return;
+      el.addEventListener('input', () => {
+        el.value = masks[id](onlyDigits(el.value));
+      });
+    });
+
+    $('uf').addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/[^a-zA-Z]/g, '').toUpperCase();
+    });
+
+    /* ---------- Validadores ---------- */
+    function validCPF(value) {
+      const c = onlyDigits(value);
+      if (c.length !== 11 || /^(\d)\1+$/.test(c)) return false;
+      for (let t = 9; t < 11; t++) {
+        let sum = 0;
+        for (let i = 0; i < t; i++) sum += Number(c[i]) * (t + 1 - i);
+        const dig = ((sum * 10) % 11) % 10;
+        if (dig !== Number(c[t])) return false;
+      }
+      return true;
+    }
+
+    function validCNPJ(value) {
+      const c = onlyDigits(value);
+      if (c.length !== 14 || /^(\d)\1+$/.test(c)) return false;
+      const calc = (len) => {
+        let sum = 0;
+        let pos = len - 7;
+        for (let i = len; i >= 1; i--) {
+          sum += Number(c[len - i]) * pos--;
+          if (pos < 2) pos = 9;
+        }
+        const r = sum % 11;
+        return r < 2 ? 0 : 11 - r;
+      };
+      return calc(12) === Number(c[12]) && calc(13) === Number(c[13]);
+    }
+
+    function validPhone(value) {
+      const d = onlyDigits(value);
+      if (d.length !== 10 && d.length !== 11) return false;
+      if (Number(d.slice(0, 2)) < 11) return false;
+      if (d.length === 11 && d[2] !== '9') return false;
+      return true;
+    }
+
+    const validEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+    const validInstagram = (v) =>
+      /^(https?:\/\/)?(www\.)?(instagram\.com\/)?@?[A-Za-z0-9._]{1,30}\/?$/.test(v);
+
+    function getOngs() {
+      try {
+        const list = JSON.parse(localStorage.getItem('ongs') || '[]');
+        return Array.isArray(list) ? list : [];
+      } catch (err) {
+        return [];
+      }
+    }
+
+    /* ---------- Exibição de erros ---------- */
+    function markInvalid(id) {
+      const el = $(id);
+      if (!el) return;
+      el.classList.add('ring-2', '!ring-error');
+    }
+
+    function clearErrors() {
+      errorBox.classList.add('hidden');
+      errorList.innerHTML = '';
+      form.querySelectorAll('.ring-2.\\!ring-error').forEach((el) => {
+        el.classList.remove('ring-2', '!ring-error');
+      });
+    }
+
+    function showErrors(errors) {
+      clearErrors();
+      errors.forEach((err) => {
+        const li = document.createElement('li');
+        li.textContent = err.msg;
+        errorList.appendChild(li);
+        markInvalid(err.id);
+      });
+      errorBox.classList.remove('hidden');
+
+      const first = $(errors[0].id);
+      if (first) {
+        first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (typeof first.focus === 'function' && first.id !== 'rescue-types') {
+          first.focus({ preventScroll: true });
+        }
+      }
+    }
+
+    // Ao digitar/alterar, remove o destaque de erro do campo
+    form.addEventListener('input', (e) => e.target.classList.remove('ring-2', '!ring-error'));
+    form.addEventListener('change', (e) => {
+      e.target.classList.remove('ring-2', '!ring-error');
+      if (e.target.name === 'animal-type') $('rescue-types').classList.remove('ring-2', '!ring-error');
+    });
+
+    /* ---------- Buscar CEP (ViaCEP) ---------- */
+    const btnCep = $('btn-buscar-cep');
+    if (btnCep) {
+      btnCep.addEventListener('click', async () => {
+        const cep = onlyDigits($('cep').value);
+        if (cep.length !== 8) {
+          showErrors([{ id: 'cep', msg: 'Informe um CEP com 8 dígitos para buscar.' }]);
+          return;
+        }
+        const textoOriginal = btnCep.textContent;
+        btnCep.disabled = true;
+        btnCep.textContent = 'Buscando...';
+        try {
+          const resp = await fetch('https://viacep.com.br/ws/' + cep + '/json/');
+          const dados = await resp.json();
+          if (dados.erro) throw new Error('CEP não encontrado');
+          $('uf').value = (dados.uf || '').toUpperCase();
+          $('cidade').value = dados.localidade || '';
+          $('bairro').value = dados.bairro || '';
+          clearErrors();
+        } catch (err) {
+          showErrors([{ id: 'cep', msg: 'Não foi possível encontrar esse CEP. Confira o número ou preencha manualmente.' }]);
+        } finally {
+          btnCep.disabled = false;
+          btnCep.textContent = textoOriginal;
+        }
+      });
+    }
+
+    /* ---------- Validação do formulário ---------- */
+    function validate() {
+      const errors = [];
+      const add = (id, msg) => errors.push({ id, msg });
+
+      const nome = $('ong-name').value.trim();
+      if (nome.length < 3) add('ong-name', 'Informe o nome da ONG ou projeto (mínimo de 3 caracteres).');
+
+      if (!$('is-independent').checked) {
+        const cnpj = $('ong-cnpj').value.trim();
+        if (!cnpj) {
+          add('ong-cnpj', 'Informe o CNPJ ou marque "Sou protetor independente".');
+        } else if (!validCNPJ(cnpj)) {
+          add('ong-cnpj', 'CNPJ inválido. Confira os números digitados.');
+        }
+      }
+
+      const logo = $('logo-upload').files[0];
+      if (logo) {
+        if (!['image/png', 'image/jpeg'].includes(logo.type)) {
+          add('logo-upload', 'O logotipo deve ser uma imagem PNG ou JPG.');
+        } else if (logo.size > 5 * 1024 * 1024) {
+          add('logo-upload', 'O logotipo deve ter no máximo 5MB.');
+        }
+      }
+
+      const cep = $('cep').value.trim();
+      if (cep && onlyDigits(cep).length !== 8) add('cep', 'CEP inválido. Use 8 dígitos (ex: 00000-000).');
+
+      const uf = $('uf').value.trim();
+      if (uf && !/^[A-Za-z]{2}$/.test(uf)) add('uf', 'Estado (UF) deve ter 2 letras (ex: SP).');
+
+      const whatsapp = $('whatsapp').value.trim();
+      if (!whatsapp) {
+        add('whatsapp', 'Informe o WhatsApp oficial da ONG.');
+      } else if (!validPhone(whatsapp)) {
+        add('whatsapp', 'WhatsApp inválido. Use DDD + número, ex: (11) 99999-9999.');
+      }
+
+      const email = $('email').value.trim().toLowerCase();
+      if (!email) {
+        add('email', 'Informe o e-mail de contato.');
+      } else if (!validEmail(email)) {
+        add('email', 'E-mail inválido. Ex: contato@suaong.org.br');
+      } else if (email === EMAIL_ONG_TESTE || getOngs().some((o) => o.email === email)) {
+        add('email', 'Já existe uma ONG cadastrada com este e-mail. Use outro e-mail ou faça login.');
+      }
+
+      const instagram = $('instagram').value.trim();
+      if (instagram && !validInstagram(instagram)) {
+        add('instagram', 'Instagram inválido. Use @usuario ou instagram.com/usuario.');
+      }
+
+      if (form.querySelectorAll('input[name="animal-type"]:checked').length === 0) {
+        add('rescue-types', 'Selecione pelo menos um tipo de animal atendido.');
+      }
+
+      const respNome = $('responsavel-nome').value.trim();
+      if (respNome.split(/\s+/).filter(Boolean).length < 2 || respNome.length < 5) {
+        add('responsavel-nome', 'Informe o nome completo do responsável (nome e sobrenome).');
+      }
+
+      const respCpf = $('responsavel-cpf').value.trim();
+      if (!respCpf) {
+        add('responsavel-cpf', 'Informe o CPF do responsável.');
+      } else if (!validCPF(respCpf)) {
+        add('responsavel-cpf', 'CPF do responsável inválido. Confira os números digitados.');
+      }
+
+      if (!$('termos-consentimento').checked) {
+        add('termos-consentimento', 'É necessário aceitar os Termos de Responsabilidade e Convivência.');
+      }
+
+      return errors;
+    }
+
+    /* ---------- Envio ---------- */
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      successBox.classList.add('hidden');
+
+      const errors = validate();
+      if (errors.length) {
+        showErrors(errors);
+        return;
+      }
+      clearErrors();
+
+      const email = $('email').value.trim().toLowerCase();
+
+      // Obs.: o CPF do responsável é validado, mas NÃO é guardado no navegador.
+      const ong = {
+        id: Date.now(),
+        nome: $('ong-name').value.trim(),
+        independente: $('is-independent').checked,
+        cnpj: $('is-independent').checked ? '' : onlyDigits($('ong-cnpj').value),
+        cep: onlyDigits($('cep').value),
+        uf: $('uf').value.trim().toUpperCase(),
+        cidade: $('cidade').value.trim(),
+        bairro: $('bairro').value.trim(),
+        whatsapp: onlyDigits($('whatsapp').value),
+        email: email,
+        instagram: $('instagram').value.trim(),
+        pix: $('pix').value.trim(),
+        tipos: Array.from(form.querySelectorAll('input[name="animal-type"]:checked')).map((i) => i.value),
+        responsavel: $('responsavel-nome').value.trim(),
+        criadoEm: new Date().toISOString()
+      };
+
+      try {
+        const ongs = getOngs();
+        ongs.push(ong);
+        localStorage.setItem('ongs', JSON.stringify(ongs));
+        localStorage.setItem('tipoUsuario', 'ong');
+        localStorage.setItem('ongLogada', email);
+      } catch (err) {
+        showErrors([{ id: 'ong-name', msg: 'Não foi possível salvar o cadastro neste navegador. Verifique se o armazenamento local está liberado.' }]);
+        return;
+      }
+
+      btnSubmit.disabled = true;
+      successBox.classList.remove('hidden');
+      successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      setTimeout(function () {
+        window.location.href = 'painel.html';
+      }, 1200);
+    });
   })();
 </script></main><footer class="w-full bg-surface-container-low py-lg mt-auto shadow-[0_-1px_6px_rgba(96,86,73,0.03)]"><div class="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-md text-center md:text-left"><div class="flex items-center gap-xs text-secondary"><span class="material-symbols-outlined text-[18px] text-primary">volunteer_activism</span><span class="font-label-md text-label-md text-on-surface-variant">© 2024 Patas Carentes. Conectando corações e lares amorosos.</span></div><div class="flex items-center gap-lg"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="termos-de-adocao" href="#">Privacidade &amp; Termos</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="ajuda-e-suporte" href="#">Canais de Apoio</a></div></div></footer></body></html>
