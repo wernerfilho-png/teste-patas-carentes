@@ -128,8 +128,15 @@
       const email = emailInput.value.trim().toLowerCase();
 
       if (isOngMode) {
-        if (email === EMAIL_ONG) {
+        // ONG de teste OU qualquer ONG cadastrada em cadastroONG.html
+        let ongs = [];
+        try { ongs = JSON.parse(localStorage.getItem('ongs') || '[]'); } catch (err) { ongs = []; }
+        const cadastrada = email === EMAIL_ONG ||
+          (Array.isArray(ongs) && ongs.some(function (o) { return o.email === email; }));
+
+        if (cadastrada) {
           localStorage.setItem('tipoUsuario', 'ong');
+          localStorage.setItem('ongLogada', email);
           window.location.href = 'painel.html';
         } else {
           alert('Nenhuma conta de ONG encontrada com este e-mail. Redirecionando para o cadastro...');
