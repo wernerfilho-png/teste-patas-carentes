@@ -34,7 +34,7 @@
     Entrar como ONG
   </button>
 </div>
-      <form class="space-y-lg" data-redirect="index.html">
+      <form id="form-login" class="space-y-lg">
         <div class="space-y-xs">
           <label class="font-label-md text-label-md text-on-surface-variant" for="email">E-MAIL</label>
           <div class="relative">
@@ -112,30 +112,60 @@
       registerLink.href = "cadastro.html";
     });
 
-   // Intercepta o envio do formulário
+   <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabUser = document.getElementById('tab-user');
+    const tabOng = document.getElementById('tab-ong');
+    const loginForm = document.getElementById('form-login'); // Agora busca pelo ID correto
+    const emailInput = document.getElementById('email');
+    const registerLink = document.getElementById('register-link');
+
+    let isOngMode = false;
+
+    // Alternar para ONG
+    tabOng.addEventListener('click', () => {
+      isOngMode = true;
+      tabOng.classList.add('bg-white', 'shadow', 'text-primary');
+      tabOng.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-highest');
+      tabUser.classList.remove('bg-white', 'shadow', 'text-primary');
+      tabUser.classList.add('text-on-surface-variant', 'hover:bg-surface-container-highest');
+      registerLink.href = "cadastroONG.html";
+    });
+
+    // Alternar para Usuário
+    tabUser.addEventListener('click', () => {
+      isOngMode = false;
+      tabUser.classList.add('bg-white', 'shadow', 'text-primary');
+      tabUser.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-highest');
+      tabOng.classList.remove('bg-white', 'shadow', 'text-primary');
+      tabOng.classList.add('text-on-surface-variant', 'hover:bg-surface-container-highest');
+      registerLink.href = "cadastro.html";
+    });
+
+    // Submissão do formulário
     loginForm.addEventListener('submit', (e) => {
-      e.preventDefault(); // Impede o recarregamento padrão da página
-      e.stopImmediatePropagation(); // Bloqueia outros scripts (como o script.js) de forçarem o redirecionamento
+      e.preventDefault();
+      e.stopImmediatePropagation();
 
       const email = emailInput.value.trim();
 
       if (isOngMode) {
-        // E-mail simulando uma ONG que já possui cadastro no banco de dados
+        // Validação da ONG
         const ongCadastrada = "ong@teste.com";
 
         if (email === ongCadastrada) {
-          // ONG já possui conta -> Vai para o painel
-          window.location.href = "painel.html";
+          window.location.href = "painel.html"; // Vai para o painel se logar como ONG
         } else {
-          // ONG não possui conta -> Alerta e redireciona para o cadastro
           alert("Nenhuma conta de ONG encontrada com este e-mail. Redirecionando para o cadastro...");
           window.location.href = "cadastroONG.html";
         }
       } else {
-        // Fluxo normal de usuário padrão
-        window.location.href = "index.html";
+        // Validação de Usuário Padrão
+        window.location.href = "index.html"; // Vai para a home se logar como usuário
       }
     });
+  });
+</script>
 
       if (isOngMode) {
         // E-mail simulando uma ONG que já possui cadastro no banco de dados
