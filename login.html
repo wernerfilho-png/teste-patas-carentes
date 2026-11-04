@@ -25,7 +25,7 @@
         <h1 class="font-headline-lg text-headline-lg text-primary mb-xs">Bem-vindo de volta</h1>
         <p class="text-on-surface-variant font-body-md">Acesse sua conta para continuar ajudando nossos patudos.</p>
       </div>
-      
+
       <!-- Seletor de Tipo de Login -->
       <div class="flex bg-surface-container-low rounded-lg p-1 mb-lg">
         <button type="button" id="tab-user" class="flex-1 py-2 text-label-md font-bold rounded-md bg-white shadow text-primary transition-all">
@@ -67,7 +67,6 @@
       </a>
     </div>
     <div class="bg-surface-container px-lg py-md text-center">
-      <!-- ID register-link adicionado aqui -->
       <p class="text-body-md text-on-surface-variant">Não tem uma conta? <a id="register-link" class="font-bold text-primary hover:underline" href="cadastro.html">Cadastre-se</a></p>
     </div>
   </div>
@@ -78,61 +77,77 @@
 </div>
 </main>
 <site-footer></site-footer>
-<script src="script.js" defer></script>
 
+<!--
+  IMPORTANTE: este script vem ANTES do script.js (que tem defer).
+  Ele roda imediatamente e usa a fase de captura no document,
+  então seus handlers sempre disparam antes dos do script.js.
+-->
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  (function () {
     const tabUser = document.getElementById('tab-user');
     const tabOng = document.getElementById('tab-ong');
-    const loginForm = document.getElementById('form-login');
     const emailInput = document.getElementById('email');
     const registerLink = document.getElementById('register-link');
 
+    const ATIVA = ['bg-white', 'shadow', 'text-primary'];
+    const INATIVA = ['text-on-surface-variant', 'hover:bg-surface-container-highest'];
+    const EMAIL_ONG = 'ong@teste.com';
+
     let isOngMode = false;
 
-    // Alternar para ONG
-    tabOng.addEventListener('click', () => {
-      isOngMode = true;
-      tabOng.classList.add('bg-white', 'shadow', 'text-primary');
-      tabOng.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-highest');
-      tabUser.classList.remove('bg-white', 'shadow', 'text-primary');
-      tabUser.classList.add('text-on-surface-variant', 'hover:bg-surface-container-highest');
-      registerLink.href = "cadastroONG.html";
-    });
+    function setMode(ong) {
+      isOngMode = ong;
+      const on = ong ? tabOng : tabUser;
+      const off = ong ? tabUser : tabOng;
 
-    // Alternar para Usuário
-    tabUser.addEventListener('click', () => {
-      isOngMode = false;
-      tabUser.classList.add('bg-white', 'shadow', 'text-primary');
-      tabUser.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-highest');
-      tabOng.classList.remove('bg-white', 'shadow', 'text-primary');
-      tabOng.classList.add('text-on-surface-variant', 'hover:bg-surface-container-highest');
-      registerLink.href = "cadastro.html";
-    });
+      on.classList.add(...ATIVA);
+      on.classList.remove(...INATIVA);
+      off.classList.remove(...ATIVA);
+      off.classList.add(...INATIVA);
 
-    // Submissão do formulário
-    loginForm.addEventListener('submit', (e) => {
+      registerLink.setAttribute('href', ong ? 'cadastroONG.html' : 'cadastro.html');
+    }
+
+    // Abas: captura no document, antes de qualquer listener do script.js
+    document.addEventListener('click', function (e) {
+      const alvo = e.target.closest('#tab-user, #tab-ong');
+      if (!alvo) return;
       e.preventDefault();
+      e.stopPropagation();
+      setMode(alvo.id === 'tab-ong');
+    }, true);
+
+    // Login: captura no document, roda antes do handler do script.js
+    document.addEventListener('submit', function (e) {
+      if (e.target.id !== 'form-login') return;
+      e.preventDefault();
+      e.stopPropagation();
       e.stopImmediatePropagation();
 
-      const email = emailInput.value.trim();
+      const email = emailInput.value.trim().toLowerCase();
 
       if (isOngMode) {
-        // Validação da ONG
-        const ongCadastrada = "ong@teste.com";
-
-        if (email === ongCadastrada) {
-          window.location.href = "painel.html"; // Vai para o painel se logar como ONG
+        if (email === EMAIL_ONG) {
+          localStorage.setItem('tipoUsuario', 'ong');
+          window.location.href = 'painel.html';
         } else {
-          alert("Nenhuma conta de ONG encontrada com este e-mail. Redirecionando para o cadastro...");
-          window.location.href = "cadastroONG.html";
+          alert('Nenhuma conta de ONG encontrada com este e-mail. Redirecionando para o cadastro...');
+          window.location.href = 'cadastroONG.html';
         }
       } else {
-        // Validação de Usuário Padrão
-        window.location.href = "index.html"; // Vai para a home se logar como usuário
+        localStorage.setItem('tipoUsuario', 'usuario');
+        window.location.href = 'index.html';
       }
-    });
-  });
+    }, true);
+
+    // Permite abrir direto no modo ONG: login.html?tipo=ong
+    if (new URLSearchParams(window.location.search).get('tipo') === 'ong') {
+      setMode(true);
+    }
+  })();
 </script>
+
+<script src="script.js" defer></script>
 </body>
 </html>
