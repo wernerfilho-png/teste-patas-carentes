@@ -2,6 +2,11 @@
    Patas Carentes - comportamento compartilhado entre as páginas
    (o menu e o rodapé ficam em components.js)
    ========================================================== */
+const SUPABASE_URL = "https://kxvbflgutffusbmzhrhv.supabase.co";
+
+const SUPABASE_ANON_KEY = "sb_publishable_ttFRDb5OCF8x4CXUSYs6Xw_9rVQJsE5";
+
+
 (function () {
   'use strict';
 
